@@ -1,0 +1,8 @@
+ollama
+pdfplumber
+chromadb>=0.4.23
+sentence-transformers 
+Flask==2.1.2
+flask-socketio
+
+
