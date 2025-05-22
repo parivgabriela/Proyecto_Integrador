@@ -1,0 +1,28 @@
+# Ignore Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+*.egg-info/
+build/
+dist/
+
+# Ignore vector database files (adjust based on your DB)
+*.chroma/
+chroma_db/
+vectordb/
+*.vectordb
+
+# Ignore logs
+logs/
+*.log
+log_*.txt
+debug.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
