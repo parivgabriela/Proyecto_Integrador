@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Cuál es el nombre de la carrera y qué título otorga?",
+    "respuesta": "La carrera se denomina 'Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial' y otorga el título de 'Técnico Superior en Ciencia de Datos e Inteligencia Artificial'."
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cuál es la duración total de la carrera?",
+    "respuesta": "La carrera tiene una duración de 5 cuatrimestres, con una carga horaria total de 1472 horas reloj y 2208 horas cátedra[cite: 453, 454, 553]."
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuáles son los requisitos de ingreso?",
+    "respuesta": "Se requieren estudios secundarios completos. Los mayores de 25 años que no cumplan con este requisito pueden rendir una evaluación y acreditar experiencia laboral y conocimientos suficientes."
+  },
+  {
+    "id": 4,
+    "pregunta": "¿Cuál es el perfil profesional del egresado?",
+    "respuesta": "El egresado estará capacitado para realizar proyectos de innovación en Ciencia de Datos e IA, diseñar, desarrollar e implementar técnicas de Machine Learning, construir redes neuronales, liderar proyectos, aplicar IA para procesar audio y texto, y comunicar eficazmente los hallazgos obtenidos."
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Cuáles son las principales funciones que ejerce el profesional?",
+    "respuesta": "Las funciones principales incluyen diseñar proyectos, diseñar soluciones que involucren análisis de datos, desarrollar sistemas de inteligencia artificial (incluyendo Visión Artificial y Procesamiento de Habla), realizar mantenimiento y optimización de sistemas, y organizar y gestionar proyectos."
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Cómo está estructurado el plan de estudios?",
+    "respuesta": "El plan de estudios se organiza en cuatro campos de formación: Formación General (4%), Formación de Fundamento (30%), Formación Específica (48%) y Prácticas Profesionalizantes (18%)[cite: 516, 519, 523, 526]."
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Qué tipo de unidades curriculares componen el plan de estudios?",
+    "respuesta": "El plan de estudios incluye materias, módulos, seminarios, talleres y prácticas profesionalizantes[cite: 532, 534, 538, 543, 545]."
+  },
+  {
+    "id": 100,
+    "pregunta": "¿Qué es un dato?",
+    "respuesta": "Un dato es una representación simbólica de un atributo o variable. Es la unidad mínima de información sin procesar."
+  },
+  {
+    "id": 102,
+    "pregunta": "¿Qué es una base de datos?",
+    "respuesta": "Es un conjunto organizado de datos estructurados que se almacenan electrónicamente para facilitar su acceso, gestión y actualización."
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Qué es SQL?",
+    "respuesta": "SQL (Structured Query Language) es un lenguaje de programación estándar utilizado para gestionar y consultar bases de datos relacionales."
+  },
+  {
+    "id": 104,
+    "pregunta": "¿Qué es información?",
+    "respuesta": "Es un conjunto de datos procesados, organizados y con un contexto, lo que le otorga significado y propósito."
+  },
+  {
+    "id": 105,
+    "pregunta": "¿Qué es inteligencia artificial?",
+    "respuesta": "La Inteligencia Artificial (IA) es un campo de la informática que desarrolla sistemas capaces de realizar tareas que normalmente requieren inteligencia humana."
+  },
+  {
+    "id": 106,
+    "pregunta": "¿Qué es deep learning?",
+    "respuesta": "El Aprendizaje Profundo (Deep Learning) es un subcampo del aprendizaje automático basado en redes neuronales con múltiples capas (profundas) para aprender de grandes volúmenes de datos."
+  },
+  {
+    "id": 107,
+    "pregunta": "¿Qué es NLP?",
+    "respuesta": "El Procesamiento del Lenguaje Natural (NLP) es un área de la IA que permite a las computadoras comprender, interpretar y generar lenguaje humano."
+  },
+  {
+    "id": 108,
+    "pregunta": "¿Qué es aprendizaje automático?",
+    "respuesta": "El Aprendizaje Automático (Machine Learning) es una rama de la IA que permite a los sistemas aprender y mejorar a partir de la experiencia (datos) sin ser programados explícitamente."
+  },
+  {
+    "id": 109,
+    "pregunta": "¿Qué es ciencia de datos?",
+    "respuesta": "La Ciencia de Datos es un campo interdisciplinario que utiliza métodos científicos, procesos y algoritmos para extraer conocimiento e insights de datos estructurados y no estructurados."
+  },
+  {
+    "id": 110,
+    "pregunta": "¿Qué es big data?",
+    "respuesta": "Big Data se refiere a conjuntos de datos extremadamente grandes y complejos que no pueden ser gestionados o procesados con herramientas tradicionales."
+  },
+  {
+    "id": 111,
+    "pregunta": "¿Qué es IOT?",
+    "respuesta": "El Internet de las Cosas (IoT) es la red de objetos físicos ('cosas') que incorporan sensores y software para conectarse e intercambiar datos por internet."
+  },
+  {
+    "id": 112,
+    "pregunta": "¿Qué es visión computacional?",
+    "respuesta": "La Visión Computacional es un campo de la IA que entrena a las computadoras para interpretar y comprender el mundo visual a partir de imágenes y videos."
+  },
+  {
+    "id": 113,
+    "pregunta": "¿Qué es aprendizaje no supervisado?",
+    "respuesta": "Es un tipo de aprendizaje automático donde el algoritmo trabaja con datos no etiquetados para encontrar patrones o estructuras ocultas por sí mismo."
+  },
+  {
+    "id": 114,
+    "pregunta": "¿Qué es aprendizaje por refuerzo?",
+    "respuesta": "Es un tipo de aprendizaje automático en el que un agente aprende a tomar decisiones mediante prueba y error, recibiendo recompensas o castigos por sus acciones."
+  },
+  {
+    "id": 115,
+    "pregunta": "¿Cuáles son los roles relacionados con datos?",
+    "respuesta": "Algunos roles clave son: Analista de Datos, Ingeniero de Datos, Científico de Datos, Arquitecto de Datos, Administrador de Base de Datos (DBA) y Analista de BI."
+  },
+  {
+    "id": 116,
+    "pregunta": "¿Qué hace un analista de datos?",
+    "respuesta": "Un Analista de Datos recopila, limpia, analiza y visualiza datos para extraer conclusiones y ayudar a las organizaciones a tomar mejores decisiones."
+  },
+  {
+    "id": 117,
+    "pregunta": "¿Qué hace un ingeniero de datos?",
+    "respuesta": "Un Ingeniero de Datos diseña, construye y mantiene la infraestructura y los pipelines que permiten la recolección, almacenamiento y procesamiento de grandes volúmenes de datos."
+  },
+  {
+    "id": 118,
+    "pregunta": "¿Qué son las bases de datos NoSQL?",
+    "respuesta": "Son bases de datos no relacionales que ofrecen modelos de datos flexibles (documental, clave-valor, etc.) y escalabilidad horizontal, ideales para Big Data y aplicaciones en tiempo real."
+  }
+]

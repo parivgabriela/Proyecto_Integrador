@@ -26,3 +26,13 @@ debug.log
 *.swp
 .DS_Store
 Thumbs.db
+
+# Ignore json temp files
+*faq_freq.json
+*faq_user.json
+
+# Upload files
+*uploads/
+
+# Ignore VS files
+.vscode/

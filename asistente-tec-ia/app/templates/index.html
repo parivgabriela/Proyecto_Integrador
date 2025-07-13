@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interactivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="/"><h3 class="text-2xl font-bold">Tec-IA</h3></a>
+                <button id="toggleTheme" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="sidebar-menu">
+                <form action="/analizar_texto">
+                    <button type="submit" class="sidebar-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Analizar texto</span>
+                    </button>
+                </form>
+                <form action="/chatear_archivo">
+                    <button type="submit" class="sidebar-button">
+                        <i class="fas fa-brain"></i>
+                        <span>Chatear con PDF</span>
+                    </button>
+                </form>
+                <form action="/listar_archivos">
+                    <button type="submit" class="sidebar-button">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Ver archivos</span>
+                    </button>
+                </form>
+                <form action="/info_tec_ia">
+                    <button type="submit" class="sidebar-button">
+                        <i class="fas fa-brain"></i>
+                        <span>Sobre Asistente Tec-IA</span>
+                    </button>
+                </form>
+                <form action="/entrenar_modelo">
+                    <button type="submit" class="sidebar-button">
+                        <i class="fas fa-brain"></i>
+                        <span>Entrenar modelo</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2 id="chatMode"><i class="fas fa-robot"></i> Asistente Tec-IA</h2>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot">
+                        <div class="message-content">
+                            <p>¡Hola! Soy tu asistente Tec-IA. ¿En qué puedo ayudarte hoy?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <textarea id="userInput" placeholder="Escribe tu mensaje aquí..." rows="1"></textarea>
+                    <button id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+
+    <script src="{{ url_for('static',filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/script-chat.js') }}"></script>
+</body>
+</html> 
