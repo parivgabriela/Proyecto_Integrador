@@ -49,7 +49,7 @@ def extract_text_from_pdf(full_path):
         logging.info(f'Extraccion exitosa de {full_path.split("/")[-1]}')
         return "\n".join(text_by_page)
     except FileNotFoundError:
-        logging.error(f"Error: No se encontró el archivo PDF de la ruta {full_path} en la ruta: {root_path}")
+        logging.error(f"Error: No se encontró el archivo PDF de la ruta {full_path}")
     except Exception as e:
         logging.error(f"Error al procesar el archivo PDF: {e}")
     
