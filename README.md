@@ -1,0 +1,181 @@
+# Asistente Tec-IA
+
+## Descripción del Proyecto
+
+**Asistente Tec-IA** es una aplicación de asistente virtual desarrollada como trabajo integrador de la carrera de **Tecnicatura Superior en Ciencia de Datos e IA** del **IFTS 24**. Esta herramienta está diseñada para apoyar a los estudiantes en su proceso de aprendizaje mediante múltiples funcionalidades basadas en inteligencia artificial.
+
+## Características Principales
+
+### 🤖 Chatbot Inteligente
+- Asistente virtual alimentado por una base de datos custom cargada con información específica de la carrera y las materias
+- Responde consultas relacionadas con el contenido académico
+- Interfaz conversacional intuitiva
+
+### 📄 Resumidor de Textos
+- Capacidad para resumir archivos de texto de hasta **800 palabras**
+- Utiliza el modelo **BART** de Facebook (`facebook/bart-large-cnn`)
+- Genera resúmenes concisos y coherentes
+
+### 🔍 Extractor de Palabras Clave
+- Identificación automática de palabras clave en textos
+- Implementado con **KeyBERT**
+- Ayuda a identificar los conceptos más relevantes de un documento
+
+### ❓ Módulo de Preguntas Frecuentes (FAQ)
+- Sistema de preguntas frecuentes para acelerar las respuestas
+- Búsqueda inteligente en base a las consultas del usuario
+- Crea una base de conocimiento interactiva para que los estudiantes pongan a prueba sus conocimientos
+
+## Requisitos del Sistema
+
+### Software Necesario
+- **Python 3.10+** (desarrollado en Python 3.10)
+- **Ollama** con el modelo **Llama 3.2**
+- **Git** para clonar el repositorio
+- **Conda** (recomendado para gestión de entornos)
+
+### Sistemas Operativos Compatibles
+- Windows 10/11
+- Linux (Ubuntu, Debian, CentOS, etc.)
+
+## Instalación
+
+### 1. Clonar el Repositorio
+```bash
+git clone git@github.com:parivgabriela/Proyecto_Integrador.git
+cd asistente-tec-ia
+```
+
+### 2. Instalar Ollama y el Modelo Llama 3.2
+
+#### Para Windows:
+1. Descargar Ollama desde: https://ollama.com/download
+2. Instalar el ejecutable
+3. Abrir terminal y ejecutar:
+```bash
+ollama run llama3.2
+```
+
+#### Para Linux:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama run llama3.2
+```
+
+### 3. Crear Entorno Virtual con Conda
+Puede ser otro entorno
+
+```bash
+conda create --name asistente-tec-ia python=3.10
+conda activate asistente-tec-ia
+```
+
+### 4. Instalar Dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+## Ejecución de la Aplicación
+
+### Windows
+Ejecutar el archivo por lotes incluido:
+```bash
+start.bat
+```
+
+### Linux
+Ejecutar el script shell:
+```bash
+chmod +x start.sh
+./start.sh
+```
+
+### Ejecución Manual
+Si prefieres ejecutar manualmente:
+```bash
+conda activate asistente-tec-ia
+python3 run.py
+```
+
+## Estructura del Proyecto
+
+```
+asistente-tec-ia/
+├── app/                  # Aplicación principal
+    ├── static/           # Archivos estáticos (CSS, JS, imágenes)
+    ├── templates/        # Archivos html
+├── data/                 # Archivos Json con FAQ
+├── logs/                 # archivo temporal es diferente en cada usuario
+├── vectordb/             # Base de datos donde se almacena los archivos procesados
+├── .gitignore            # Lista de archivos que no son subidos al repositorio
+├── requirements.txt       # Dependencias de Python
+├── start.bat             # Script de inicio para Windows
+├── start.sh              # Script de inicio para Linux
+├── static/pdf               
+└── README.md            # Archivo Readme
+```
+
+## Uso de la Aplicación
+
+### Chatbot
+1. Inicia la aplicación
+2. Escribe tu consulta en el chat
+3. El asistente responderá basándose en la base de datos de la carrera
+
+### Resumidor de Textos
+1. Selecciona la opción "Resumir Texto"
+2. Carga tu archivo de texto (máximo 800 palabras)
+3. Obtén un resumen conciso del contenido
+
+### Extractor de Palabras Clave
+1. Accede a la función "Palabras Clave"
+2. Ingresa o carga tu texto
+3. Visualiza las palabras clave más relevantes
+
+### Preguntas Frecuentes
+1. Navega al módulo de FAQ
+2. Explora las preguntas frecuentes disponibles
+3. Pon a prueba tu conocimiento respondiendo las preguntas
+
+## Solución de Problemas
+
+### Error: "Ollama not found"
+- Verifica que Ollama esté instalado y en el PATH del sistema
+- Asegúrate de que el modelo Llama 3.2 esté descargado
+
+### Error: "Module not found"
+- Verifica que el entorno virtual esté activado
+- Reinstala las dependencias: `pip install -r requirements.txt`
+
+### Problemas con CUDA (Linux)
+- Si tienes GPU NVIDIA, instala los drivers apropiados
+- Para CPU únicamente, las dependencias funcionarán sin configuración adicional
+
+## Contribución
+
+Este proyecto fue desarrollado como trabajo integrador académico. Para contribuciones:
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit tus cambios (`git commit -am 'Añade nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Crea un Pull Request
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## Autores
+
+- **Gabriela Juliana Pari Vaca**
+- **IFTS 24**
+
+## Contacto
+
+databypari@gmail.com
+
+---
+
+*Desarrollado con ❤️ y mucha paciencia*
+
