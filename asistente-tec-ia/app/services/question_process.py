@@ -4,7 +4,7 @@ import logging
 import unicodedata
 from app.config.files_config import load_json_file, save_json_file, update_faq_frequency, FAQ_FILE, FAQ_USER_FILE
 from .questions import get_anwser
-from .constants_process import MODEL_CUSTOM_PDF
+from .constants_process import MODEL_CUSTOM_PDF, MODEL_LLAMA
 
 chroma_client = chromadb.PersistentClient(path="chroma_cache")
 collection = chroma_client.get_or_create_collection(name="cache_respuestas")
@@ -101,7 +101,9 @@ def process_user_query(query: str, model_type: str):
     """
     response = None
     user_question_lower = process_question_nlp(query)
-    
+    if model_type == MODEL_LLAMA:
+        response = get_anwser(query, model_type)
+        return response
     # 1. Cargar todas las FAQs (predefinidas y de usuario)
     faq_data = load_json_file(FAQ_FILE)
     faq_user_data = load_json_file(FAQ_USER_FILE)
@@ -125,7 +127,7 @@ def process_user_query(query: str, model_type: str):
         response = get_anwser(query, model_type)
 
         # don't save
-        if not model_type == MODEL_CUSTOM_PDF:
+        if not model_type == MODEL_CUSTOM_PDF and "No encontré información" not in response:
             new_faq_id = get_next_user_faq_id()
             query_with_format = correct_text_format(query)
             new_faq_entry = {
