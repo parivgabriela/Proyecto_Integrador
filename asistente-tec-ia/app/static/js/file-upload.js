@@ -177,15 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
     function processUrlDownload(endpoint, url) {
         showLoading();
-        
-        // Simulación de petición para este ejemplo
-        setTimeout(function() {
-            hideLoading();
-            showChat();
-        }, 3000);
-        
-        // En un caso real, se haría la petición así:
-        /*
+
         fetch(endpoint, {
             method: 'POST',
             headers: {
@@ -202,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hideLoading();
             alert('Error al descargar el archivo: ' + error);
         });
-        */
+
     }
             
     function showLoading() {
