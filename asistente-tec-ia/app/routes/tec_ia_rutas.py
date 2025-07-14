@@ -3,6 +3,7 @@ import logging
 from app.extensions import socketio
 from flask import Blueprint, render_template, request, jsonify, current_app
 from werkzeug.utils import secure_filename
+from app.config.files_config import load_json_file, FAQ_FILE, FAQ_FREQ_FILE
 from app.services.question_process import process_user_query
 from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, UPLOAD_USER_PATH, KNOWLEDGE_BASE_PATH
 from app.services.get_keywords_text import extract_keywords
@@ -181,3 +182,36 @@ def procesar_texto_y_archivo():
             "detalle": str(e),
             "error": "Se produjo un error al procesar la solicitud."
         }), 500
+
+@tec_ia_bot.route('/get_view_faq', methods=['GET'])
+def get_view_faq():
+    return render_template("faq.html")
+
+@tec_ia_bot.route('/get_faq', methods=['GET'])
+def obtener_faq():
+    faq_info = load_json_file(FAQ_FILE)
+    print("type",type(faq_info))
+    return jsonify(faq_info), 200
+
+@tec_ia_bot.route('/get_faq_ranking', methods=['GET'])
+def get_faq_ranking():
+    faq_data = load_json_file(FAQ_FILE)               # { "1": "¿Qué es X?", "2": "¿Cómo usar Y?" }
+    freq_data = load_json_file(FAQ_FREQ_FILE)         # [ { "id": "1", "frecuencia": 20 }, ... ]
+
+    # Ordenar por frecuencia descendente
+    ranked = sorted(freq_data, key=lambda x: x['frecuencia'], reverse=True)
+    
+    faq_data_dict = {item["id"]: item["pregunta"] for item in faq_data}
+    # Combinar preguntas con su frecuencia
+    result = []
+    for item in ranked:
+        q_id = item['id_pregunta']
+        pregunta = faq_data_dict.get(q_id, "Pregunta no encontrada")
+        result.append({
+            "id": q_id,
+            "pregunta": pregunta,
+            "frecuencia": item['frecuencia']
+        })
+
+    return jsonify(result), 200
+
