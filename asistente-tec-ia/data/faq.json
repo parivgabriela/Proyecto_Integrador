@@ -825,5 +825,12 @@
 	"pregunta": "¿Qué es la entropía cruzada?",
 	"respuesta": "La entropía cruzada es una función de pérdida comúnmente utilizada en problemas de clasificación. Mide la diferencia entre la distribución de probabilidad predicha y la distribución real, penalizando más fuertemente las predicciones incorrectas con alta confianza.",
 	"categoria": 5
+  },
+  {
+	"id": 231,
+	"pregunta": "¿Qué es una base de datos no relacional?",
+	"respuesta": "Una base de datos no relacional (o NoSQL) es un tipo de base de datos que no usa tablas con filas y columnas, como en las bases de datos relacionales. En su lugar, almacena los datos en formatos más flexibles como documentos, pares clave-valor, grafos o columnas distribuidas. **Características clave:** No requiere un esquema fijo. Escalable horizontalmente. Ideal para datos grandes o cambiantes. Permite trabajar con estructuras como JSON o XML. Ejemplo popular: MongoDB (usa documentos JSON para guardar datos).",
+	"categoria": 5
   }
+  
 ]
