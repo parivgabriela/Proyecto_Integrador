@@ -14,6 +14,7 @@ dist/
 chroma_db/
 vectordb/
 *.vectordb
+chroma_cache/
 
 # Ignore logs
 logs/
