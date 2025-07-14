@@ -17,7 +17,7 @@ def check_json_files():
         # Inicializar faq_freq.json con los IDs de faq.json si no existe o está vacío
     freq_init_data = load_json_file(FAQ_FREQ_FILE)
     if not freq_init_data:
-        initial_freq_entries = [{"id_pregunta": faq["id"], "count": 0} for faq in load_json_file(FAQ_FILE)]
+        initial_freq_entries = [{"id_pregunta": faq["id"], "frecuencia": 0} for faq in load_json_file(FAQ_FILE)]
         save_json_file(initial_freq_entries, FAQ_FREQ_FILE)
 
 
@@ -44,10 +44,10 @@ def update_faq_frequency(question_id):
     found = False
     for item in freq_data:
         if item["id_pregunta"] == question_id:
-            item["count"] += 1
+            item["frecuencia"] += 1
             found = True
             break
     if not found:
         # Esto debería ocurrir solo si un ID de faq_user.json se añade y no se inicializó en faq_freq.json
-        freq_data.append({"id_pregunta": question_id, "count": 1})
+        freq_data.append({"id_pregunta": question_id, "frecuencia": 1})
     save_json_file(freq_data, FAQ_FREQ_FILE)
