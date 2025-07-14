@@ -1,5 +1,7 @@
 import os
 import logging
+import requests
+from urllib.parse import urlparse
 from app.extensions import socketio
 from flask import Blueprint, render_template, request, jsonify, current_app
 from werkzeug.utils import secure_filename
@@ -70,6 +72,9 @@ def chat_with_llama(query):
 
     socketio.send(respuesta)
 
+@tec_ia_bot.route("/chatear_modelo_llama", methods=["GET"])
+def chatear_modelo_llama():
+    return render_template("chatear_modelo_llama.html")
 
 @socketio.on("procesando_archivos")
 def procesando_archivos():
@@ -85,10 +90,13 @@ def procesando_archivos_completado():
 
 @tec_ia_bot.route('/subir_archivos_procesar', methods=['POST'])
 def subir_archivo():
-    logging.info("Iniciando proceso chat con archivos personalizados")
-    files = request.files.getlist('files')
-    if not files:
-        return jsonify({"error": "No se encontraron archivos en la petición"}), 400
+    try:
+        files = request.files.getlist('files')
+        if not files:
+            return jsonify({"error": "No se encontraron archivos en la petición"}), 400
+    except Exception as e:
+        logging.error(f"Error al subir archivos: {str(e)}")
+        return jsonify({"error": "Error interno del servidor"}), 500
 
     uploaded_files_info = []
     errors = []
@@ -126,6 +134,42 @@ def subir_archivo():
             "error": "No se pudo subir ningún archivo.",
             "errores": errors
         }), 400    
+
+@tec_ia_bot.route('/descargar_archivo_url', methods=['POST'])
+def descargar_archivo_url():
+    data = request.get_json()
+    url = data.get('url')
+
+    if not url:
+        return jsonify({'error': 'URL no proporcionada'}), 400
+
+    try:
+        # Descargar contenido desde la URL
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+
+        # Obtener nombre del archivo desde la URL
+        parsed_url = urlparse(url)
+        filename = os.path.basename(parsed_url.path)
+        if not filename:
+            filename = 'archivo_descargado'
+
+        file_path = os.path.join(UPLOAD_USER_PATH, filename)
+
+        # Guardar archivo localmente
+        with open(file_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+        return jsonify({
+            'message': 'Archivo descargado correctamente',
+            'filename': filename,
+            'filepath': file_path
+        })
+
+    except requests.RequestException as e:
+        return jsonify({'error': f'Error al descargar el archivo: {str(e)}'}), 500
+
 
 @tec_ia_bot.route("/analizar_texto", methods=["GET"])
 def analizar_archivo():
@@ -206,7 +250,9 @@ def get_faq_ranking():
     result = []
     for item in ranked:
         q_id = item['id_pregunta']
+        print(q_id)
         pregunta = faq_data_dict.get(q_id, "Pregunta no encontrada")
+        print(pregunta)
         result.append({
             "id": q_id,
             "pregunta": pregunta,
