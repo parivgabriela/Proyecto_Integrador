@@ -20,3 +20,5 @@ sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFuncti
 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
+
+categorias_faq = {"001": "Programación", "002": "Ciencia de datos", "003": "IA", "004": "Estadistica", "005": "Inteligencia del negocio"}
