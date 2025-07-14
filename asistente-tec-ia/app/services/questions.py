@@ -16,13 +16,17 @@ PROMPT_NO_CONTEXT = """Eres un asistente útil para estudiantes que responde pre
     """
 
 def generate_answer(prompt):
-    output = generate(
-        model="llama3.2",
-        prompt=prompt
-    )
-    min, sec = convert_format_time(output["total_duration"])
-    logging.info(f"Respuesta:\nModelo: {str(output['model'])}\nTiempo Total: {str(min)}:{str(sec)}\nRespuesta:{str(output['response'])}\n{str(output['total_duration'])}")
-    return output["response"]
+    try:
+        output = generate(
+            model="llama3.2",
+            prompt=prompt
+        )
+        min, sec = convert_format_time(output["total_duration"])
+        logging.info(f"Respuesta:\nModelo: {str(output['model'])}\nTiempo Total: {str(min)}:{str(sec)}\nRespuesta:{str(output['response'])}\n{str(output['total_duration'])}")
+        return output["response"]
+    except Exception as e:
+        logging.error("Error en el proceso de enviar la pregunta")
+        return "Error en el proceso de responder la pregunta"
 
 def get_anwser(query, model_type="TEC-IA"):
     logging.info(f"Procesando pregunta con el modelo {model_type}")
