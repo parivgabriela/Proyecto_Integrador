@@ -101,19 +101,13 @@ python3 run.py
 ## Estructura del Proyecto
 
 ```
-asistente-tec-ia/
-├── app/                  # Aplicación principal
-    ├── static/           # Archivos estáticos (CSS, JS, imágenes)
-    ├── templates/        # Archivos html
-├── data/                 # Archivos Json con FAQ
-├── logs/                 # archivo temporal es diferente en cada usuario
-├── vectordb/             # Base de datos donde se almacena los archivos procesados
-├── .gitignore            # Lista de archivos que no son subidos al repositorio
-├── requirements.txt       # Dependencias de Python
-├── start.bat             # Script de inicio para Windows
-├── start.sh              # Script de inicio para Linux
-├── static/pdf               
-└── README.md            # Archivo Readme
+Proyecto_Integrador      
+├── asistente-tec-ia/
+    ├── app/                  # Aplicación principal
+    ├── start.bat             # Script de inicio para Windows
+    ├── start.sh              # Script de inicio para Linux
+    ...          
+└── README.md                 # Archivo Readme
 ```
 
 ## Uso de la Aplicación
