@@ -37,9 +37,12 @@ function enviarMensaje(mensaje, chatMode) {
     if (chatMode == "Chat Personalizado") {
         socket.emit("chat_personalizado", mensaje);
     }
-    else {
+    else if (chatMode == "Asistente Tec-IA"){
         socket.emit("chat_tec_ia", mensaje);
+    } else {
+        socket.emit("chat_with_llama", mensaje)
     }
+    
 }
 
 function handleMessage(data) {
