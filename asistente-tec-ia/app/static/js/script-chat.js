@@ -40,7 +40,6 @@ function enviarMensaje(mensaje, chatMode) {
     else {
         socket.emit("chat_tec_ia", mensaje);
     }
-    //socket.send(mensaje);
 }
 
 function handleMessage(data) {
