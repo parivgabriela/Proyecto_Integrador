@@ -2,11 +2,11 @@ import logging
 from ollama import generate
 from .funciones_auxiliares import convert_format_time
 from app.services.files_pdf_process import get_context_from_chroma
-from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA
+from app.services.constants_process import MODEL_LLM
 
 PROMPT_WITH_CONTEXT = """Eres un asistente experto encargado de responder preguntas basándote ÚNICAMENTE en un contexto específico.
     Tu tarea es leer el contexto y la pregunta, y luego formular una respuesta clara y concisa utilizando solo la información proporcionada.
-    Basa tu respuesta en los datos del contexto. Si la información del contexto no es suficiente para responder la pregunta de manera definitiva, responde exactamente con: "No encontré información sobre eso en el documento." No intentes adivinar ni usar conocimiento externo.
+    Basa tu respuesta solamente con los datos del contexto. Si la información del contexto no es suficiente para responder la pregunta de manera definitiva, responde exactamente con: "No encontré información sobre eso en el documento." No intentes adivinar ni usar conocimiento externo.
     ---CONTEXTO---
     {contexto}
     ---PREGUNTA---
@@ -15,7 +15,7 @@ PROMPT_WITH_CONTEXT = """Eres un asistente experto encargado de responder pregun
 """
 
 PROMPT_NO_CONTEXT = """
-    Eres un asistente académico experto, especializado en Programacion, Inteligencia de negocios, Ciencia de Datos e Inteligencia Artificial. Tu audiencia son estudiantes universitarios de esta carrera.
+    Eres un asistente académico experto, especializado en Programacion en python, Inteligencia de negocios, Ciencia de Datos e Inteligencia Artificial. Tu audiencia son estudiantes universitarios de esta carrera.
     Tu objetivo es responder a la pregunta del estudiante siguiendo estas reglas estrictamente:
 
     1.  **Claridad y Precisión**: Responde de manera clara y conceptualmente correcta. Usa la terminología técnica adecuada, pero explícala de forma sencilla.
@@ -31,7 +31,7 @@ PROMPT_NO_CONTEXT = """
 def generate_answer(prompt):
     try:
         output = generate(
-            model="llama3.2",
+            model=MODEL_LLM,
             prompt=prompt
         )
         min, sec = convert_format_time(output["total_duration"])
@@ -49,5 +49,5 @@ def get_anwser(query, model_type="TEC-IA"):
 
     if contexto:
         prompt = PROMPT_WITH_CONTEXT.format(contexto=contexto, query=query)
-        #respuesta = answer_question(prompt)
+
     return generate_answer(prompt)
