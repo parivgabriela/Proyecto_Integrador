@@ -95,6 +95,9 @@ Ejecutar el script shell:
 chmod +x start.sh
 ./start.sh
 ```
+### Al fin! Ir al navegador
+Una vez ejecutada la aplicación, ir al link que aparece en la terminal o pegar el siguiente link
+ http://127.0.0.1:5000
 
 ### Ejecución Manual
 Si prefieres ejecutar manualmente:
