@@ -38,7 +38,7 @@ def listar_pdf():
 def entrenar_modelo():
     process_pdf_files_save_collection(KNOWLEDGE_BASE_PATH, MODEL_TEC_IA)
 
-    return render_template('index.html', respuesta="Modelo entrenado ok")
+    return render_template('index.html', respuesta="Modelo entrenado, solo ejecutarlo una vez")
 
 
 @tec_ia_bot.route("/chatear_archivo", methods=["GET"])
