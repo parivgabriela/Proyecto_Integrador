@@ -18,6 +18,9 @@ sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFuncti
     model_name="all-MiniLM-L6-v2"
 )
 
+MODEL_LLM = "llama3.2"
+MODEL_LLM_version = "llama3.2:latest"
+
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
