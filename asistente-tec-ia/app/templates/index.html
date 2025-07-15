@@ -55,10 +55,10 @@
                         <span>Sobre Tec-IA</span>
                     </button>
                 </form>
-                <form action="/entrenar_modelo">
+                <form action="/entrenar_modelo" onsubmit="return confirm('Se recomienda ejecutar solo la primera vez. Luego queda alamcenado en el dispositivo');">
                     <button type="submit" class="sidebar-button">
                         <i class="fas fa-cogs"></i>
-                        <span>Entrenar modelo</span>
+                        <span>Entrenar modelo <span title="Debe ejecutarse la primera vez." style="font-weight: thin; margin-left: 10px;">⚠️</span></span>
                     </button>
                 </form>
             </div>
@@ -69,6 +69,7 @@
             <div class="chat-container">
                 <div class="chat-header">
                     <h2 id="chatMode"><i class="fas fa-robot"></i>Asistente Tec-IA</h2>
+                    <h3>{{ respuesta }}</h3>
                 </div>
                 <div class="chat-messages" id="chatMessages">
                     <div class="message bot">
