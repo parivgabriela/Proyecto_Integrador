@@ -57,22 +57,63 @@ function contarPalabras(texto) {
 // Función para agregar un mensaje al chat
 function addMessage(message, isUser = false) {
     const messageDiv = document.createElement('div');
-    const formatMessage = formatearTexto(message)
-    messageDiv.classList.add('message');// revisar
     messageDiv.className = isUser ? 'message user' : 'message bot';
     
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
+
+    const trimmedMessage = message.trim();
+
+    if (trimmedMessage.startsWith('```') && trimmedMessage.endsWith('```')) {
+        // Es un bloque de código
+        
+        // 1. Extraer el código de adentro de las comillas
+        const codeContent = trimmedMessage.slice(3, -3).trim();
+
+        // 2. Crear elementos <pre> y <code> para un formato de código semántico
+        const preElement = document.createElement('pre');
+        const codeElement = document.createElement('code');
+        
+        // 3. Asignar el contenido como texto plano para evitar problemas de formato
+        codeElement.textContent = codeContent;
+        
+        preElement.appendChild(codeElement);
+        contentDiv.appendChild(preElement);
+
+    } else {
+        // Es un mensaje de texto normal
+        const messageParagraph = document.createElement('p');
+        // Se formatea el texto normal como antes
+        messageParagraph.innerHTML = formatearTexto(message);
+        contentDiv.appendChild(messageParagraph);
+    }
     
-    const messageParagraph = document.createElement('p');
-    messageParagraph.innerHTML = formatearTexto(formatMessage);
-    
-    contentDiv.appendChild(messageParagraph);
     messageDiv.appendChild(contentDiv);
     chatMessages.appendChild(messageDiv);
     
     // Scroll al fondo del chat
     chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Tu función original para formatear negritas y viñetas (sin cambios)
+function formatearTexto(texto) {
+    // Negrita: **texto**
+    texto = texto.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    // Viñetas: * texto (al inicio de línea)
+    // Se mejora la regex para que funcione correctamente
+    texto = texto.replace(/^\s*\*\s+(.*)/gm, '<li>$1</li>');
+
+    // Si se encontraron viñetas, envolverlas en <ul>
+    // Se mejora la regex para agrupar listas consecutivas
+    if (texto.includes('<li>')) {
+      texto = texto.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
+    }
+
+    // Reemplazar saltos de línea por <br> para el resto del texto
+    texto = texto.replace(/\n/g, '<br>');
+
+    return texto;
 }
 
 // Ajustar altura del textarea según el contenido
@@ -145,20 +186,6 @@ function accionEnviarMensaje(input) {
         }
 }
 
-function formatearTexto(texto) {
-    // Negrita: **texto**
-    texto = texto.replace(/\*\*(.*?)\*\*/g, '<br><strong>$1</strong>');
-
-    // Viñetas: * texto (al inicio de línea o precedido por espacio)
-    texto = texto.replace(/\n?\s*\*\s+(.*)/g, '<li>* $1</li>');
-
-    // Si se encontraron viñetas, envolverlas en <ul>
-    if (texto.includes('<li>')) {
-      texto = texto.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
-    }
-
-    return texto;
-}
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
