@@ -13,21 +13,21 @@ except LookupError:
     nltk.download('punkt')
     nltk.download('punkt_tab')
 
-def resumir_texto_llama3(texto: str, modelo_ollama: str = "llama3.2:latest", max_tokens_por_bloque: int = 2000) -> str:
+def resumir_texto_llama3(text: str, modelo_ollama: str = "llama3.2:latest", max_tokens_por_bloque: int = 2000) -> str:
     """
     Parámetros:
-    - texto (str): El texto en español a resumir
+    - text (str): El texto en español a resumir
     - modelo_ollama (str): El nombre del modelo de Llama 3.2 debe estar instalado, ejecutar ollama list para ver los modelos que se tiene en el sistema.
     - max_tokens_por_bloque (int): Número máximo de tokens aproximado para cada bloque de texto a procesar.
 
     Retorna:
     - str: El resumen generado, o un mensaje de error si no se pudo procesar.
     """
-    if not texto or len(texto.strip()) < 50: # Un mínimo de palabras para que valga la pena resumir
+    if not text or len(text.strip()) < 50: # Un mínimo de palabras para que valga la pena resumir
         logging.warning("El texto es demasiado corto para ser resumido o está vacío.")
-        return texto.strip() if texto else "No se pudo generar un resumen para el texto proporcionado (texto muy corto)."
+        return text.strip() if text else "No se pudo generar un resumen para el text proporcionado (texto muy corto)."
 
-    oraciones = nltk.sent_tokenize(texto, language='spanish')
+    oraciones = nltk.sent_tokenize(text, language='spanish')
     
     bloques = []
     bloque_actual_oraciones = []
@@ -51,7 +51,7 @@ def resumir_texto_llama3(texto: str, modelo_ollama: str = "llama3.2:latest", max
         bloques.append(" ".join(bloque_actual_oraciones))
 
     if not bloques: # Si el texto era muy corto o no se pudo dividir
-        bloques.append(texto)
+        bloques.append(text)
 
     resumenes_parciales = []
     for i, bloque in enumerate(bloques):
