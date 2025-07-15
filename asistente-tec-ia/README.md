@@ -10,8 +10,8 @@ El sistema utiliza el sistema RAG
 
 
 ### 📄 Resumidor de Textos
-- Capacidad para resumir archivos de texto de hasta **800 palabras** esto tambien se pu
-- Utiliza el modelo **BART** de Facebook (`facebook/bart-large-cnn`)
+- Capacidad para resumir archivos de texto de hasta **1200 palabras** esto tambien se puede modificar
+- Utiliza el modelo **llama3.2:latest** de meta. Se puede modificar por otro, pero debe estar descargado desde ollama
 - Genera resúmenes concisos y coherentes
 
 ### 🔍 Extractor de Palabras Clave

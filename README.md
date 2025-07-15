@@ -12,8 +12,8 @@
 - Interfaz conversacional intuitiva
 
 ### 📄 Resumidor de Textos
-- Capacidad para resumir archivos de texto de hasta **800 palabras**
-- Utiliza el modelo **BART** de Facebook (`facebook/bart-large-cnn`)
+- Capacidad para resumir archivos de texto de hasta **1200 palabras**
+- Utiliza el modelo de **ollama-llama3.2** de Meta (`llama3.2:latest`)
 - Genera resúmenes concisos y coherentes
 
 ### 🔍 Extractor de Palabras Clave
@@ -119,7 +119,7 @@ Proyecto_Integrador
 
 ### Resumidor de Textos
 1. Selecciona la opción "Resumir Texto"
-2. Carga tu archivo de texto (máximo 800 palabras)
+2. Carga tu archivo de texto (máximo 1200 palabras)
 3. Obtén un resumen conciso del contenido
 
 ### Extractor de Palabras Clave
