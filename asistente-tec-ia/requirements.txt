@@ -3,7 +3,7 @@ flask-socketio
 chromadb>=0.4.23
 pdfplumber
 keybert
-nltk
+nltk==3.8.1
 ollama
 transformers
 scikit-learn
