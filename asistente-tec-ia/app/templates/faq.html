@@ -186,15 +186,11 @@
             const testResultsList = document.getElementById('test-results-list');
             const restartTestBtn = document.getElementById('restart-test-btn');
 
-            // ==================================
-            //        ESTADO DE LA APLICACIÓN
-            // ==================================
             let allFaqs = [];
             let displayedFaqs = []; // FAQs después de aplicar filtros
             let currentPage = 1;
             const itemsPerPage = 10;
 
-            // **IDs de categoría corregidos**
             let categories = [
                 { id: '0', name: 'Institucional' },
                 { id: '1', name: 'Programación' },
@@ -219,10 +215,6 @@
                     .replace(/[¿¡.,;]/g, ''); // Elimina signos de puntuación comunes
             };
             
-            // ==================================
-            //      FUNCIONES DE RENDERIZADO
-            // ==================================
-
             const renderFaqs = () => {
                 faqContainer.innerHTML = '';
                 if (displayedFaqs.length === 0) {
@@ -325,10 +317,6 @@
                 });
             };
 
-            // ==================================
-            //   LÓGICA DE FILTRADO Y BÚSQUEDA
-            // ==================================
-
             const handleFilterAndSearch = () => {
                 const searchTerm = normalizeText(searchInput.value);
                 const activeCategory = document.querySelector('.category-tag.active')?.dataset.category || 'all';
@@ -361,6 +349,15 @@
                 // **Filtro para excluir preguntas con ID < 99**
                 const testableFaqs = allFaqs.filter(faq => parseInt(faq.id, 10) >= 99);
                 
+                // Si no hay preguntas para el test, muestra un mensaje y detiene la función
+                if (testableFaqs.length === 0) {
+                    testModeContainer.classList.remove('hidden');
+                    testQuestionArea.classList.add('hidden');
+                    testResultsArea.classList.remove('hidden');
+                    testResultsList.innerHTML = '<p>No hay preguntas disponibles para el modo test.</p>';
+                    return;
+                }
+            
                 testState.questions = [...testableFaqs].sort(() => 0.5 - Math.random());
                 testState.currentIndex = 0;
                 testState.results = [];
@@ -368,18 +365,67 @@
                 testModeContainer.classList.remove('hidden');
                 testQuestionArea.classList.remove('hidden');
                 testResultsArea.classList.add('hidden');
-                
+            
                 displayNextTestQuestion();
             };
 
-            const displayNextTestQuestion = () => { /* Sin cambios */ };
-            const endTest = () => { /* Sin cambios */ };
-            const handleTestAnswer = (isCorrect) => { /* Sin cambios */ };
-            
-            // ==================================
-            //   INICIALIZACIÓN Y EVENT LISTENERS
-            // ==================================
+            const displayNextTestQuestion = () => {
 
+                // Verifica si quedan preguntas
+                if (testState.currentIndex < 10) {
+                    const currentQuestion = testState.questions[testState.currentIndex];
+                    testQuestionEl.textContent = currentQuestion.pregunta;
+                    testAnswerEl.innerHTML = currentQuestion.respuesta; // Usar innerHTML si la respuesta tiene formato
+                    testAnswerEl.classList.add('hidden'); // Ocultar la respuesta al mostrar una nueva pregunta
+                    showAnswerBtn.textContent = 'Ver Respuesta'; // Resetear texto del botón
+                } else {
+                    endTest(); // Si no hay más preguntas, termina el test
+                }
+            };
+            const endTest = () => {
+                testState.active = false;
+                testQuestionArea.classList.add('hidden');
+                testResultsArea.classList.remove('hidden');
+                testResultsList.innerHTML = ''; // Limpiar resultados anteriores
+
+                // Calcular y mostrar el puntaje
+                const correctAnswers = testState.results.filter(r => r.correct).length;
+                const totalQuestions = 10;
+                const score = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
+
+                const summary = document.createElement('div');
+                summary.innerHTML = `
+                    <p class="font-bold text-lg">Test finalizado</p>
+                    <p>Tu puntaje: <span class="font-bold text-2xl ${score >= 60 ? 'text-green-500' : 'text-red-500'}">${score.toFixed(0)}%</span> (${correctAnswers} de ${totalQuestions} correctas)</p>
+                    <hr class="my-3">
+                `;
+                testResultsList.appendChild(summary);
+
+                // Mostrar un resumen de las respuestas
+                testState.results.forEach(result => {
+                    const resultEl = document.createElement('div');
+                    resultEl.className = 'p-2 rounded mb-2';
+                    resultEl.innerHTML = `
+                        <p class="font-semibold">${result.question}</p>
+                        <p class="${result.correct ? 'text-green-500' : 'text-red-500'}">${result.correct ? '✅ Respondiste bien' : '❌ No sabías'}</p>
+                    `;
+                    testResultsList.appendChild(resultEl);
+                });
+            };
+        
+            const handleTestAnswer = (isCorrect) => {
+                const currentQuestion = testState.questions[testState.currentIndex];
+            
+                // Guardar el resultado
+                testState.results.push({
+                    question: currentQuestion.pregunta,
+                    correct: isCorrect
+                });
+
+                testState.currentIndex++; // Mover a la siguiente pregunta
+                displayNextTestQuestion();
+            };
+            
             const init = async () => {
                 try {
                     const response = await fetch('/get_faq');
@@ -418,10 +464,20 @@
                 }
             });
             startTestBtn.addEventListener('click', startTest);
-            showAnswerBtn.addEventListener('click', () => testAnswerEl.classList.toggle('hidden'));
+            showAnswerBtn.addEventListener('click', () => {
+                testAnswerEl.classList.toggle('hidden');
+                // Cambia el texto del botón para que sea más intuitivo
+                if (testAnswerEl.classList.contains('hidden')) {
+                    showAnswerBtn.textContent = 'Ver Respuesta';
+                } else {
+                    //testAnswerEl.classList.toggle('active');
+                    showAnswerBtn.textContent = 'Ocultar Respuesta';
+                }
+            });
             correctBtn.addEventListener('click', () => handleTestAnswer(true));
             incorrectBtn.addEventListener('click', () => handleTestAnswer(false));
             restartTestBtn.addEventListener('click', startTest);
+
             init();
         });
     </script>
