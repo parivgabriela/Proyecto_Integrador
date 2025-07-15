@@ -1,5 +1,10 @@
 # Asistente Tec-IA
 
+### Proyecto Integrador,&nbsp;&nbsp;Tecnicatura Superior ciencia de datos e IA, &nbsp;&nbsp;IFTS24
+
+**Profesor:** Erick Ravelo&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; **Alumna:** Gabriela Pari Vaca
+
+---------
 ## Descripción del Proyecto
 
 **Asistente Tec-IA** es una aplicación de asistente virtual desarrollada como trabajo integrador de la carrera de **Tecnicatura Superior en Ciencia de Datos e IA** del **IFTS 24**. Esta herramienta está diseñada para apoyar a los estudiantes en su proceso de aprendizaje mediante múltiples funcionalidades basadas en inteligencia artificial.
