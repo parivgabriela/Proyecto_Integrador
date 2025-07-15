@@ -99,6 +99,9 @@ chmod +x start.sh
 Una vez ejecutada la aplicación, ir al link que aparece en la terminal o pegar el siguiente link
  http://127.0.0.1:5000
 
+### Antes de usar el asistente Tec-IA por primera vez
+Antes de utilizar el chat de asistente Tec-IA hace clic en "Entrenar modelo"
+
 ### Ejecución Manual
 Si prefieres ejecutar manualmente:
 ```bash
