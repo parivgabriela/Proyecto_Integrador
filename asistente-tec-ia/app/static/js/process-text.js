@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsContent = document.getElementById('results-content');
     const newAnalysisBtn = document.getElementById('new-analysis-btn');
 
-    const MAX_WORDS = 800; // Límite de palabras
+    const MAX_WORDS = 2000; // Límite de palabras
 
     // --- Funciones de Navegación entre Vistas ---
     function showView(viewToShow) {
