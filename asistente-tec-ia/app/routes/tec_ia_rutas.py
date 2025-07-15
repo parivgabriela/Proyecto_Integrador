@@ -9,7 +9,7 @@ from app.config.files_config import load_json_file, FAQ_FILE, FAQ_FREQ_FILE
 from app.services.question_process import process_user_query
 from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, UPLOAD_USER_PATH, KNOWLEDGE_BASE_PATH
 from app.services.get_keywords_text import extract_keywords
-from app.services.summarize_text import resumir_texto_ai
+from app.services.summarize_text import resumir_texto_llama3
 from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA
 
 tec_ia_bot = Blueprint("tec_ia_bot", __name__)
@@ -198,7 +198,7 @@ def procesar_texto_y_archivo():
         estado_http = 200
         # Now you can use text_content or file_content based on the action
         if action == "summarize":
-            resultado = resumir_texto_ai(text_content)
+            resultado = resumir_texto_llama3(text_content)
             respuesta = {
                 "title": "Resumen",
                 "summary": resultado
