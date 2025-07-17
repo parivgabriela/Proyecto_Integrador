@@ -728,6 +728,7 @@ body.dark-mode .more-info h3 {
 
 .accordion-header:hover {
     text-decoration: underline;
+    background-color: #fff;
 }
 
 .accordion-content {
@@ -789,6 +790,65 @@ body.dark-mode .accordion-content {
 
 body.dark-mode .more-info li a {
     color: #58a6ff;
+}
+
+/* FAQ */
+
+.test-mode-bg{
+    background-color: #343e54;
+}
+
+.light-mode .test-mode-bg{
+    background-color: #cfdaef;
+}
+
+.titulo-ranking{
+    color: white;
+}
+
+.light-mode .titulo-ranking{
+    color: #1f2937;
+}
+
+.ranking-container{
+    background-color: #343e54;
+}
+
+.light-mode .ranking-container{
+    background-color: white;
+}
+
+.accordion-content-faq {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.accordion-header.active + .accordion-content-faq {
+    max-height: 500px; /* Altura suficiente para el contenido */
+    padding-top: 1rem; /* 1rem = p-4 */
+    padding-bottom: 1rem;
+}
+
+.light-mode .accordion-content-faq {
+    background-color: #F9FAFB; /* Un gris muy claro */
+    color: #1f2937; /* Texto oscuro */
+}
+
+.dark-mode .accordion-header:hover {
+    background-color: #394d6e;
+}
+
+.rotate-180 { transform: rotate(180deg); }
+.category-tag { transition: all 0.2s ease; }
+.category-tag.active { background-color: #4f46e5; color: white; }
+
+/* Estilo para botones de paginación deshabilitados */
+.pagination-btn:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
 }
 
 @keyframes blink {

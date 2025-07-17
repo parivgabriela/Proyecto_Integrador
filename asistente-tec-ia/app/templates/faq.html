@@ -7,64 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* ================================== */
-        /* CORRECCIONES DE ESTILO        */
-        /* ================================== */
-
-        /* 1. Transición del acordeón mejorada para ocultar contenido completamente */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
-        .accordion-header.active + .accordion-content {
-            max-height: 500px; /* Altura suficiente para el contenido */
-            padding-top: 1rem; /* 1rem = p-4 */
-            padding-bottom: 1rem;
-        }
-        .test-mode-bg{
-            background-color: #343e54;
-        }
-
-        .light-mode .test-mode-bg{
-            background-color: #cfdaef;
-        }
-        .titulo-ranking{
-            color: white;
-        }
-        .light-mode .titulo-ranking{
-            color: #1f2937;
-        }
-        .ranking-container{
-            background-color: #343e54;
-        }
-        .light-mode .ranking-container{
-            background-color: white;
-        }
-        /* 2. Colores corregidos para Light Mode */
-        .light-mode .accordion-content {
-            background-color: #F9FAFB; /* Un gris muy claro */
-            color: #1f2937; /* Texto oscuro */
-        }
-        
-        .light-mode .accordion-header:hover {
-            background-color: #f3f4f6;
-        }
-
-        .rotate-180 { transform: rotate(180deg); }
-        .category-tag { transition: all 0.2s ease; }
-        .category-tag.active { background-color: #4f46e5; color: white; }
-
-        /* Estilo para botones de paginación deshabilitados */
-        .pagination-btn:disabled {
-            background-color: #d1d5db;
-            cursor: not-allowed;
-        }
-    </style>
 </head>
 <body class="light-mode">
     <div class="app-container">
@@ -195,10 +137,6 @@
             ];
             let testState = { active: false, questions: [], currentIndex: 0, results: [] };
 
-            // ==================================
-            //        FUNCIONES AUXILIARES
-            // ==================================
-
             // **Función para normalizar texto (ignorar acentos y puntuación)**
             const normalizeText = (text) => {
                 if (!text) return '';
@@ -230,7 +168,7 @@
                             <span>${faq.pregunta}</span>
                             <i class="fas fa-chevron-down transition-transform"></i>
                         </button>
-                        <div class="accordion-content bg-gray-50 dark:bg-gray-900">
+                        <div class="accordion-content-faq">
                            <div class="p-4">
                                 <p>${faq.respuesta}</p>
                                 <div class="mt-2 text-xs text-gray-500">Categorías: ${faq.categoria}</div>
