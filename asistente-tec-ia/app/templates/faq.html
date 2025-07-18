@@ -128,12 +128,12 @@
             const itemsPerPage = 10;
 
             let categories = [
-                { id: '0', name: 'Institucional' },
-                { id: '1', name: 'Programación' },
-                { id: '2', name: 'Ciencia de Datos' },
-                { id: '3', name: 'IA' },
-                { id: '4', name: 'Estadística' },
-                { id: '5', name: 'Inteligencia del Negocio' },
+                { id: 0, name: 'Institucional' },
+                { id: 1, name: 'Programación' },
+                { id: 2, name: 'Ciencia de Datos' },
+                { id: 3, name: 'IA' },
+                { id: 4, name: 'Estadística' },
+                { id: 5, name: 'Inteligencia del Negocio' },
             ];
             let testState = { active: false, questions: [], currentIndex: 0, results: [] };
 
@@ -251,12 +251,12 @@
 
             const handleFilterAndSearch = () => {
                 const searchTerm = normalizeText(searchInput.value);
-                const activeCategory = document.querySelector('.category-tag.active')?.dataset.category || 'all';
-                
-                let filteredFaqs = allFaqs;
+                const activeBtnCategory = document.querySelector('.category-tag.active');
+                const activeCategoryId = activeBtnCategory?.dataset.category || 'all';
 
-                if (activeCategory !== 'all') {
-                    filteredFaqs = filteredFaqs.filter(faq => (faq.categoria || '').includes(activeCategory));
+                let filteredFaqs = allFaqs;
+                if (activeCategoryId !== 'all') {
+                    filteredFaqs = filteredFaqs.filter(faq => (faq.categoria === parseInt(activeCategoryId, 10)));
                 }
 
                 if (searchTerm) {
