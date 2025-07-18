@@ -234,30 +234,25 @@ def get_view_faq():
 @tec_ia_bot.route('/get_faq', methods=['GET'])
 def obtener_faq():
     faq_info = load_json_file(FAQ_FILE)
-    print("type",type(faq_info))
     return jsonify(faq_info), 200
 
 @tec_ia_bot.route('/get_faq_ranking', methods=['GET'])
 def get_faq_ranking():
-    faq_data = load_json_file(FAQ_FILE)               # { "1": "¿Qué es X?", "2": "¿Cómo usar Y?" }
-    freq_data = load_json_file(FAQ_FREQ_FILE)         # [ { "id": "1", "frecuencia": 20 }, ... ]
+    faq_data = load_json_file(FAQ_FILE)
+    freq_data = load_json_file(FAQ_FREQ_FILE)
 
     # Ordenar por frecuencia descendente
     ranked = sorted(freq_data, key=lambda x: x['frecuencia'], reverse=True)
-    
-    faq_data_dict = {item["id"]: item["pregunta"] for item in faq_data}
+    faq_data_dict = { item["id"]: "pregunta" for item in faq_data }
     # Combinar preguntas con su frecuencia
     result = []
     for item in ranked:
         q_id = item['id_pregunta']
-        print(q_id)
         pregunta = faq_data_dict.get(q_id, "Pregunta no encontrada")
-        print(pregunta)
         result.append({
-            "id": q_id,
-            "pregunta": pregunta,
-            "frecuencia": item['frecuencia']
-        })
+                "pregunta": pregunta,
+                "frecuencia": item['frecuencia']
+            })
 
     return jsonify(result), 200
 
