@@ -6,10 +6,10 @@ import ollama
 try:
     # Intenta encontrar el recurso 'punkt'
     nltk.data.find('tokenizers/punkt')
-    print("El recurso 'punkt' de NLTK ya está descargado.")
+    logging.info("El recurso 'punkt' de NLTK ya está descargado.")
 except LookupError:
     # Si no lo encuentra, lo descarga.
-    print("Descargando el recurso 'punkt' de NLTK...")
+    logging.info("Descargando el recurso 'punkt' de NLTK...")
     nltk.download('punkt')
     nltk.download('punkt_tab')
 
