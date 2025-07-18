@@ -118,9 +118,8 @@ def process_user_query(query: str, model_type: str):
     
     if found_faq:
         # La pregunta existe, brindamos la respuesta y sumamos el contador
-        print(f"Respuesta (ID {found_faq['id']}): {found_faq['respuesta']}")
+        logging.info(f"Pregunta encontrada en FAQ\nRespuesta (ID {found_faq['id']}): {found_faq['respuesta']}")
         update_faq_frequency(found_faq["id"])
-        logging.info("Pregunta encontrada en FAQ")
         response = found_faq['respuesta']
     else:
         # La pregunta no existe, llamamos a answer_question, almacenamos y sumamos el contador
