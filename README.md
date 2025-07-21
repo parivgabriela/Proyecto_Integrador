@@ -123,20 +123,29 @@ Proyecto_Integrador
 
 ## Uso de la Aplicación
 
-### Chatbot
+### Chatbot Tec-IA
 1. Inicia la aplicación
 2. Escribe tu consulta en el chat
 3. El asistente responderá basándose en la base de datos de la carrera
 
+### Chatear con PDF personalizado
+1. Selecciona del menú "Chatear con PDF"
+2. Carga tu archivo PDF y luego hace clic en "Procesar archivos"
+3. El asistente responderá basándose en la información cargada.
+
+### Chatear con Llama
+1. Selecciona del menú "Chatear con Llama3.2"
+2. Escribe tu consulta. El modelo esta especializado para responderte como un experto en ciencia de datos e IA, junto con programación en python
+
 ### Resumidor de Textos
-1. Selecciona la opción "Resumir Texto"
-2. Carga tu archivo de texto (máximo 1200 palabras)
-3. Obtén un resumen conciso del contenido
+1. Selecciona del menú "Analizar texto"
+2. Carga tu archivo de texto o pega el texto (máximo 1200 palabras).
+3. Selecciona la opción "Resumir Texto"
 
 ### Extractor de Palabras Clave
-1. Accede a la función "Palabras Clave"
-2. Ingresa o carga tu texto
-3. Visualiza las palabras clave más relevantes
+1. Selecciona del menú "Analizar texto"
+2. Carga tu archivo de texto o pega el texto (máximo 1200 palabras).
+3. Selecciona la opción "Extraer Palabras Claves"
 
 ### Preguntas Frecuentes
 1. Navega al módulo de FAQ
