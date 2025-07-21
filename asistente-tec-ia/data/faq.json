@@ -3,834 +3,1820 @@
 	"id": 1,
 	"pregunta": "¿Cuál es el nombre de la carrera y qué título otorga?",
 	"respuesta": "La carrera se denomina 'Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial' y otorga el título de 'Técnico Superior en Ciencia de Datos e Inteligencia Artificial'.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 2,
 	"pregunta": "¿Cuál es la duración total de la carrera?",
 	"respuesta": "La carrera tiene una duración de 5 cuatrimestres, con una carga horaria total de 1472 horas reloj y 2208 horas cátedra.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 3,
 	"pregunta": "¿Cuáles son los requisitos de ingreso?",
 	"respuesta": "Se requieren estudios secundarios completos. Los mayores de 25 años que no cumplan con este requisito pueden rendir una evaluación y acreditar experiencia laboral y conocimientos suficientes.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 4,
 	"pregunta": "¿Cuál es el perfil profesional del egresado?",
 	"respuesta": "El egresado estará capacitado para realizar proyectos de innovación en Ciencia de Datos e IA, diseñar, desarrollar e implementar técnicas de Machine Learning, construir redes neuronales, liderar proyectos, aplicar IA para procesar audio y texto, y comunicar eficazmente los hallazgos obtenidos.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 5,
 	"pregunta": "¿Cuáles son las principales funciones que ejerce el profesional?",
 	"respuesta": "Las funciones principales incluyen diseñar proyectos, diseñar soluciones que involucren análisis de datos, desarrollar sistemas de inteligencia artificial (incluyendo Visión Artificial y Procesamiento de Habla), realizar mantenimiento y optimización de sistemas, y organizar y gestionar proyectos.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 6,
 	"pregunta": "¿Cómo está estructurado el plan de estudios?",
 	"respuesta": "El plan de estudios se organiza en cuatro campos de formación: Formación General (4%), Formación de Fundamento (30%), Formación Específica (48%) y Prácticas Profesionalizantes (18%).",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 7,
 	"pregunta": "¿Qué tipo de unidades curriculares componen el plan de estudios?",
 	"respuesta": "El plan de estudios incluye materias, módulos, seminarios, talleres y prácticas profesionalizantes.",
-	"categoria": 0
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 8,
+	"pregunta": "¿Cuál es el propósito principal del modelizado de minería de datos y qué implica para los futuros técnicos?",
+	"respuesta": "El propósito fundamental es que los futuros Técnicos Superiores en Ciencia de Datos e Inteligencia Artificial aprendan a manipular, explorar y preparar las fuentes de información para luego procesar los datos. Esto implica la realización de diferentes modelos para detectar datos atípicos, predecir comportamientos y analizar los resultados obtenidos.",
+	"categoria": 0,
+	"nivel": 1
   },
   {
 	"id": 100,
-	"pregunta": "¿Qué es un dato?",
-	"respuesta": "Un dato es la representación simbólica de un atributo o característica de una entidad. Es la unidad básica de información que puede ser procesada, almacenada y transmitida. Los datos pueden ser numéricos, textuales, imágenes, sonidos, etc., y por sí solos no tienen significado hasta que se procesan y contextualizan.",
-	"categoria": 2
+	"pregunta": "¿Qué es SQL?",
+	"respuesta": "SQL (Structured Query Language) es un lenguaje estándar para gestionar y manipular bases de datos relacionales. Permite realizar operaciones como consultas (SELECT), inserción (INSERT), actualización (UPDATE) y eliminación (DELETE) de datos, así como crear y modificar estructuras de bases de datos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 101,
-	"pregunta": "¿Qué es una base de datos?",
-	"respuesta": "Una base de datos es un sistema organizado para almacenar, gestionar y recuperar datos de manera eficiente. Consiste en una colección estructurada de datos relacionados que pueden ser consultados, actualizados y administrados mediante un sistema de gestión de bases de datos (DBMS).",
-"categoria": 2
+	"pregunta": "¿Qué es IOT?",
+	"respuesta": "IoT (Internet of Things) o Internet de las Cosas es una red de dispositivos físicos interconectados que pueden recopilar e intercambiar datos a través de internet. Incluye sensores, electrodomésticos inteligentes, vehículos conectados y otros dispositivos que generan grandes cantidades de datos para análisis y automatización.",
+	"categoria": 1,
+	"nivel": 1
   },
-  {
+	{
 	"id": 102,
-	"pregunta": "¿Qué es SQL?",
-	"respuesta": "SQL (Structured Query Language) es un lenguaje estándar para gestionar y manipular bases de datos relacionales. Permite realizar operaciones como consultas (SELECT), inserción (INSERT), actualización (UPDATE) y eliminación (DELETE) de datos, así como crear y modificar estructuras de bases de datos.",
-	"categoria": 1
+	"pregunta": "¿Qué es SQL y para qué se utiliza principalmente?",
+	"respuesta": "SQL (Structured Query Language) es un lenguaje de programación estándar diseñado para gestionar y manipular bases de datos relacionales. Se utiliza principalmente para crear, consultar, actualizar y eliminar datos en bases de datos, así como para definir la estructura de las tablas y establecer relaciones entre ellas. SQL permite realizar operaciones como SELECT para consultas, INSERT para agregar datos, UPDATE para modificar registros y DELETE para eliminar información.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 103,
-	"pregunta": "¿Qué es información?",
-	"respuesta": "La información es el resultado del procesamiento, interpretación y organización de datos en un contexto específico que les otorga significado y utilidad. Mientras que los datos son hechos crudos, la información es datos procesados que pueden ser utilizados para tomar decisiones o generar conocimiento.",
-	"categoria": 2
+	"pregunta": "¿Cuál es la diferencia entre `DELETE`, `TRUNCATE` y `DROP` en SQL?",
+	"respuesta": "DELETE elimina registros específicos de una tabla basándose en condiciones WHERE, mantiene la estructura de la tabla y puede ser revertido con ROLLBACK. TRUNCATE elimina todos los registros de una tabla de forma más rápida que DELETE, reinicia los contadores de identidad pero conserva la estructura. DROP elimina completamente la tabla y su estructura de la base de datos, incluyendo índices, triggers y permisos asociados.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 104,
-	"pregunta": "¿Qué es inteligencia artificial?",
-	"respuesta": "La inteligencia artificial (IA) es el campo de la informática que busca crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Incluye capacidades como reconocimiento de patrones, toma de decisiones, comprensión del lenguaje, resolución de problemas y aprendizaje automático.",
-	"categoria": 3
+	"pregunta": "¿Qué es una `PRIMARY KEY` y cuál es su función en una tabla?",
+	"respuesta": "Una PRIMARY KEY (clave primaria) es una restricción que identifica de manera única cada registro en una tabla. Su función principal es garantizar la integridad de los datos asegurando que no haya registros duplicados. Una tabla solo puede tener una clave primaria, no puede contener valores NULL, y automáticamente crea un índice único. Además, sirve como referencia para las claves foráneas de otras tablas.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 105,
-	"pregunta": "¿Qué es deep learning?",
-	"respuesta": "El deep learning es una rama del machine learning que utiliza redes neuronales artificiales con múltiples capas (profundas) para aprender representaciones jerárquicas de los datos. Es especialmente efectivo para tareas complejas como reconocimiento de imágenes, procesamiento de lenguaje natural y reconocimiento de voz.",
-	"categoria": 3
+	"pregunta": "¿Qué es una `FOREIGN KEY` y cómo establece relaciones entre tablas?",
+	"respuesta": "Una FOREIGN KEY (clave foránea) es una restricción que establece un vínculo entre dos tablas, referenciando la clave primaria de otra tabla. Su función es mantener la integridad referencial, asegurando que los valores en la tabla hijo existan en la tabla padre. Esto previene la inserción de registros huérfanos y mantiene la consistencia de los datos relacionales, permitiendo crear relaciones uno-a-muchos o muchos-a-muchos entre entidades.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 106,
-	"pregunta": "¿Qué es NLP?",
-	"respuesta": "NLP (Natural Language Processing) o Procesamiento de Lenguaje Natural es una rama de la IA que se enfoca en la interacción entre computadoras y lenguaje humano. Incluye tareas como análisis de sentimientos, traducción automática, generación de texto, chatbots y extracción de información de textos.",
-	"categoria": 3
+	"pregunta": "Explica la diferencia entre `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN` y `FULL OUTER JOIN`.",
+	"respuesta": "INNER JOIN devuelve solo los registros que tienen coincidencias en ambas tablas. LEFT JOIN devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha, completando con NULL donde no hay coincidencias. RIGHT JOIN devuelve todos los registros de la tabla derecha y los coincidentes de la izquierda. FULL OUTER JOIN devuelve todos los registros de ambas tablas, completando con NULL donde no existen coincidencias en cualquier lado.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 107,
-	"pregunta": "¿Qué es aprendizaje automático?",
-	"respuesta": "El aprendizaje automático (machine learning) es una subdisciplina de la IA que permite a las computadoras aprender y mejorar automáticamente a partir de la experiencia sin ser explícitamente programadas. Utiliza algoritmos que pueden identificar patrones en los datos y hacer predicciones o decisiones basadas en esos patrones.",
-	"categoria": 3
+	"pregunta": "¿Qué es un índice en una base de datos y por qué es importante para el rendimiento?",
+	"respuesta": "Un índice es una estructura de datos que mejora la velocidad de las operaciones de consulta en una tabla, funcionando como un catálogo ordenado que apunta a las ubicaciones de los registros. Es importante para el rendimiento porque reduce significativamente el tiempo de búsqueda, especialmente en tablas grandes, evitando recorrer todos los registros. Sin embargo, los índices ocupan espacio adicional y pueden ralentizar las operaciones de inserción, actualización y eliminación.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 108,
-	"pregunta": "¿Qué es ciencia de datos?",
-	"respuesta": "La ciencia de datos es un campo interdisciplinario que combina métodos científicos, procesos, algoritmos y sistemas para extraer conocimiento e insights de datos estructurados y no estructurados. Integra estadística, programación, matemáticas y conocimiento del dominio para resolver problemas complejos.",
-	"categoria": 2
+	"pregunta": "¿Para qué se utiliza la cláusula `GROUP BY` en una consulta SQL?",
+	"respuesta": "La cláusula GROUP BY se utiliza para agrupar registros que tienen valores idénticos en columnas específicas, permitiendo aplicar funciones de agregación como COUNT, SUM, AVG, MAX y MIN a cada grupo. Es esencial para generar reportes resumidos y análisis estadísticos, como calcular totales por categoría, promedios por departamento, o contar registros por fecha. Siempre debe usarse cuando se combinan columnas individuales con funciones de agregación.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 109,
-	"pregunta": "¿Qué es big data?",
-	"respuesta": "Big data se refiere a conjuntos de datos extremadamente grandes y complejos que no pueden ser procesados eficientemente con herramientas tradicionales. Se caracteriza por las '3 V': Volumen (gran cantidad), Velocidad (procesamiento rápido) y Variedad (diferentes tipos de datos). A menudo se añaden Veracidad y Valor como características adicionales.",
- 	"categoria": 2
+	"pregunta": "¿Cuál es la función de la cláusula `HAVING` y en qué se diferencia de `WHERE`?",
+	"respuesta": "HAVING filtra grupos de registros después de que GROUP BY ha agrupado los datos y se han aplicado funciones de agregación. WHERE filtra registros individuales antes del agrupamiento. La diferencia principal es que WHERE no puede usar funciones de agregación, mientras que HAVING sí puede. Por ejemplo, WHERE edad > 25 filtra personas, pero HAVING COUNT(*) > 5 filtra grupos que tienen más de 5 registros.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 110,
-	"pregunta": "¿Qué es IOT?",
-	"respuesta": "IoT (Internet of Things) o Internet de las Cosas es una red de dispositivos físicos interconectados que pueden recopilar e intercambiar datos a través de internet. Incluye sensores, electrodomésticos inteligentes, vehículos conectados y otros dispositivos que generan grandes cantidades de datos para análisis y automatización.",
-	"categoria": 1
+	"pregunta": "¿Qué son las subconsultas (subqueries) en SQL?",
+	"respuesta": "Las subconsultas son consultas SQL anidadas dentro de otra consulta principal, que se ejecutan primero para proporcionar resultados que la consulta externa utiliza en sus condiciones. Pueden aparecer en cláusulas SELECT, WHERE, FROM o HAVING. Se clasifican en correlacionadas (dependen de la consulta externa) y no correlacionadas (independientes). Son útiles para realizar comparaciones complejas, filtrar datos basándose en resultados de otras tablas, o calcular valores dinámicos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 111,
-	"pregunta": "¿Qué es visión computacional?",
-	"respuesta": "La visión computacional es un campo de la IA que entrena computadoras para interpretar y entender el contenido visual del mundo. Utiliza técnicas de machine learning y deep learning para procesar imágenes y videos, permitiendo aplicaciones como reconocimiento facial, detección de objetos y análisis médico de imágenes.",
-	"categoria": 3
+	"pregunta": "¿Qué es una vista (`VIEW`) en SQL y cuál es su utilidad?",
+	"respuesta": "Una VIEW es una consulta almacenada que actúa como una tabla virtual, mostrando datos de una o más tablas base sin almacenar físicamente los datos. Su utilidad incluye simplificar consultas complejas, proporcionar seguridad al restringir acceso a columnas específicas, mantener compatibilidad cuando cambia la estructura de tablas, y crear interfaces de datos personalizadas para diferentes usuarios. Las vistas se actualizan automáticamente cuando cambian los datos subyacentes.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 112,
-	"pregunta": "¿Qué es aprendizaje no supervisado?",
-	"respuesta": "El aprendizaje no supervisado es un tipo de machine learning donde el algoritmo encuentra patrones ocultos en datos sin etiquetas o respuestas conocidas. Incluye técnicas como clustering (agrupamiento), reducción de dimensionalidad y detección de anomalías, donde el objetivo es descubrir estructuras subyacentes en los datos.",
-	"categoria": 3
+	"pregunta": "¿Para qué sirven los procedimientos almacenados (`STORED PROCEDURES`)?",
+	"respuesta": "Los procedimientos almacenados son bloques de código SQL precompilados que se guardan en la base de datos y pueden ejecutarse múltiples veces. Sirven para encapsular lógica de negocio compleja, mejorar el rendimiento al evitar recompilación, proporcionar seguridad mediante control de acceso, reducir tráfico de red, mantener consistencia en operaciones complejas, y facilitar el mantenimiento centralizado del código. Pueden recibir parámetros y devolver valores.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 113,
-	"pregunta": "¿Qué es aprendizaje por refuerzo?",
-	"respuesta": "El aprendizaje por refuerzo es un paradigma de machine learning donde un agente aprende a tomar decisiones óptimas en un entorno mediante prueba y error. El agente recibe recompensas o penalizaciones por sus acciones y busca maximizar la recompensa acumulada a largo plazo. Es usado en juegos, robótica y sistemas de recomendación.",
-	"categoria": 3
+	"pregunta": "¿Qué es la normalización de bases de datos y cuáles son sus objetivos?",
+	"respuesta": "La normalización es el proceso de organizar los datos en una base de datos para reducir la redundancia y mejorar la integridad. Sus objetivos principales son eliminar datos duplicados, minimizar anomalías de inserción, actualización y eliminación, optimizar el uso del espacio de almacenamiento, y mantener la consistencia de los datos. Se logra dividiendo tablas grandes en tablas más pequeñas y relacionadas, siguiendo reglas específicas llamadas formas normales.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 114,
-	"pregunta": "¿Cuáles son los roles relacionados con datos?",
-	"respuesta": "Algunos roles clave son: Analista de Datos, Ingeniero de Datos, Científico de Datos, Arquitecto de Datos, Administrador de Base de Datos (DBA) y Analista de BI.",
-	"categoria": 5
+	"pregunta": "Describe brevemente las tres primeras formas normales (1FN, 2FN, 3FN).",
+	"respuesta": "Primera Forma Normal (1FN): Elimina grupos repetitivos asegurando que cada celda contenga valores atómicos y únicos. Segunda Forma Normal (2FN): Cumple 1FN y elimina dependencias parciales, donde atributos no clave dependen solo de parte de la clave primaria compuesta. Tercera Forma Normal (3FN): Cumple 2FN y elimina dependencias transitivas, donde atributos no clave no deben depender de otros atributos no clave, solo de la clave primaria directamente.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 115,
-	"pregunta": "¿Qué hace un analista de datos?",
-	"respuesta": "Un Analista de Datos recopila, limpia, analiza y visualiza datos para extraer conclusiones y ayudar a las organizaciones a tomar mejores decisiones.",
-	"categoria": 5
+	"pregunta": "¿Qué es una transacción en una base de datos y qué propiedades (ACID) debe cumplir?",
+	"respuesta": "Una transacción es una unidad de trabajo que agrupa múltiples operaciones de base de datos que deben ejecutarse como un bloque indivisible. Las propiedades ACID son: Atomicidad (todas las operaciones se completan o ninguna), Consistencia (la base de datos mantiene un estado válido), Aislamiento (las transacciones concurrentes no interfieren entre sí), y Durabilidad (los cambios confirmados persisten permanentemente, incluso ante fallas del sistema).",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 116,
-	"pregunta": "¿Qué hace un ingeniero de datos?",
-	"respuesta": "Un Ingeniero de Datos diseña, construye y mantiene la infraestructura y los pipelines que permiten la recolección, almacenamiento y procesamiento de grandes volúmenes de datos.",
-	"categoria": 1
+	"pregunta": "¿Cuál es la diferencia entre `UNION` y `UNION ALL`?",
+	"respuesta": "UNION combina los resultados de dos o más consultas SELECT eliminando automáticamente las filas duplicadas y ordenando los resultados, lo que requiere procesamiento adicional. UNION ALL también combina resultados pero conserva todas las filas, incluyendo duplicados, y no ordena automáticamente, lo que lo hace más rápido. UNION ALL es preferible cuando se sabe que no hay duplicados o cuando se desean conservar todos los registros.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 117,
-	"pregunta": "¿Qué son las bases de datos NoSQL?",
-	"respuesta": "Las bases de datos NoSQL (Not Only SQL) son sistemas de gestión de bases de datos que no siguen el modelo relacional tradicional. Están diseñadas para manejar grandes volúmenes de datos no estructurados o semi-estructurados con alta escalabilidad y flexibilidad. Incluyen tipos como documentales (MongoDB), clave-valor (Redis), columnar (Cassandra) y de grafos (Neo4j).",
-	"categoria": 2
+	"pregunta": "¿Qué hace la función `COUNT()` en SQL?",
+	"respuesta": "La función COUNT() es una función de agregación que cuenta el número de registros que cumplen ciertos criterios. COUNT(*) cuenta todas las filas incluyendo valores NULL, COUNT(columna) cuenta solo las filas donde esa columna no es NULL, y COUNT(DISTINCT columna) cuenta valores únicos excluyendo NULL. Es útil para generar estadísticas, validar datos, y crear reportes que requieren conteos de registros en consultas con o sin GROUP BY.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 118,
-	"pregunta": "¿Cuál es el propósito principal del modelizado de minería de datos según el documento y qué implica para los futuros técnicos?",
-	"respuesta": "El propósito fundamental es que los futuros Técnicos Superiores en Ciencia de Datos e Inteligencia Artificial aprendan a manipular, explorar y preparar las fuentes de información para luego procesar los datos. Esto implica la realización de diferentes modelos para detectar datos atípicos, predecir comportamientos y analizar los resultados obtenidos.",
-	"categoria": 2
+	"pregunta": "¿Cómo se pueden manejar valores nulos en SQL? Menciona al menos dos funciones.",
+	"respuesta": "Los valores NULL se pueden manejar con varias funciones: ISNULL(columna, valor_reemplazo) reemplaza NULL con un valor específico, COALESCE(valor1, valor2, ...) devuelve el primer valor no nulo de una lista, NULLIF(valor1, valor2) devuelve NULL si ambos valores son iguales, y las condiciones IS NULL o IS NOT NULL para filtrar registros. También se puede usar CASE WHEN para lógica condicional más compleja con valores nulos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 119,
-	"pregunta": "Según el texto, ¿por qué es crucial el procesamiento de datos antes de aplicar técnicas de minería de datos y qué principio lo confirma?",
-	"respuesta": "El procesamiento de datos es una etapa crucial porque la calidad de los resultados en las fases posteriores depende directamente de la calidad de los datos procesados. La falta de un procesamiento adecuado, incluso con algoritmos sofisticados, producirá resultados incorrectos, lo que confirma el principio de 'garbage in, garbage out' (si entra basura, sale basura).",
-	"categoria": 2
+	"pregunta": "¿Qué es el `CASE` en SQL y para qué se utiliza?",
+	"respuesta": "CASE es una expresión condicional que permite implementar lógica if-then-else dentro de consultas SQL. Se utiliza para crear columnas calculadas basadas en condiciones, categorizar datos, transformar valores, y realizar cálculos condicionales. Tiene dos sintaxis: CASE WHEN condición THEN resultado para múltiples condiciones, y CASE expresión WHEN valor THEN resultado para comparar una expresión con valores específicos. Siempre termina con END y puede incluir ELSE para casos no contemplados.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 120,
-	"pregunta": "¿Qué estrategias y técnicas de limpieza de datos se mencionan en el documento para abordar problemas comunes en los conjuntos de datos?",
-	"respuesta": "El documento describe varias estrategias de limpieza de datos, incluyendo la estandarización y normalización para unificar formatos, la detección y eliminación de duplicados mediante comparación exacta y aproximada, la validación basada en reglas para asegurar la consistencia, y la corrección asistida con herramientas de sugerencia y revisión manual.",
-	"categoria": 2
+	"pregunta": "¿Qué es IoT (Internet de las cosas) y cómo se relaciona con la programación?",
+	"respuesta": "IoT (Internet of Things) es la red de dispositivos físicos conectados a internet que pueden recopilar e intercambiar datos, como sensores, electrodomésticos inteligentes, y wearables. Se relaciona con la programación a través del desarrollo de firmware para dispositivos, aplicaciones móviles y web para control, APIs para comunicación entre dispositivos, procesamiento de big data generado por sensores, implementación de protocolos de comunicación, y desarrollo de sistemas de análisis en tiempo real para automatización y toma de decisiones.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 121,
-	"pregunta": "Describe los tres patrones de datos faltantes (missing data) que se explican en el documento y sus implicaciones en el análisis.",
-	"respuesta": "Los patrones son: 'Missing Completely At Random' (MCAR), donde la ausencia es totalmente aleatoria; 'Missing At Random' (MAR), donde la ausencia depende de otras variables observadas; y 'Missing Not At Random' (MNAR), donde la ausencia depende del propio valor faltante. Cada patrón determina la estrategia de manejo más apropiada para evitar sesgos en los resultados.",
-	"categoria": 4
+	"pregunta": "¿Qué hace un ingeniero de datos en su día a día?",
+	"respuesta": "Un ingeniero de datos diseña, construye y mantiene la infraestructura necesaria para la recopilación, almacenamiento y procesamiento de datos. En su día a día desarrolla pipelines de datos automatizados, configura y optimiza bases de datos y data warehouses, implementa procesos de ETL/ELT, monitorea la calidad y integridad de los datos, colabora con científicos de datos y analistas para proporcionar datos limpios y accesibles, optimiza consultas y rendimiento de sistemas, y documenta procesos de datos para garantizar escalabilidad y mantenibilidad.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 122,
-	"pregunta": "¿Qué es la transformación de datos y cuáles son las técnicas de normalización más comunes que se presentan en el texto?",
-	"respuesta": "La transformación de datos es el proceso de convertir datos de un formato a otro para prepararlos para el análisis, lo que puede mejorar significativamente la calidad de los resultados. Las técnicas de normalización más comunes que se mencionan son el 'Min-Max Scaling' para ajustar a un rango específico, la estandarización o 'Z-score' para obtener una media de 0 y desviación estándar de 1, y la normalización robusta que utiliza la mediana y el rango intercuartílico.",
-	"categoria": 4
+	"pregunta": "Explica la necesidad de codificar variables categóricas y describe brevemente el método de One-Hot Encoding.",
+	"respuesta": "Las variables categóricas deben codificarse porque los algoritmos de machine learning requieren entrada numérica para procesar los datos. One-Hot Encoding es un método que convierte cada categoría en una columna binaria (0 o 1), donde 1 indica la presencia de esa categoría y 0 su ausencia. Por ejemplo, una variable 'color' con valores ['rojo', 'azul', 'verde'] se convierte en tres columnas: 'color_rojo', 'color_azul', 'color_verde'. Es útil para variables nominales sin orden jerárquico, evitando que el algoritmo asuma relaciones ordinales inexistentes.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 123,
-	"pregunta": "¿Cómo ayudan los métodos gráficos en la detección de outliers y qué ejemplos de estos métodos se mencionan en el documento?",
-	"respuesta": "Los métodos gráficos son una herramienta poderosa que aprovecha la capacidad del cerebro para reconocer patrones y anomalías que podrían pasar desapercibidas en análisis numéricos. Algunos ejemplos mencionados son los histogramas y gráficos de densidad, diagramas de caja (Box plots) para identificar valores atípicos, y los diagramas de dispersión (Scatter plots) para detectar outliers bivariados y relaciones no lineales.",
-	"categoria": 4
+	"pregunta": "¿Qué es una API y cómo facilita la comunicación entre diferentes sistemas de software?",
+	"respuesta": "Una API (Application Programming Interface) es un conjunto de reglas, protocolos y herramientas que define cómo diferentes componentes de software pueden interactuar entre sí. Facilita la comunicación proporcionando una interfaz estándar que abstrae la complejidad interna de los sistemas, permitiendo que aplicaciones intercambien datos y funcionalidades de manera segura y eficiente. Las APIs definen endpoints, métodos HTTP, formatos de datos y autenticación, enabling que sistemas diversos se integren sin conocer los detalles internos de implementación.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 124,
-	"pregunta": "Explica la evolución de la minería de datos, desde sus inicios hasta la era del Big Data, según se describe en el documento.",
-	"respuesta": "La minería de datos evolucionó desde sus bases teóricas en los años 60 y 70, pasando por la acuñación del término en los 80, hasta la era del Big Data en los 2010. Esta última etapa se caracterizó por el crecimiento exponencial en volumen, velocidad y variedad de los datos, requiriendo nuevas arquitecturas como Hadoop y Spark, y la consolidación de roles como el de 'científico de datos'.",
-	"categoria": 2
+	"pregunta": "Diferencia entre una base de datos SQL y una NoSQL.",
+	"respuesta": "Las bases de datos SQL son relacionales, usan estructura de tablas con esquemas fijos, emplean SQL como lenguaje de consulta, siguen propiedades ACID estrictas y son ideales para transacciones complejas y datos estructurados. Las NoSQL son no relacionales, permiten esquemas flexibles o dinámicos, usan diversos modelos (documento, clave-valor, grafos, columnas), priorizan escalabilidad horizontal y disponibilidad, y son mejores para big data, aplicaciones web escalables y datos semi-estructurados. NoSQL sacrifica algunas garantías ACID por rendimiento y escalabilidad.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 125,
-	"pregunta": "¿En qué sectores se puede aplicar la minería de datos para la toma de decisiones estratégicas, y qué tipo de aplicaciones se pueden realizar?",
-	"respuesta": "La minería de datos tiene aplicaciones estratégicas en sectores como finanzas, comercio minorista, telecomunicaciones, manufactura y gobierno. Permite realizar análisis de inteligencia competitiva, evaluar nuevos mercados, desarrollar nuevos productos e incluso analizar posibles fusiones y adquisiciones, convirtiéndose en un componente esencial de la decisión ejecutiva.",
-	"categoria": 5
+	"pregunta": "¿Qué es Python y por qué es tan popular en el análisis de datos?",
+	"respuesta": "Python es un lenguaje de programación interpretado, de alto nivel y multipropósito, conocido por su sintaxis clara y legible. Es popular en análisis de datos porque ofrece bibliotecas especializadas como Pandas, NumPy, Matplotlib y Scikit-learn, tiene una curva de aprendizaje suave, permite prototipado rápido, cuenta con una comunidad activa, es multiplataforma, integra bien con otras tecnologías, y combina capacidades de manipulación de datos, visualización, machine learning y desarrollo web en un solo ecosistema cohesivo.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 126,
-	"pregunta": "¿Cuáles son los principales criterios para la selección de datos en un proyecto de minería de datos según el texto?",
-	"respuesta": "Los criterios de selección de datos incluyen la relevancia de los datos para el problema, la calidad de los datos, que deben ser precisos y completos, el costo asociado a la adquisición y almacenamiento, y el cumplimiento de aspectos éticos y legales como la privacidad. Una selección adecuada es una decisión estratégica que afecta la validez de todo el proceso.",
-	"categoria": 5
+	"pregunta": "¿Qué es una estructura de datos de tipo 'lista' en Python?",
+	"respuesta": "Una lista en Python es una estructura de datos mutable y ordenada que puede almacenar elementos de cualquier tipo de dato, incluyendo otros objetos complejos. Se define con corchetes [] y permite operaciones como agregar, eliminar, modificar y acceder a elementos por índice. Las listas son dinámicas (cambian de tamaño automáticamente), permiten elementos duplicados, soportan slicing, y ofrecen métodos útiles como append(), remove(), sort(), len(). Son ideales para almacenar colecciones de datos que necesitan mantenerse ordenadas y modificarse frecuentemente.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 127,
-	"pregunta": "Describe las responsabilidades legales y éticas que deben considerar las organizaciones al manipular datos en proyectos de minería de datos.",
-	"respuesta": "Las organizaciones deben cumplir con las leyes de protección de datos como el GDPR, garantizando la privacidad y seguridad de la información. Esto implica implementar medidas técnicas y organizativas adecuadas, gestionar los riesgos de seguridad y respetar los derechos de los sujetos de los datos, como el consentimiento informado y el derecho de acceso o rectificación.",
-	"categoria": 5
+	"pregunta": "¿Qué es un 'diccionario' en Python y en qué se diferencia de una lista?",
+	"respuesta": "Un diccionario es una estructura de datos mutable que almacena pares clave-valor, definida con llaves {}. Se diferencia de una lista en que usa claves únicas para acceder a valores en lugar de índices numéricos, no mantiene orden de inserción automáticamente (aunque desde Python 3.7+ sí lo hace), permite búsquedas más rápidas O(1), las claves deben ser inmutables, y es ideal para representar relaciones y mapeos. Mientras las listas son secuencias ordenadas accesibles por posición, los diccionarios son mapeos accesibles por identificadores únicos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 128,
-	"pregunta": "¿Cuál es el propósito principal del módulo 'Modelizado de Minería de Datos' y cómo se estructuran sus contenidos?",
-	"respuesta": "El propósito principal es que los estudiantes aprendan a manipular, explorar y preparar fuentes de información para procesar los datos resultantes, realizando diferentes modelos para detectar datos atípicos, predecir comportamientos y analizar resultados. Los contenidos se organizan en dos bloques: 'Procesamiento de Datos', que se enfoca en la extracción de información útil de grandes volúmenes de datos, y 'Modelos de minería de datos', que consiste en generar patrones comprensibles utilizando herramientas como los árboles de decisión.",
-	"categoria": 2
+	"pregunta": "¿Para qué sirve la librería Pandas en Python?",
+	"respuesta": "Pandas es una librería fundamental para análisis y manipulación de datos que proporciona estructuras de datos eficientes (Series y DataFrame) y herramientas para trabajar con datos estructurados. Sirve para leer/escribir diversos formatos (CSV, Excel, JSON, SQL), limpiar y transformar datos, realizar operaciones de filtrado y agrupación, manejar datos faltantes, realizar joins y merges, crear pivots y cross-tabulations, y generar estadísticas descriptivas. Es esencial para el preprocesamiento de datos antes del análisis o machine learning.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 129,
-	"pregunta": "¿Por qué es crucial el procesamiento de datos antes de aplicar técnicas de minería de datos y qué problemas comunes busca resolver?",
-	"respuesta": "El procesamiento de datos es crucial porque la calidad de los resultados de la minería depende directamente de la calidad de los datos iniciales. Ignorar esta etapa puede llevar a conclusiones erróneas, confirmando el principio 'si entra basura, sale basura'. Busca resolver problemas como la deficiente calidad de los datos (valores faltantes, inconsistencias), la complejidad y heterogeneidad de las fuentes, el ruido o información irrelevante, y la necesidad de transformaciones para adaptar los datos a los algoritmos.",
-	"categoria": 2
+	"pregunta": "¿Qué es un DataFrame en Pandas?",
+	"respuesta": "Un DataFrame es la estructura de datos principal de Pandas, similar a una tabla bidimensional con filas y columnas etiquetadas. Combina múltiples Series (columnas) bajo un índice común, permitiendo almacenar datos de diferentes tipos en cada columna. Ofrece funcionalidades como indexación flexible, operaciones vectorizadas, manejo automático de datos faltantes, facilidades para agrupar y agregar datos, y métodos para reshaping. Es ideal para representar datasets tabulares y realizar análisis exploratorio de datos de manera eficiente y intuitiva.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 130,
-	"pregunta": "Describe el proceso de limpieza de datos y menciona al menos tres problemas principales que aborda.",
-	"respuesta": "La limpieza de datos es un aspecto crítico del procesamiento que busca identificar y corregir imperfecciones para asegurar que el conjunto de datos sea preciso, completo, consistente y uniforme. Aborda problemas como: 1) Valores faltantes o nulos, que pueden deberse a no aplicabilidad, no disponibilidad o errores técnicos; 2) Duplicados, ya sean exactos, parciales o semánticos que distorsionan las estadísticas; y 3) Valores atípicos (outliers), que son puntos que se desvían significativamente del patrón general.",
-	"categoria": 2
+	"pregunta": "¿Cómo se seleccionan filas y columnas en un DataFrame de Pandas?",
+	"respuesta": "Para seleccionar columnas se usa df['columna'] para una columna o df[['col1', 'col2']] para múltiples. Para filas se puede usar df.iloc[índice] para posición numérica o df.loc[etiqueta] para índice con etiqueta. Para combinaciones se usa df.loc[filas, columnas] o df.iloc[filas, columnas]. También se pueden usar condiciones booleanas como df[df['edad'] > 25], slicing como df[1:5], y métodos como head(), tail(), sample(). Los operadores .loc[] y .iloc[] son más precisos para selecciones complejas.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 131,
-	"pregunta": "¿Qué son los patrones de datos faltantes (missing data) y por qué es importante comprenderlos?",
-	"respuesta": "Los patrones de datos faltantes describen el mecanismo que genera la ausencia de valores. Es fundamental comprenderlos porque determinan las estrategias de tratamiento más apropiadas. Los tres patrones principales son: MCAR (Missing Completely At Random), donde la ausencia es totalmente aleatoria; MAR (Missing At Random), donde la ausencia depende de otras variables observadas; y MNAR (Missing Not At Random), donde la ausencia depende del propio valor faltante, siendo este el caso más problemático.",
-	"categoria": 4
+	"pregunta": "¿Para qué se utiliza la librería NumPy en Python?",
+	"respuesta": "NumPy (Numerical Python) es la librería fundamental para computación científica que proporciona soporte para arrays multidimensionales eficientes y operaciones matemáticas vectorizadas. Se utiliza para realizar cálculos numéricos rápidos, álgebra lineal, transformadas de Fourier, generación de números aleatorios, y manipulación de arrays. Es la base de otras librerías como Pandas, Matplotlib y Scikit-learn. Sus arrays son más eficientes que las listas de Python para operaciones numéricas, ofreciendo mejor rendimiento y menor uso de memoria para cálculos matemáticos complejos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 132,
-	"pregunta": "Explica la diferencia entre las estrategias de eliminación y de imputación para manejar datos faltantes, mencionando una ventaja y una desventaja de cada una.",
-	"respuesta": "La eliminación consiste en descartar registros o variables con datos faltantes. Por ejemplo, la eliminación por lista (listwise deletion) es simple pero puede reducir mucho la muestra y generar sesgos si los datos no son MCAR. La imputación, por otro lado, busca rellenar los valores ausentes. La imputación por la media es fácil de implementar, pero puede distorsionar la distribución de la variable y subestimar la varianza, afectando las relaciones entre variables.",
-	"categoria": 4
+	"pregunta": "¿Qué es un array de NumPy y en qué se diferencia de una lista de Python?",
+	"respuesta": "Un array de NumPy es una estructura de datos homogénea y multidimensional que almacena elementos del mismo tipo de dato en ubicaciones contiguas de memoria. Se diferencia de una lista de Python en que es más eficiente en memoria, permite operaciones vectorizadas (aplicar operaciones a todos los elementos simultáneamente), soporta múltiples dimensiones nativamente, tiene tipo de dato fijo para todos los elementos, ofrece mejor rendimiento para cálculos numéricos, y proporciona funciones matemáticas optimizadas. Las listas son más flexibles pero menos eficientes para operaciones numéricas masivas.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 133,
-	"pregunta": "Define qué son los errores de clasificación y proporciona dos ejemplos de tipos de errores comunes.",
-	"respuesta": "Los errores de clasificación ocurren cuando una observación es asignada de manera incorrecta a una categoría o clase, lo cual puede impactar significativamente los análisis posteriores, especialmente en modelos supervisados. Dos tipos comunes son: 1) Errores sistemáticos, que son clasificaciones erróneas consistentes debido a fallas en el sistema, como un formulario que asigna un valor por defecto; y 2) Errores por ambigüedad, que surgen de definiciones poco claras o solapamiento entre categorías, como clasificar un producto inconsistentemente entre 'Electrónica' e 'Informática'.",
-	"categoria": 2
+	"pregunta": "¿Qué es el 'slicing' en Python?",
+	"respuesta": "Slicing es una técnica para extraer subsecuencias de estructuras de datos ordenadas como listas, tuplas, strings y arrays usando la sintaxis [inicio:fin:paso]. El formato básico es objeto[start:stop:step], donde start es inclusivo, stop es exclusivo, y step define el incremento. Ejemplos: lista[1:5] extrae elementos del índice 1 al 4, lista[:3] los primeros 3 elementos, lista[::2] elementos en posiciones pares, lista[::-1] invierte la secuencia. Es una forma eficiente y legible de trabajar con porciones de datos sin modificar la estructura original.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 134,
-	"pregunta": "¿Cómo pueden los métodos gráficos, como los diagramas de caja y los gráficos de dispersión, ayudar en la detección de outliers?",
-	"respuesta": "Los métodos gráficos son herramientas poderosas para detectar valores atípicos (outliers) al aprovechar la capacidad humana para reconocer patrones visuales. Los diagramas de caja (box plots) visualizan la mediana y los cuartiles, identificando claramente outliers mediante un criterio estadístico como 1.5 veces el rango intercuartílico. Por su parte, los gráficos de dispersión (scatter plots) muestran la relación entre dos variables y permiten detectar outliers bivariados que se alejan del patrón de concentración de los datos.",
-	"categoria": 4
+	"pregunta": "Describe el propósito de la función `apply()` en Pandas.",
+	"respuesta": "La función apply() en Pandas permite aplicar una función personalizada a lo largo de filas o columnas de un DataFrame o a elementos de una Series. Su propósito es realizar transformaciones complejas que no están disponibles como métodos built-in, aplicar múltiples operaciones simultáneamente, y mantener la estructura del DataFrame. Puede usar funciones lambda, funciones definidas por el usuario, o funciones built-in. Se especifica el eje con axis=0 (columnas) o axis=1 (filas). Es más flexible que operaciones vectorizadas básicas pero puede ser menos eficiente para operaciones simples.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 135,
-	"pregunta": "¿Qué es la transformación de datos y por qué es una etapa fundamental en el preprocesamiento?",
-	"respuesta": "La transformación de datos es el proceso de convertir datos de un formato o estructura a otro para prepararlos antes del análisis o la minería. Es fundamental porque una transformación adecuada puede mejorar significativamente la calidad y utilidad de los resultados. Esto incluye ajustar los datos a los requisitos de los algoritmos, como la normalización para algoritmos sensibles a la escala, o la codificación de variables categóricas a numéricas para que puedan ser procesadas.",
-	"categoria": 2
+	"pregunta": "¿Qué es la programación orientada a objetos (POO)?",
+	"respuesta": "La Programación Orientada a Objetos (POO) es un paradigma de programación que organiza el código alrededor de objetos que contienen datos (atributos) y código (métodos) que operan sobre esos datos. Se basa en cuatro principios fundamentales: encapsulación (ocultamiento de datos internos), herencia (reutilización de código mediante jerarquías), polimorfismo (múltiples formas de un mismo comportamiento), y abstracción (simplificación de complejidad). Facilita el desarrollo de software modular, reutilizable y mantenible, modelando problemas del mundo real como interacciones entre objetos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 136,
-	"pregunta": "Compara las técnicas de normalización Min-Max Scaling y Z-score (Estandarización). ¿En qué se diferencian y para qué se utilizan?",
-	"respuesta": "Ambas son técnicas de normalización, pero escalan los datos de forma diferente. Min-Max Scaling transforma los datos a un rango específico, usualmente entre 0 y 1, usando los valores mínimo y máximo de la variable. La Estandarización o Z-score transforma los datos para que tengan una media de 0 y una desviación estándar de 1, utilizando la media y la desviación estándar de la variable. Se utilizan para algoritmos sensibles a las magnitudes, como los basados en distancias (k-NN) o redes neuronales.",
-	"categoria": 4
+	"pregunta": "Define los conceptos de clase, objeto, atributo y método en POO.",
+	"respuesta": "Clase es una plantilla o molde que define la estructura y comportamiento de un tipo de objeto, especificando qué atributos y métodos tendrá. Objeto es una instancia específica de una clase, con valores concretos para sus atributos. Atributo es una variable que pertenece a una clase/objeto y almacena datos o estado. Método es una función definida dentro de una clase que define el comportamiento del objeto y puede acceder/modificar sus atributos. Por ejemplo: la clase 'Coche' define atributos como 'color' y 'modelo', métodos como 'arrancar()', y cada coche específico es un objeto de esa clase.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 137,
-	"pregunta": "¿Qué es la discretización y cuáles son sus beneficios en la minería de datos?",
-	"respuesta": "La discretización es una técnica de transformación que convierte variables continuas en variables categóricas o discretas, dividiendo el rango de la variable en intervalos. Este proceso puede ser muy útil porque facilita la interpretación de los resultados, reduce el impacto de pequeños errores de medición, permite el uso de algoritmos que requieren atributos categóricos y puede ayudar a reducir la complejidad general del modelo a construir.",
-	"categoria": 4
+	"pregunta": "¿Qué es la herencia en POO?",
+	"respuesta": "La herencia es un principio de POO que permite crear nuevas clases (clases hijas o derivadas) basadas en clases existentes (clases padre o base), heredando automáticamente sus atributos y métodos. Facilita la reutilización de código, establece relaciones jerárquicas entre clases, permite especialización mediante la adición de nuevos métodos o modificación de existentes (override), y promueve la extensibilidad del código. Por ejemplo, una clase 'Vehículo' puede ser padre de 'Coche' y 'Motocicleta', compartiendo atributos comunes como 'velocidad' pero teniendo características específicas propias.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 138,
-	"pregunta": "Explica la necesidad de codificar variables categóricas y describe brevemente el método de One-Hot Encoding.",
-	"respuesta": "La mayoría de los algoritmos de minería de datos requieren entradas numéricas, por lo que las variables categóricas deben ser transformadas a una representación numérica para poder ser procesadas. One-Hot Encoding es un método para lograr esto que crea una nueva variable binaria (con valores 0 o 1) para cada categoría posible de la variable original. Por ejemplo, una variable 'Color' con tres valores ('Rojo', 'Verde', 'Azul') se convertiría en tres nuevas variables binarias.",
-	"categoria": 1
+	"pregunta": "¿Qué es el polimorfismo en POO?",
+	"respuesta": "El polimorfismo es la capacidad de objetos de diferentes clases de responder al mismo mensaje o método de maneras específicas a su tipo. Permite que una misma interfaz tenga múltiples implementaciones, facilitando código más flexible y mantenible. Se manifiesta através de sobrescritura de métodos (override) donde clases hijas redefinen métodos heredados, y sobrecarga (overloading) donde múltiples métodos tienen el mismo nombre pero diferentes parámetros. Por ejemplo, el método 'hacer_sonido()' puede implementarse diferentemente en clases 'Perro' ('ladrar') y 'Gato' ('maullar'), pero se invoca de la misma forma.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 139,
-	"pregunta": "¿En qué consiste la reducción de dimensionalidad y cuál es su importancia en el contexto de la minería de datos?",
-	"respuesta": "La reducción de dimensionalidad es un conjunto de técnicas que buscan reducir el número de variables de un conjunto de datos, preservando la mayor cantidad de información relevante posible. Su importancia radica en que puede mejorar el rendimiento computacional de los algoritmos, reducir el sobreajuste (overfitting) de los modelos y facilitar la visualización y la interpretabilidad de los datos, lo cual es especialmente útil cuando se trabaja con datasets de muchas variables.",
-	"categoria": 4
+	"pregunta": "¿Qué es la encapsulación en POO?",
+	"respuesta": "La encapsulación es el principio que consiste en ocultar los detalles internos de implementación de una clase y exponer solo las interfaces necesarias para interactuar con el objeto. Se implementa mediante modificadores de acceso (público, privado, protegido) que controlan qué atributos y métodos son accesibles desde fuera de la clase. Proporciona seguridad al prevenir modificaciones no autorizadas de datos internos, facilita el mantenimiento al permitir cambios internos sin afectar código externo, y mejora la modularidad del código. Los métodos getter y setter son ejemplos comunes de encapsulación controlada.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 140,
-	"pregunta": "¿Cómo se utiliza el método del rango intercuartílico (IQR) para la identificación numérica de outliers?",
-	"respuesta": "El método del rango intercuartílico (IQR) es una técnica estadística para identificar outliers. Primero, se calcula el IQR, que es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1) de los datos. Luego, se definen límites: un límite inferior como Q1 - 1.5 × IQR y un límite superior como Q3 + 1.5 × IQR. Cualquier valor que caiga por debajo del límite inferior o por encima del límite superior es considerado un outlier.",
-	"categoria": 4
+	"pregunta": "¿Qué es un entorno virtual en Python y por qué es útil?",
+	"respuesta": "Un entorno virtual es un espacio aislado que contiene una instalación independiente de Python y sus paquetes, separado del sistema principal. Es útil porque permite trabajar con diferentes versiones de paquetes en proyectos distintos sin conflictos, evita contaminar el sistema Python global, facilita la reproducibilidad del entorno de desarrollo, simplifica el deployment al definir dependencias específicas, y permite experimentar con nuevas librerías sin riesgo. Se crean con herramientas como venv, virtualenv, o conda, y cada proyecto puede tener su propio entorno con dependencias específicas.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 141,
-	"pregunta": "Dentro de la normativa relativa al uso de datos, ¿qué implica la privacidad de la información y la propiedad intelectual?",
-	"respuesta": "La privacidad de la información implica proteger los datos personales contra el acceso, uso o divulgación no autorizados, asegurando el cumplimiento de leyes como el GDPR y gestionando el consentimiento de los individuos. La propiedad intelectual en minería de datos es compleja, ya que involucra la propiedad de los datos originales, los algoritmos (que pueden ser patentados), los modelos resultantes del entrenamiento y los conocimientos o insights derivados, los cuales pueden ser protegidos como secretos comerciales.",
-	"categoria": 5
+	"pregunta": "¿Qué es Git y para qué se utiliza en el desarrollo de software?",
+	"respuesta": "Git es un sistema de control de versiones distribuido que rastrea cambios en archivos y coordina el trabajo entre múltiples desarrolladores. Se utiliza para mantener historial completo de cambios en el código, permitir trabajo colaborativo sin conflictos, crear ramas para desarrollo paralelo de funcionalidades, fusionar cambios de diferentes fuentes, revertir a versiones anteriores cuando es necesario, y distribuir el código entre diferentes repositorios. Es fundamental en desarrollo moderno para gestionar proyectos, desde código fuente hasta documentación, proporcionando trazabilidad, backup automático y flujos de trabajo organizados.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 142,
-	"pregunta": "Diferencia entre los casos de regresión y los casos de clasificación en el contexto de los modelos de minería de datos.",
-	"respuesta": "La principal diferencia radica en el tipo de variable que buscan predecir. Los modelos de clasificación se utilizan para predecir una variable objetivo que es categórica o discreta, como 'abandona' o 'no abandona' un servicio. En cambio, los modelos de regresión se emplean cuando la variable objetivo es continua y numérica, como predecir el precio de una vivienda o la temperatura de mañana. Esta diferencia fundamental determina los algoritmos, las métricas de evaluación y la interpretación de los resultados a utilizar.",
-	"categoria": 3
+	"pregunta": "Define los comandos básicos de Git: `commit`, `push`, `pull`, `branch`.",
+	"respuesta": "Commit guarda cambios en el repositorio local creando un snapshot con un mensaje descriptivo, registrando qué cambios se hicieron y cuándo. Push envía commits locales al repositorio remoto, sincronizando cambios para que otros desarrolladores puedan accederlos. Pull descarga y fusiona cambios del repositorio remoto al local, actualizando la copia de trabajo con las últimas modificaciones. Branch crea, lista o cambia entre ramas, permitiendo desarrollo paralelo de diferentes funcionalidades sin afectar la rama principal. Estos comandos forman el flujo básico: modificar código, commit local, push al remoto, pull para sincronizar.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 143,
-	"pregunta": "¿Qué son los modelos de ensemble y por qué se utilizan en la minería de datos?",
-	"respuesta": "Los modelos de ensemble son aquellos que combinan las predicciones de múltiples modelos base para generar una predicción final más robusta y precisa. Se utilizan ampliamente porque, al agregar varias perspectivas, a menudo logran un mejor rendimiento predictivo que cualquier modelo individual. Además, pueden ayudar a reducir el sobreajuste, mejorar la estabilidad y capturar relaciones más complejas en los datos, aprovechando las fortalezas de diferentes tipos de algoritmos.",
-	"categoria": 3
+	"pregunta": "¿Qué es un 'script' en el contexto de la programación?",
+	"respuesta": "Un script es un programa informático relativamente simple, generalmente escrito en un lenguaje interpretado, diseñado para automatizar tareas específicas o ejecutar una secuencia de comandos. Se caracteriza por ser ejecutado directamente por un intérprete sin necesidad de compilación previa, tener propósito específico y limitado, ser más corto que aplicaciones completas, y facilitar la automatización de procesos repetitivos. Los scripts pueden automatizar tareas del sistema, procesar datos, realizar backups, o integrar diferentes herramientas, siendo especialmente útiles para administración de sistemas y análisis de datos.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 144,
-	"pregunta": "Describe la tarea de 'Asociación' en minería de datos y proporciona un ejemplo.",
-	"respuesta": "La tarea de asociación, a menudo llamada análisis de la cesta de mercado, busca descubrir relaciones o reglas de afinidad entre elementos en grandes conjuntos de datos. El objetivo es identificar qué elementos tienden a aparecer juntos con frecuencia. Un ejemplo clásico es el descubrimiento de la regla 'si un cliente compra pañales, entonces es probable que también compre cerveza', lo que permite a un supermercado optimizar la disposición de sus productos para fomentar las ventas cruzadas.",
-	"categoria": 3
+	"pregunta": "¿Para qué se utiliza la sentencia `try-except` en Python?",
+	"respuesta": "La sentencia try-except se utiliza para manejar excepciones y errores de manera controlada, evitando que el programa se detenga abruptamente. El bloque try contiene código que podría generar errores, mientras que except captura y maneja excepciones específicas. Permite crear programas más robustos al anticipar errores potenciales como división por cero, archivos inexistentes, o problemas de red. Se puede combinar con else (se ejecuta si no hay excepciones) y finally (siempre se ejecuta). También permite capturar tipos específicos de excepciones y proporcionar mensajes de error informativos al usuario.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 145,
-	"pregunta": "Explica cómo funcionan los enfoques basados en densidad para la detección de atípicos y menciona un algoritmo representativo.",
-	"respuesta": "Los enfoques basados en densidad identifican observaciones atípicas (outliers) como aquellos puntos que se encuentran en regiones de baja densidad del espacio de características. La idea es que los datos normales se agrupan en zonas densas, mientras que las anomalías están aisladas. Un algoritmo representativo es LOF (Local Outlier Factor), que compara la densidad local de un punto con la de sus vecinos, siendo muy efectivo para detectar atípicos cuya densidad es significativamente menor que la de su entorno inmediato.",
-	"categoria": 3
+	"pregunta": "¿Qué son las funciones lambda en Python?",
+	"respuesta": "Las funciones lambda son funciones anónimas pequeñas y concisas que se definen en una sola línea usando la palabra clave 'lambda'. Se utilizan para operaciones simples que no justifican definir una función completa con def. Su sintaxis es 'lambda argumentos: expresión' y solo pueden contener expresiones, no declaraciones. Son especialmente útiles con funciones como map(), filter(), sort(), y apply() en Pandas. Por ejemplo, 'lambda x: x**2' eleva al cuadrado, o 'lambda x, y: x + y' suma dos valores. Proporcionan una forma elegante y funcional de escribir código conciso para transformaciones simples.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
 	"id": 146,
-	"pregunta": "¿Qué es la Regresión Logística y para qué tipo de problemas de minería de datos se utiliza?",
-	"respuesta": "La regresión logística es un modelo estadístico utilizado fundamentalmente para problemas de clasificación binaria, es decir, cuando la variable objetivo tiene dos posibles resultados (por ejemplo, 'sí' o 'no', 'éxito' o 'fracaso'). A pesar de su nombre, no es un modelo de regresión, sino de clasificación. Modela la probabilidad de que una observación pertenezca a una de las dos clases, transformando una combinación lineal de las variables predictoras mediante la función logística (o sigmoide).",
-	"categoria": 3
-  },{
-	"id": "147",
-	"pregunta": "Según los casos de estudio, ¿cuál es el factor que más consume tiempo y que resulta más determinante para el éxito de un proyecto de minería de datos?",
-	"respuesta": "Los casos de estudio revelan que la calidad y la preparación de los datos son, con frecuencia, el factor más determinante para el éxito de un proyecto. Esta fase, que incluye la limpieza, transformación e ingeniería de características, consume típicamente entre el 60% y el 80% del esfuerzo total del proyecto. Se demuestra que algoritmos simples aplicados a datos bien preparados a menudo superan a técnicas más sofisticadas que utilizan datos de baja calidad.",
-	"categoria": 2
+	"pregunta": "¿Cómo se leen y escriben archivos CSV en Python usando Pandas?",
+	"respuesta": "Para leer archivos CSV se usa pd.read_csv('archivo.csv') que devuelve un DataFrame. Se pueden especificar parámetros como sep para el delimitador, header para indicar si hay encabezados, index_col para establecer una columna como índice, y encoding para caracteres especiales. Para escribir se usa df.to_csv('archivo.csv'), con opciones como index=False para no guardar el índice, sep para el separador, y encoding. Ejemplo completo: df = pd.read_csv('datos.csv', encoding='utf-8') para leer, y df.to_csv('resultado.csv', index=False) para escribir. Pandas maneja automáticamente tipos de datos y facilita el preprocesamiento.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "148",
-	"pregunta": "¿Qué es el 'ruido' en un conjunto de datos y por qué es un problema para la minería de datos?",
-	"respuesta": "El ruido se refiere a la distorsión o error aleatorio presente en los datos, como valores incorrectos o información irrelevante que oculta los patrones subyacentes. Es un problema significativo porque puede llevar a los algoritmos de minería a construir modelos incorrectos o poco fiables, que se ajustan al ruido en lugar de a la verdadera estructura de los datos, afectando la precisión y la validez de los resultados.",
-	"categoria": 2
+	"id": 147,
+	"pregunta": "¿Qué es la recursividad en programación?",
+	"respuesta": "La recursividad es una técnica de programación donde una función se llama a sí misma para resolver un problema dividiéndolo en subproblemas más pequeños de la misma naturaleza. Requiere dos componentes esenciales: un caso base que detiene la recursión, y un caso recursivo que reduce el problema hacia el caso base. Es útil para problemas con estructura repetitiva como cálculo de factorial, recorrido de árboles, algoritmos de ordenamiento como quicksort, y procesamiento de estructuras anidadas. Aunque elegante para ciertos problemas, puede ser menos eficiente que soluciones iterativas debido al overhead de llamadas a funciones.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "149",
-	"pregunta": "Diferencia entre duplicados exactos, duplicados parciales y duplicados semánticos.",
-	"respuesta": "Los duplicados exactos son registros idénticos en todas sus variables. Los duplicados parciales ocurren cuando hay coincidencias en campos clave pero diferencias en otros, como un mismo cliente con dos direcciones diferentes. Los duplicados semánticos son los más difíciles de detectar, ya que representan la misma entidad del mundo real pero con datos completamente distintos, como 'IBM' y 'International Business Machines'.",
-	"categoria": 2
+	"id": 148,
+	"pregunta": "¿Cuál es la diferencia entre una variable local y una global?",
+	"respuesta": "Una variable local se define dentro de una función y solo es accesible desde esa función, creándose cuando la función se ejecuta y destruyéndose al terminar. Una variable global se define fuera de cualquier función y es accesible desde cualquier parte del programa. Las variables locales tienen precedencia sobre las globales con el mismo nombre dentro de su alcance. Para modificar una variable global desde una función se debe usar la palabra clave 'global'. Las variables locales proporcionan encapsulación y evitan efectos secundarios no deseados, mientras que las globales facilitan compartir datos entre funciones pero pueden complicar el debugging y mantenimiento.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "150",
-	"pregunta": "¿En qué consiste la tarea de Agrupamiento o Clustering y en qué se diferencia de la Clasificación?",
-	"respuesta": "El Agrupamiento o Clustering es una técnica de aprendizaje no supervisado que tiene como objetivo agrupar un conjunto de observaciones en subconjuntos o 'clusters', de modo que las observaciones dentro de un mismo grupo sean muy similares entre sí y distintas a las de otros grupos. Se diferencia de la Clasificación en que no utiliza una variable objetivo predefinida; los grupos se descubren directamente a partir de la estructura inherente de los datos.",
-	"categoria": 3
+	"id": 149,
+	"pregunta": "¿Qué es la complejidad algorítmica y cómo se suele expresar (notación Big O)?",
+	"respuesta": "La complejidad algorítmica mide la eficiencia de un algoritmo en términos de tiempo de ejecución o espacio de memoria requerido conforme aumenta el tamaño de entrada. Se expresa con notación Big O que describe el comportamiento asintótico en el peor caso. Ejemplos comunes: O(1) tiempo constante, O(log n) logarítmico, O(n) lineal, O(n log n) linearítmico, O(n²) cuadrático, O(2^n) exponencial. Permite comparar algoritmos independientemente del hardware y determinar escalabilidad. Un algoritmo O(n) es más eficiente que O(n²) para datasets grandes, siendo fundamental para elegir estructuras de datos y algoritmos apropiados.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "151",
-	"pregunta": "¿Qué son los Árboles de Decisión y cuál es una de sus principales ventajas?",
-	"respuesta": "Los Árboles de Decisión son un modelo de aprendizaje supervisado que predice el valor de una variable objetivo aprendiendo reglas de decisión simples inferidas de las características de los datos. Su estructura se asemeja a un árbol, con nodos de decisión y nodos hoja. Una de sus principales ventajas es su alta interpretabilidad, ya que las reglas generadas son explícitas y fáciles de entender para los expertos del dominio y los responsables de la toma de decisiones.",
-	"categoria": 3
+	"id": 150,
+	"pregunta": "¿Qué es el 'debugging' o depuración de código?",
+	"respuesta": "El debugging es el proceso de identificar, localizar y corregir errores o bugs en el código para que el programa funcione correctamente. Incluye técnicas como usar print statements para rastrear valores, debuggers interactivos que permiten ejecutar código paso a paso, revisión de logs y mensajes de error, testing unitario para verificar componentes individuales, y análisis de stack traces. Las herramientas modernas ofrecen breakpoints, inspección de variables en tiempo real, y evaluación de expresiones. Es una habilidad fundamental que requiere pensamiento lógico, paciencia y comprensión del flujo del programa para resolver problemas sistemáticamente.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "152",
-	"pregunta": "¿Qué es la selección de características (feature selection) y por qué es importante?",
-	"respuesta": "La selección de características es el proceso de elegir un subconjunto de las variables más relevantes de un conjunto de datos para la construcción de un modelo. Es una parte crucial de la reducción de dimensionalidad, ya que eliminar variables irrelevantes o redundantes puede mejorar la precisión del modelo, reducir el sobreajuste (overfitting), disminuir el tiempo de entrenamiento y hacer que los resultados sean más fáciles de interpretar.",
-	"categoria": 2
+	"id": 151,
+	"pregunta": "¿Para qué sirve un `constructor` en una clase de Python?",
+	"respuesta": "Un constructor en Python es el método especial __init__() que se ejecuta automáticamente cuando se crea una nueva instancia de una clase. Su función principal es inicializar los atributos del objeto con valores específicos, configurar el estado inicial del objeto, y realizar cualquier configuración necesaria durante la creación. Recibe 'self' como primer parámetro (referencia al objeto) seguido de otros parámetros necesarios para la inicialización. Por ejemplo, una clase Persona puede tener __init__(self, nombre, edad) para establecer estos atributos al crear el objeto. Permite crear objetos con diferentes estados iniciales y asegura que siempre estén correctamente configurados.",
+	"categoria": 1,
+	"nivel": 1
   },
   {
-	"id": "153",
-	"pregunta": "Explica la diferencia fundamental entre el aprendizaje supervisado y el no supervisado.",
-	"respuesta": "La diferencia fundamental radica en la disponibilidad de una variable objetivo o etiqueta. En el aprendizaje supervisado, como en la clasificación y la regresión, el algoritmo aprende de un conjunto de datos donde los resultados correctos son conocidos. En el aprendizaje no supervisado, como en el clustering y la asociación, el algoritmo intenta encontrar patrones y estructuras ocultas en los datos sin ninguna etiqueta o resultado predefinido.",
-	"categoria": 3
+	"id": 152,
+	"pregunta": "¿Qué es un dato?",
+	"respuesta": "Un dato es la representación simbólica de un atributo o característica de una entidad. Es la unidad básica de información que puede ser procesada, almacenada y transmitida. Los datos pueden ser numéricos, textuales, imágenes, sonidos, etc., y por sí solos no tienen significado hasta que se procesan y contextualizan.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "154",
-	"pregunta": "¿Qué es el sobreajuste (overfitting) de un modelo y cómo puede mitigarse?",
-	"respuesta": "El sobreajuste ocurre cuando un modelo de minería de datos aprende con demasiado detalle el conjunto de datos de entrenamiento, incluyendo el ruido y las fluctuaciones aleatorias. Esto provoca que el modelo funcione muy bien con los datos de entrenamiento pero falle al generalizar a datos nuevos. Puede mitigarse mediante técnicas como la validación cruzada, la reducción de la complejidad del modelo o la selección de características para eliminar el ruido.",
-	"categoria": 3
+	"id": 153,
+	"pregunta": "¿Qué es una base de datos?",
+	"respuesta": "Una base de datos es un sistema organizado para almacenar, gestionar y recuperar datos de manera eficiente. Consiste en una colección estructurada de datos relacionados que pueden ser consultados, actualizados y administrados mediante un sistema de gestión de bases de datos (DBMS).",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "155",
-	"pregunta": "¿Cuál es la importancia de la visualización de datos en las etapas iniciales de un proyecto de minería de datos?",
-	"respuesta": "La visualización de datos es fundamental en las etapas iniciales para la exploración y el análisis descriptivo. Permite a los analistas obtener una comprensión intuitiva de los datos, identificar patrones, detectar anomalías como outliers, visualizar las relaciones entre variables y comunicar los hallazgos iniciales de manera efectiva antes de proceder con el modelado formal. Es una herramienta clave para guiar el preprocesamiento de datos.",
-	"categoria": 2
+	"id": 154,
+	"pregunta": "¿Qué es información?",
+	"respuesta": "La información es el resultado del procesamiento, interpretación y organización de datos en un contexto específico que les otorga significado y utilidad. Mientras que los datos son hechos crudos, la información es datos procesados que pueden ser utilizados para tomar decisiones o generar conocimiento.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "156",
-	"pregunta": "Describe el método de discretización conocido como 'Binning' o 'Agrupamiento en contenedores'.",
-	"respuesta": "El Binning es un método de discretización que transforma una variable continua en una categórica dividiendo el rango de valores en un número determinado de intervalos o 'bins' de igual ancho o de igual frecuencia. Por ejemplo, se puede agrupar la edad en categorías como 'Joven', 'Adulto' y 'Mayor'. Es una técnica sencilla para simplificar los datos y puede ayudar a reducir el impacto de pequeños errores de observación.",
-	"categoria": 2
+	"id": 155,
+	"pregunta": "¿Qué es ciencia de datos?",
+	"respuesta": "La ciencia de datos es un campo interdisciplinario que combina métodos científicos, procesos, algoritmos y sistemas para extraer conocimiento e insights de datos estructurados y no estructurados. Integra estadística, programación, matemáticas y conocimiento del dominio para resolver problemas complejos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "157",
-	"pregunta": "Define los conceptos de 'Dato', 'Información' y 'Conocimiento' en el contexto de la minería de datos.",
-	"respuesta": "Un 'dato' es un valor crudo, un hecho sin procesar (ej. '35 grados'). La 'información' son datos procesados y puestos en un contexto para que sean útiles (ej. 'la temperatura actual es de 35 grados'). El 'conocimiento', el objetivo final de la minería de datos, es la comprensión profunda derivada de la información, que permite la toma de decisiones (ej. 'hace calor, por lo que la venta de bebidas frías aumentará').",
-	"categoria": 2
+	"id": 156,
+	"pregunta": "¿Qué es big data y cuáles son sus características principales (las 'V')?",
+	"respuesta": "Big data se refiere a conjuntos de datos extremadamente grandes y complejos que no pueden ser procesados eficientemente con herramientas tradicionales. Se caracteriza por las '3 V': Volumen (gran cantidad), Velocidad (procesamiento rápido) y Variedad (diferentes tipos de datos). A menudo se añaden Veracidad y Valor como características adicionales.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "158",
-	"pregunta": "¿Por qué la colaboración con un experto en el dominio es crucial para el éxito de un proyecto de minería de datos?",
-	"respuesta": "La colaboración con un experto en el dominio es crucial porque este aporta un conocimiento contextual indispensable que los datos por sí solos no pueden ofrecer. Ayuda a definir correctamente el problema de negocio, a interpretar las variables, a validar los patrones encontrados, a distinguir entre correlaciones espurias y relaciones causales reales, y a asegurar que los resultados del modelo sean relevantes y aplicables en la práctica.",
-	"categoria": 5
+	"id": 157,
+	"pregunta": "¿Qué es IOT?",
+	"respuesta": "IoT (Internet of Things) o Internet de las Cosas es una red de dispositivos físicos interconectados que pueden recopilar e intercambiar datos a través de internet. Incluye sensores, electrodomésticos inteligentes, vehículos conectados y otros dispositivos que generan grandes cantidades de datos para análisis y automatización.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "159",
-	"pregunta": "¿Cuáles son las dos principales estrategias para manejar los valores atípicos (outliers) una vez que han sido detectados?",
-	"respuesta": "Una vez detectados, las dos principales estrategias para manejar outliers son la eliminación y la acomodación. La eliminación consiste en suprimir la observación atípica del conjunto de datos, lo cual es arriesgado si no se está seguro de que es un error. La acomodación implica emplear técnicas de modelado robustas que sean menos sensibles a la presencia de estos valores extremos, o transformar la variable para reducir el impacto del outlier.",
-	"categoria": 2
+	"id": 158,
+	"pregunta": "¿Qué son las bases de datos NoSQL?",
+	"respuesta": "Las bases de datos NoSQL (Not Only SQL) son sistemas de gestión de bases de datos que no siguen el modelo relacional tradicional. Están diseñadas para manejar grandes volúmenes de datos no estructurados o semi-estructurados con alta escalabilidad y flexibilidad. Incluyen tipos como documentales (MongoDB), clave-valor (Redis), columnar (Cassandra) y de grafos (Neo4j).",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "160",
-	"pregunta": "Describe el objetivo del Análisis de Componentes Principales (PCA) como técnica de reducción de dimensionalidad.",
-	"respuesta": "El Análisis de Componentes Principales (PCA) es una técnica estadística que reduce la dimensionalidad de un conjunto de datos transformando las variables originales en un nuevo conjunto de variables no correlacionadas llamadas componentes principales. El objetivo es retener la mayor cantidad de varianza (información) posible en los primeros componentes, permitiendo así descartar los últimos componentes y simplificar el dataset sin una pérdida significativa de información.",
-	"categoria": 4
+	"id": 159,
+	"pregunta": "¿Cuál es el propósito principal del modelizado de minería de datos y qué implica para los futuros técnicos?",
+	"respuesta": "El propósito principal del modelizado de minería de datos es descubrir patrones ocultos, tendencias y conocimiento útil a partir de grandes volúmenes de datos para apoyar la toma de decisiones. Para los futuros técnicos implica desarrollar habilidades en algoritmos de aprendizaje automático, estadística, programación y comprensión del negocio para construir modelos predictivos y descriptivos que generen valor empresarial.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "161",
-	"pregunta": "Además de la privacidad, ¿qué otras consideraciones éticas y legales son importantes al utilizar datos en minería de datos?",
-	"respuesta": "Además de la privacidad, es crucial considerar la equidad y la no discriminación para evitar que los modelos perpetúen sesgos históricos presentes en los datos contra ciertos grupos demográficos. También son importantes la transparencia y la explicabilidad de los modelos, para que las decisiones automáticas puedan ser comprendidas y auditadas. Finalmente, se debe asegurar el cumplimiento de toda la normativa legal aplicable a la industria específica.",
-	"categoria": 5
+	"id": 160,
+	"pregunta": "¿Por qué es crucial el procesamiento de datos antes de aplicar técnicas de minería de datos?",
+	"respuesta": "El procesamiento de datos es crucial porque los datos reales suelen contener errores, valores faltantes, duplicados y ruido que pueden afectar significativamente la calidad de los resultados. Un procesamiento adecuado mejora la precisión de los modelos, reduce el tiempo de entrenamiento, elimina sesgos y asegura que los algoritmos funcionen correctamente sobre datos limpios y consistentes.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
-	"id": "162",
-	"pregunta": "¿Cómo ayuda la imputación por regresión a manejar los valores faltantes?",
-	"respuesta": "La imputación por regresión es una técnica sofisticada para manejar valores faltantes que utiliza otras variables del conjunto de datos para predecir el valor ausente. Se construye un modelo de regresión donde la variable con el valor faltante es la variable objetivo y las otras son las predictoras. El valor predicho por el modelo se utiliza para rellenar el hueco, lo cual preserva mejor las relaciones entre variables que métodos simples como la imputación por la media.",
-	"categoria": 4
+	"id": 161,
+	"pregunta": "¿Qué estrategias y técnicas de limpieza de datos existen para abordar problemas comunes?",
+	"respuesta": "Las principales estrategias incluyen: eliminación de duplicados (exact, fuzzy matching), manejo de valores faltantes (imputación por media, mediana, moda o métodos avanzados), detección y tratamiento de outliers (métodos estadísticos, Z-score), normalización y estandarización de formatos, validación de consistencia, corrección de errores tipográficos y transformación de tipos de datos.",
+	"categoria": 2,
+	"nivel": 2
+  },
+  {
+	"id": 162,
+	"pregunta": "Explica la evolución de la minería de datos, desde sus inicios hasta la era del Big Data.",
+	"respuesta": "La minería de datos evolucionó desde los sistemas de bases de datos tradicionales (1960s-70s), pasando por el desarrollo de técnicas estadísticas y de inteligencia artificial (1980s-90s), la formalización del proceso KDD (1990s), el surgimiento de herramientas comerciales (2000s), hasta llegar a la era del Big Data (2010s-presente) caracterizada por el manejo de volúmenes masivos, variedad de datos no estructurados y velocidad de procesamiento en tiempo real.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 163,
-	"pregunta": "¿Cuál es la diferencia entre media poblacional y media muestral?",
-	"respuesta": "La media poblacional (μ) es el promedio de todos los elementos de una población completa, mientras que la media muestral (x̄) es el promedio de una muestra extraída de esa población. La media muestral es un estimador de la media poblacional.",
-	"categoria": 4
+	"pregunta": "Describe el proceso de limpieza de datos y menciona al menos tres problemas principales que aborda.",
+	"respuesta": "La limpieza de datos es un proceso sistemático que identifica y corrige errores e inconsistencias en los conjuntos de datos. Los tres problemas principales que aborda son: 1) Valores faltantes o nulos que pueden sesgar los resultados, 2) Duplicados que distorsionan las estadísticas y patrones, y 3) Valores atípicos (outliers) que pueden afectar negativamente el rendimiento de los algoritmos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 164,
-	"pregunta": "¿Qué es la moda?",
-	"respuesta": "La moda es el valor que aparece con mayor frecuencia en un conjunto de datos. Un conjunto puede ser unimodal (una moda), bimodal (dos modas), multimodal (varias modas) o amodal (sin moda).",
-	"categoria": 4
+	"pregunta": "Define qué son los errores de clasificación y proporciona dos ejemplos de tipos de errores comunes.",
+	"respuesta": "Los errores de clasificación ocurren cuando un modelo asigna incorrectamente una instancia a una clase equivocada. Dos tipos comunes son: 1) Falsos positivos (Tipo I): el modelo predice la clase positiva cuando la real es negativa (ej: diagnosticar enfermedad cuando el paciente está sano), y 2) Falsos negativos (Tipo II): el modelo predice la clase negativa cuando la real es positiva (ej: no detectar spam cuando el email sí es spam).",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 165,
-	"pregunta": "¿Qué es la mediana?",
-	"respuesta": "La mediana es el valor que divide un conjunto de datos ordenados en dos mitades iguales. Es el valor del medio cuando los datos están ordenados de menor a mayor, o el promedio de los dos valores centrales si hay un número par de observaciones.",
-	"categoria": 4
+	"pregunta": "¿Qué es la transformación de datos y por qué es una etapa fundamental en el preprocesamiento?",
+	"respuesta": "La transformación de datos es el proceso de convertir datos de su formato original a un formato adecuado para el análisis. Es fundamental porque: normaliza escalas diferentes entre variables, mejora la distribución de los datos, reduce la dimensionalidad, crea nuevas características relevantes y adapta los datos a los requerimientos específicos de los algoritmos de minería de datos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 166,
-	"pregunta": "¿Cuándo es preferible usar la mediana en lugar de la media?",
-	"respuesta": "La mediana es preferible cuando los datos tienen valores extremos (outliers) o cuando la distribución es asimétrica, ya que la mediana es más resistente a estos valores extremos que la media aritmética.",
-	"categoria": 4
+	"pregunta": "Según los casos de estudio, ¿cuál es el factor que más consume tiempo en un proyecto de minería de datos?",
+	"respuesta": "La preparación y limpieza de datos es el factor que más consume tiempo en un proyecto de minería de datos, típicamente representando entre el 60-80% del tiempo total del proyecto. Esto incluye la recolección, limpieza, transformación, integración y preparación de los datos antes de poder aplicar algoritmos de análisis.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 167,
-	"pregunta": "¿Qué es la varianza?",
-	"respuesta": "La varianza es una medida de dispersión que indica qué tan dispersos están los datos respecto a la media. Se calcula como el promedio de las diferencias cuadráticas entre cada valor y la media.",
-	"categoria": 4
+	"pregunta": "¿Qué es el 'ruido' en un conjunto de datos y por qué es un problema?",
+	"respuesta": "El ruido se refiere a valores erróneos, irrelevantes o distorsionados en los datos que no representan la información verdadera. Es un problema porque puede llevar a conclusiones incorrectas, reducir la precisión de los modelos, generar patrones falsos, aumentar la complejidad computacional y dificultar la interpretación de los resultados reales.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 168,
-	"pregunta": "¿Qué es la desviación estándar?",
-	"respuesta": "La desviación estándar es la raíz cuadrada de la varianza. Mide la dispersión promedio de los datos respecto a la media y tiene las mismas unidades que los datos originales, lo que facilita su interpretación.",
-	"categoria": 4
+	"pregunta": "Diferencia entre duplicados exactos, duplicados parciales y duplicados semánticos.",
+	"respuesta": "Duplicados exactos: registros idénticos en todos los campos. Duplicados parciales: registros que coinciden en algunos campos clave pero difieren en otros (ej: mismo nombre pero direcciones ligeramente diferentes). Duplicados semánticos: registros que representan la misma entidad pero con diferentes representaciones (ej: 'IBM' vs 'International Business Machines').",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 169,
-	"pregunta": "¿Qué son los cuartiles?",
-	"respuesta": "Los cuartiles son valores que dividen un conjunto de datos ordenados en cuatro partes iguales. Q1 (primer cuartil) es el valor que deja el 25% de los datos por debajo, Q2 (segundo cuartil) es la mediana, y Q3 (tercer cuartil) deja el 75% de los datos por debajo.",
-	"categoria": 4
+	"pregunta": "¿Qué es la selección de características (feature selection) y por qué es importante?",
+	"respuesta": "La selección de características es el proceso de identificar y seleccionar las variables más relevantes para el modelo, eliminando características redundantes o irrelevantes. Es importante porque reduce la dimensionalidad, mejora el rendimiento del modelo, disminuye el overfitting, reduce el tiempo de entrenamiento y facilita la interpretación del modelo.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 170,
-	"pregunta": "¿Qué es el rango intercuartílico (IQR)?",
-	"respuesta": "El rango intercuartílico (IQR) es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1). Representa la dispersión del 50% central de los datos y es útil para identificar valores atípicos.",
-	"categoria": 4
+	"pregunta": "¿Cuál es la importancia de la visualización de datos en las etapas iniciales de un proyecto?",
+	"respuesta": "La visualización de datos es crucial en las etapas iniciales porque permite: identificar patrones y tendencias de manera intuitiva, detectar valores atípicos y anomalías, comprender la distribución de los datos, identificar relaciones entre variables, comunicar hallazgos de forma efectiva y guiar la toma de decisiones sobre qué técnicas de análisis aplicar.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 171,
-	"pregunta": "¿Qué es la asimetría (skewness)?",
-	"respuesta": "La asimetría mide la falta de simetría en la distribución de los datos. Una distribución con asimetría positiva tiene una cola más larga hacia la derecha, mientras que una con asimetría negativa tiene una cola más larga hacia la izquierda.",
-	"categoria": 4
+	"pregunta": "Describe el método de discretización conocido como 'Binning' o 'Agrupamiento en contenedores'.",
+	"respuesta": "Binning es una técnica de discretización que divide variables numéricas continuas en intervalos o 'contenedores' discretos. Puede ser de ancho igual (intervalos del mismo tamaño), de frecuencia igual (mismo número de observaciones por bin) o basado en percentiles. Es útil para reducir el ruido, manejar outliers y convertir variables continuas en categóricas para ciertos algoritmos.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 172,
-	"pregunta": "¿Qué es la curtosis?",
-	"respuesta": "La curtosis mide la forma de la distribución, específicamente qué tan puntiaguda o aplanada es comparada con una distribución normal. Una curtosis alta indica una distribución más puntiaguda, mientras que una baja indica una distribución más aplanada.",
-	"categoria": 4
+	"pregunta": "Define los conceptos de 'Dato', 'Información' y 'Conocimiento' en el contexto de la minería de datos.",
+	"respuesta": "Dato: hechos en bruto sin contexto (ej: números, texto). Información: datos procesados y organizados con significado y contexto (ej: 'Las ventas aumentaron 15%'). Conocimiento: información procesada que incluye experiencia, comprensión y capacidad de tomar decisiones (ej: 'El aumento de ventas se debe a la campaña publicitaria, por lo que debemos invertir más en marketing').",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 173,
-	"pregunta": "¿Qué es un outlier o valor atípico?",
-	"respuesta": "Un outlier es un valor que se encuentra significativamente alejado del resto de los datos. Se puede identificar usando el método IQR (valores fuera de Q1 - 1.5*IQR o Q3 + 1.5*IQR) o mediante z-scores (|z| > 3).",
-	"categoria": 4
+	"pregunta": "¿Cuáles son las dos principales estrategias para manejar los valores atípicos (outliers)?",
+	"respuesta": "Las dos estrategias principales son: 1) Eliminación: remover completamente los outliers del conjunto de datos cuando se confirma que son errores o no son representativos, y 2) Transformación: aplicar técnicas como winsorización, transformación logarítmica o normalización para reducir su impacto sin eliminarlos completamente, preservando información potencialmente valiosa.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 174,
-	"pregunta": "¿Qué es el z-score o puntaje estándar?",
-	"respuesta": "El z-score indica cuántas desviaciones estándar se encuentra un valor respecto a la media. Se calcula como z = (x - μ) / σ. Un z-score de 0 indica que el valor está en la media, valores positivos están por encima y negativos por debajo.",
-	"categoria": 4
+	"pregunta": "Describe el proceso KDD (Knowledge Discovery in Databases) y sus etapas.",
+	"respuesta": "KDD es un proceso iterativo para extraer conocimiento de bases de datos. Sus etapas son: 1) Selección: identificar datos relevantes, 2) Preprocesamiento: limpiar y transformar datos, 3) Transformación: convertir datos al formato adecuado, 4) Minería de datos: aplicar algoritmos para descubrir patrones, y 5) Interpretación/Evaluación: evaluar y presentar el conocimiento descubierto.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 175,
-	"pregunta": "¿Qué es la distribución normal?",
-	"respuesta": "La distribución normal es una distribución de probabilidad continua, simétrica y con forma de campana. Se caracteriza por tener media μ y desviación estándar σ, y es fundamental en estadística porque muchos fenómenos naturales siguen esta distribución.",
-	"categoria": 4
+	"pregunta": "¿Qué es CRISP-DM y cuáles son sus fases?",
+	"respuesta": "CRISP-DM (Cross-Industry Standard Process for Data Mining) es una metodología estándar para proyectos de minería de datos. Sus seis fases son: 1) Comprensión del negocio, 2) Comprensión de los datos, 3) Preparación de los datos, 4) Modelado, 5) Evaluación, y 6) Despliegue. Es un proceso cíclico e iterativo.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 176,
-	"pregunta": "¿Qué es la correlación?",
-	"respuesta": "La correlación mide la fuerza y dirección de la relación lineal entre dos variables cuantitativas. El coeficiente de correlación de Pearson varía entre -1 y 1, donde -1 indica correlación negativa perfecta, 0 indica no correlación lineal, y 1 indica correlación positiva perfecta.",
-	"categoria": 4
+	"pregunta": "Diferencia entre datos estructurados, semi-estructurados y no estructurados.",
+	"respuesta": "Datos estructurados: organizados en formato fijo como tablas con filas y columnas (ej: bases de datos relacionales). Semi-estructurados: tienen cierta organización pero no siguen un esquema rígido (ej: XML, JSON). No estructurados: sin organización predefinida (ej: texto libre, imágenes, videos, correos electrónicos).",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 177,
-	"pregunta": "¿Qué es la covarianza?",
-	"respuesta": "La covarianza mide cómo dos variables cambian juntas. Si es positiva, las variables tienden a aumentar juntas; si es negativa, cuando una aumenta la otra disminuye. La covarianza no está estandarizada, por lo que es difícil interpretar su magnitud.",
-	"categoria": 4
+	"pregunta": "¿Qué es la ingeniería de características (feature engineering)?",
+	"respuesta": "La ingeniería de características es el proceso de usar conocimiento del dominio para crear, modificar o seleccionar variables (características) que mejoren el rendimiento de los algoritmos de machine learning. Incluye crear nuevas variables, transformar existentes, combinar características y extraer información relevante de los datos en bruto.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 178,
-	"pregunta": "¿Qué es una muestra representativa?",
-	"respuesta": "Una muestra representativa es un subconjunto de la población que mantiene las mismas características y proporciones que la población total. Permite hacer inferencias válidas sobre la población usando técnicas de muestreo adecuadas.",
-	"categoria": 4
+	"pregunta": "¿Por qué es importante la validación de un modelo de ciencia de datos?",
+	"respuesta": "La validación es crucial para: evaluar el rendimiento real del modelo, detectar overfitting y underfitting, asegurar que el modelo generalice bien a datos no vistos, comparar diferentes modelos objetivamente, identificar sesgos, establecer confianza en las predicciones y garantizar que el modelo sea útil en producción.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 179,
-	"pregunta": "¿Qué es el error estándar?",
-	"respuesta": "El error estándar es la desviación estándar de la distribución muestral de un estadístico. Para la media muestral, se calcula como σ/√n, donde σ es la desviación estándar poblacional y n es el tamaño de la muestra.",
-	"categoria": 4
+	"pregunta": "Explica la técnica de validación cruzada (cross-validation).",
+	"respuesta": "La validación cruzada divide el conjunto de datos en k pliegues (folds), entrena el modelo en k-1 pliegues y lo evalúa en el pliegue restante, repitiendo este proceso k veces. Proporciona una estimación más robusta del rendimiento del modelo al usar todos los datos tanto para entrenamiento como para validación, reduciendo la varianza en la evaluación.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 180,
-	"pregunta": "¿Qué es el Teorema del Límite Central?",
-	"respuesta": "El Teorema del Límite Central establece que la distribución de las medias muestrales se aproxima a una distribución normal cuando el tamaño de la muestra es suficientemente grande (n ≥ 30), independientemente de la forma de la distribución poblacional.",
-	"categoria": 4
+	"pregunta": "¿Qué es una matriz de confusión y para qué se utiliza?",
+	"respuesta": "La matriz de confusión es una tabla que muestra el rendimiento de un modelo de clasificación comparando las predicciones con las etiquetas reales. Se utiliza para calcular métricas como precisión, recall, especificidad y F1-score, identificar qué clases son más difíciles de clasificar y analizar los tipos de errores que comete el modelo.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 181,
-	"pregunta": "¿Qué es un intervalo de confianza?",
-	"respuesta": "Un intervalo de confianza es un rango de valores que, con cierto nivel de confianza (por ejemplo, 95%), contiene el verdadero valor del parámetro poblacional. Se construye usando la estimación puntual más o menos el margen de error.",
-	"categoria": 4
+	"pregunta": "Define las métricas de Precisión (Precision) y Exhaustividad (Recall).",
+	"respuesta": "Precisión: proporción de predicciones positivas que fueron correctas (TP/(TP+FP)). Mide qué tan confiables son las predicciones positivas. Recall (Exhaustividad): proporción de casos positivos reales que fueron correctamente identificados (TP/(TP+FN)). Mide qué tan bien el modelo encuentra todos los casos positivos.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 182,
-	"pregunta": "¿Qué es una hipótesis nula?",
-	"respuesta": "La hipótesis nula (H₀) es una afirmación que se asume verdadera hasta que se demuestre lo contrario. Generalmente establece que no hay diferencia o efecto. Se contrasta con la hipótesis alternativa (H₁) que sugiere que sí hay diferencia o efecto.",
-	"categoria": 4
+	"pregunta": "¿Qué es el F1-Score y cuándo es útil?",
+	"respuesta": "El F1-Score es la media armónica entre precisión y recall (2*(Precision*Recall)/(Precision+Recall)). Es útil cuando hay desbalance de clases, cuando tanto los falsos positivos como los falsos negativos son igualmente costosos, y cuando se necesita una única métrica que balancee tanto la precisión como el recall.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 183,
-	"pregunta": "¿Qué es el valor p (p-value)?",
-	"respuesta": "El valor p es la probabilidad de obtener un resultado igual o más extremo que el observado, asumiendo que la hipótesis nula es verdadera. Un valor p pequeño (típicamente < 0.05) sugiere evidencia contra la hipótesis nula.",
-	"categoria": 4
+	"pregunta": "¿Qué es la curva ROC y el área bajo la curva (AUC)?",
+	"respuesta": "La curva ROC grafica la tasa de verdaderos positivos vs. la tasa de falsos positivos para diferentes umbrales de clasificación. El AUC (Area Under the Curve) mide el área bajo la curva ROC, indicando la capacidad del modelo para distinguir entre clases. Un AUC de 0.5 indica rendimiento aleatorio, mientras que 1.0 indica clasificación perfecta.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 184,
-	"pregunta": "¿Qué es el nivel de significancia (α)?",
-	"respuesta": "El nivel de significancia (α) es el umbral usado para decidir si rechazar la hipótesis nula. Comúnmente se usa α = 0.05, lo que significa que hay un 5% de probabilidad de rechazar incorrectamente una hipótesis nula verdadera (Error Tipo I).",
-	"categoria": 4
+	"pregunta": "¿Cuál es la diferencia entre un parámetro y un hiperparámetro de un modelo?",
+	"respuesta": "Parámetros: valores que el modelo aprende automáticamente durante el entrenamiento (ej: pesos en una red neuronal, coeficientes en regresión lineal). Hiperparámetros: valores configurados antes del entrenamiento que controlan el proceso de aprendizaje (ej: tasa de aprendizaje, número de árboles en random forest, regularización).",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 185,
-	"pregunta": "¿Qué es un Error Tipo I y Tipo II?",
-	"respuesta": "Error Tipo I: Rechazar la hipótesis nula cuando es verdadera (falso positivo). Error Tipo II: No rechazar la hipótesis nula cuando es falsa (falso negativo). La probabilidad del Error Tipo I es α, y del Error Tipo II es β.",
-	"categoria": 4
+	"pregunta": "Describe el problema de la multicolinealidad en los datos.",
+	"respuesta": "La multicolinealidad ocurre cuando dos o más variables predictoras están altamente correlacionadas, proporcionando información redundante. Causa problemas como: inestabilidad en los coeficientes del modelo, dificultad para interpretar la importancia individual de las variables, aumento de la varianza de las estimaciones y reducción del poder estadístico.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 186,
-	"pregunta": "¿Qué es la potencia estadística?",
-	"respuesta": "La potencia estadística es la probabilidad de rechazar correctamente una hipótesis nula falsa. Se calcula como 1 - β, donde β es la probabilidad del Error Tipo II. Una potencia alta (> 0.80) indica que el test es bueno detectando efectos reales.",
-	"categoria": 4
+	"pregunta": "¿Qué es el análisis exploratorio de datos (EDA)?",
+	"respuesta": "EDA es el proceso inicial de exploración y análisis de datos para descubrir patrones, detectar anomalías, probar hipótesis y verificar suposiciones mediante técnicas estadísticas y visualizaciones. Ayuda a comprender la estructura, calidad y características de los datos antes de aplicar modelos más complejos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 187,
-	"pregunta": "¿Qué es una variable aleatoria?",
-	"respuesta": "Una variable aleatoria es una función que asigna valores numéricos a los resultados de un experimento aleatorio. Puede ser discreta (valores específicos) o continua (cualquier valor en un rango).",
-	"categoria": 4
+	"pregunta": "¿Para qué sirve un histograma en el análisis de datos?",
+	"respuesta": "Un histograma muestra la distribución de frecuencias de una variable numérica, permitiendo: identificar la forma de la distribución (normal, sesgada, bimodal), detectar valores atípicos, observar la dispersión de los datos, identificar brechas en los datos y comparar distribuciones entre diferentes grupos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 188,
-	"pregunta": "¿Qué es la función de densidad de probabilidad (PDF)?",
-	"respuesta": "La función de densidad de probabilidad describe la probabilidad relativa de que una variable aleatoria continua tome un valor específico. El área bajo la curva de la PDF en un intervalo representa la probabilidad de que la variable caiga en ese intervalo.",
-	"categoria": 4
+	"pregunta": "¿Qué información nos proporciona un gráfico de dispersión (scatter plot)?",
+	"respuesta": "Un gráfico de dispersión muestra la relación entre dos variables numéricas, revelando: tipo de correlación (positiva, negativa, nula), fuerza de la relación, presencia de valores atípicos, patrones no lineales, agrupamientos de datos y la dirección de la asociación entre las variables.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 189,
-	"pregunta": "¿Qué es la función de distribución acumulativa (CDF)?",
-	"respuesta": "La función de distribución acumulativa es la probabilidad de que una variable aleatoria tome un valor menor o igual a un valor específico. Para variables continuas, es la integral de la PDF desde -∞ hasta ese valor.",
-	"categoria": 4
+	"pregunta": "¿Qué es un diagrama de caja (box plot) y qué componentes muestra?",
+	"respuesta": "Un box plot es una representación gráfica que muestra la distribución de los datos mediante cinco números resumen: valor mínimo (excluyendo outliers), primer cuartil (Q1), mediana (Q2), tercer cuartil (Q3) y valor máximo (excluyendo outliers). También muestra outliers como puntos individuales fuera de los 'bigotes'.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 190,
-	"pregunta": "¿Qué es el coeficiente de variación?",
-	"respuesta": "El coeficiente de variación es la razón entre la desviación estándar y la media, expresada como porcentaje. CV = (σ/μ) × 100%. Es útil para comparar la variabilidad relativa entre diferentes conjuntos de datos con diferentes unidades o escalas.",
-	"categoria": 4
+	"pregunta": "¿Cómo se puede manejar el desbalance de clases en un problema de clasificación?",
+	"respuesta": "Se puede manejar mediante: técnicas de remuestreo (oversampling de la clase minoritaria, undersampling de la mayoritaria), técnicas sintéticas (SMOTE), ajuste de pesos de clase en el algoritmo, uso de métricas apropiadas (F1-score, AUC), ensemble methods, y técnicas de threshold adjustment.",
+	"categoria": 2,
+	"nivel": 2
   },
-{
+  {
 	"id": 191,
-	"pregunta": "¿Qué es la media aritmética?",
-	"respuesta": "La media aritmética es el promedio de un conjunto de datos, calculada sumando todos los valores y dividiéndolos entre el número total de observaciones. Es una medida de tendencia central que representa el valor típico del conjunto de datos.",
-	"categoria": 4
+	"pregunta": "¿Qué es el muestreo aleatorio?",
+	"respuesta": "El muestreo aleatorio es una técnica donde cada elemento de la población tiene la misma probabilidad de ser seleccionado para la muestra. Garantiza que la muestra sea representativa de la población, elimina sesgos de selección y permite hacer inferencias estadísticas válidas sobre la población completa.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 192,
-	"pregunta": "¿Qué es una red neuronal artificial?",
-	"respuesta": "Una red neuronal artificial es un modelo computacional inspirado en el funcionamiento del cerebro humano. Consiste en nodos interconectados (neuronas artificiales) organizados en capas que procesan información mediante conexiones ponderadas para resolver problemas complejos.",
-	"categoria": 5
+	"pregunta": "Diferencia entre muestreo estratificado y muestreo por conglomerados.",
+	"respuesta": "Muestreo estratificado: divide la población en subgrupos homogéneos (estratos) y selecciona muestras aleatorias de cada estrato, asegurando representación de todos los grupos. Muestreo por conglomerados: divide la población en grupos heterogéneos (conglomerados) y selecciona aleatoriamente algunos conglomerados completos para estudiar.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 193,
-	"pregunta": "¿Qué es un perceptrón?",
-	"respuesta": "El perceptrón es la unidad básica de una red neuronal, inspirada en una neurona biológica. Recibe múltiples entradas, las multiplica por pesos, suma los resultados, añade un sesgo (bias) y aplica una función de activación para producir una salida.",
-	"categoria": 5
+	"pregunta": "¿Qué es la imputación de datos y qué métodos comunes existen?",
+	"respuesta": "La imputación es el proceso de llenar valores faltantes con estimaciones plausibles. Métodos comunes incluyen: imputación por media/mediana/moda, imputación por regresión, imputación múltiple, k-nearest neighbors (KNN), imputación iterativa (MICE), e imputación basada en modelos de machine learning.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 194,
-	"pregunta": "¿Qué son los pesos en una red neuronal?",
-	"respuesta": "Los pesos son parámetros numéricos que determinan la fuerza de las conexiones entre neuronas. Durante el entrenamiento, los pesos se ajustan para minimizar el error y permitir que la red aprenda patrones en los datos.",
-	"categoria": 5
+	"pregunta": "Explica el concepto de reducción de dimensionalidad.",
+	"respuesta": "La reducción de dimensionalidad es el proceso de disminuir el número de variables o características en un conjunto de datos mientras se preserva la mayor cantidad posible de información relevante. Beneficia al reducir la complejidad computacional, eliminar ruido, evitar la maldición de la dimensionalidad y facilitar la visualización de datos.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 195,
-	"pregunta": "¿Qué es el sesgo (bias) en una neurona?",
-	"respuesta": "El sesgo es un parámetro adicional que se suma a la entrada ponderada de una neurona antes de aplicar la función de activación. Permite que la neurona se active incluso cuando todas las entradas son cero, proporcionando flexibilidad al modelo.",
-	"categoria": 5
+	"pregunta": "¿En qué consiste la técnica de Análisis de Componentes Principales (PCA)?",
+	"respuesta": "PCA es una técnica de reducción de dimensionalidad que transforma variables correlacionadas en un conjunto menor de variables no correlacionadas llamadas componentes principales. Estos componentes capturan la máxima varianza de los datos originales, permitiendo reducir la dimensionalidad mientras se preserva la mayor cantidad de información posible.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 196,
-	"pregunta": "¿Qué es una función de activación?",
-	"respuesta": "La función de activación es una función matemática que determina si una neurona debe activarse o no. Introduce no linealidad en la red, permitiendo que aprenda patrones complejos. Ejemplos incluyen ReLU, sigmoid, tanh y softmax.",
-	"categoria": 5
+	"pregunta": "¿Qué es la ética en la ciencia de datos?",
+	"respuesta": "La ética en ciencia de datos se refiere a los principios morales que guían la recolección, análisis y uso de datos. Incluye consideraciones sobre privacidad, consentimiento informado, transparencia, equidad, responsabilidad, prevención de sesgos discriminatorios y uso responsable de la información personal y sensible.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 197,
-	"pregunta": "¿Qué es la función de activación ReLU?",
-	"respuesta": "ReLU (Rectified Linear Unit) es una función de activación que devuelve 0 para valores negativos y el valor original para valores positivos: f(x) = max(0, x). Es popular porque es computacionalmente eficiente y ayuda a mitigar el problema del gradiente que desaparece.",
-	"categoria": 5
+	"pregunta": "Menciona dos posibles sesgos que pueden surgir en un proyecto de ciencia de datos.",
+	"respuesta": "1) Sesgo de selección: cuando la muestra no es representativa de la población objetivo, llevando a conclusiones erróneas. 2) Sesgo de confirmación: tendencia a buscar, interpretar o recordar información que confirma las creencias preexistentes, ignorando evidencia contradictoria durante el análisis de datos.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 198,
-	"pregunta": "¿Qué es la función de activación sigmoid?",
-	"respuesta": "La función sigmoid transforma cualquier valor real en un valor entre 0 y 1: f(x) = 1/(1 + e^(-x)). Es útil para problemas de clasificación binaria, pero puede sufrir del problema del gradiente que desaparece en redes profundas.",
-	"categoria": 5
+	"pregunta": "¿Qué es la interpretabilidad de un modelo y por qué es importante?",
+	"respuesta": "La interpretabilidad es la capacidad de explicar o entender cómo un modelo toma decisiones y por qué produce determinados resultados. Es importante para: generar confianza en las decisiones, cumplir regulaciones, detectar sesgos, validar la lógica del modelo, facilitar la depuración y permitir que los usuarios comprendan y actúen sobre las predicciones.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 199,
-	"pregunta": "¿Qué es una red neuronal multicapa (MLP)?",
-	"respuesta": "Una red neuronal multicapa es una red que tiene una o más capas ocultas entre la capa de entrada y la capa de salida. Cada capa está completamente conectada con la siguiente, permitiendo que la red aprenda representaciones más complejas.",
-	"categoria": 5
+	"pregunta": "Diferencia entre causalidad y correlación.",
+	"respuesta": "Correlación indica que dos variables cambian juntas, pero no implica que una cause la otra. Causalidad establece que una variable influye directamente en otra. La correlación es más fácil de detectar estadísticamente, mientras que la causalidad requiere evidencia adicional, experimentos controlados o análisis más riguroso para establecerse.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 200,
-	"pregunta": "¿Qué es el deep learning?",
-	"respuesta": "El deep learning es una rama del machine learning que utiliza redes neuronales artificiales con múltiples capas ocultas (profundas) para aprender representaciones jerárquicas de los datos. Es especialmente efectivo para tareas como visión por computadora, procesamiento de lenguaje natural y reconocimiento de voz.",
-	"categoria": 5
+	"pregunta": "¿Qué es el data storytelling y cuál es su objetivo?",
+	"respuesta": "Data storytelling es el arte de comunicar insights y hallazgos de datos a través de una narrativa convincente que combina datos, visualizaciones y contexto. Su objetivo es hacer que los datos sean comprensibles, memorables y accionables para diferentes audiencias, facilitando la toma de decisiones informadas basadas en evidencia.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 201,
-	"pregunta": "¿Qué es la propagación hacia adelante (forward propagation)?",
-	"respuesta": "La propagación hacia adelante es el proceso donde los datos de entrada se propagan a través de la red neuronal capa por capa, desde la entrada hasta la salida. Cada neurona calcula su salida basándose en las entradas ponderadas y la función de activación.",
-	"categoria": 5
+	"pregunta": "Describe un caso de uso práctico de la ciencia de datos en la industria.",
+	"respuesta": "Sistemas de recomendación en e-commerce: empresas como Amazon usan ciencia de datos para analizar el comportamiento de compra, historial de navegación y preferencias de usuarios para recomendar productos personalizados. Esto aumenta las ventas, mejora la experiencia del cliente y optimiza el inventario mediante algoritmos de machine learning y análisis de patrones de consumo.",
+	"categoria": 2,
+	"nivel": 1
   },
   {
 	"id": 202,
-	"pregunta": "¿Qué es la retropropagación (backpropagation)?",
-	"respuesta": "La retropropagación es el algoritmo utilizado para entrenar redes neuronales. Calcula el gradiente de la función de pérdida con respecto a los pesos, propagando el error hacia atrás desde la salida hasta la entrada, y actualiza los pesos para minimizar el error.",
-	"categoria": 5
+	"pregunta": "¿Qué es un pipeline de datos?",
+	"respuesta": "Un pipeline de datos es una serie de procesos automatizados que mueven y transforman datos desde fuentes originales hasta destinos finales. Incluye etapas de extracción, transformación, limpieza, validación y carga de datos (ETL/ELT). Permite procesamiento eficiente, reproducible y escalable de datos para análisis y aplicaciones de machine learning.",
+	"categoria": 2,
+	"nivel": 2
   },
   {
 	"id": 203,
-	"pregunta": "¿Qué es una función de pérdida (loss function)?",
-	"respuesta": "La función de pérdida mide qué tan bien está funcionando el modelo comparando las predicciones con los valores reales. Ejemplos incluyen error cuadrático medio (MSE) para regresión y entropía cruzada para clasificación.",
-	"categoria": 5
+	"pregunta": "¿Qué es inteligencia artificial?",
+	"respuesta": "La inteligencia artificial (IA) es el campo de la informática que busca crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Incluye capacidades como reconocimiento de patrones, toma de decisiones, comprensión del lenguaje, resolución de problemas y aprendizaje automático.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 204,
-	"pregunta": "¿Qué es el gradiente descendente?",
-	"respuesta": "El gradiente descendente es un algoritmo de optimización que actualiza los pesos de la red en la dirección opuesta al gradiente de la función de pérdida. El objetivo es encontrar los pesos que minimizan la función de pérdida.",
-	"categoria": 5
+	"pregunta": "¿Qué es deep learning?",
+	"respuesta": "El deep learning es una rama del machine learning que utiliza redes neuronales artificiales con múltiples capas (profundas) para aprender representaciones jerárquicas de los datos. Es especialmente efectivo para tareas complejas como reconocimiento de imágenes, procesamiento de lenguaje natural y reconocimiento de voz.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 205,
-	"pregunta": "¿Qué es la tasa de aprendizaje (learning rate)?",
-	"respuesta": "La tasa de aprendizaje es un hiperparámetro que controla qué tan grandes son los pasos que toma el algoritmo de optimización al actualizar los pesos. Una tasa muy alta puede causar inestabilidad, mientras que una muy baja puede hacer que el entrenamiento sea lento.",
-	"categoria": 5
+	"pregunta": "¿Qué es NLP?",
+	"respuesta": "NLP (Natural Language Processing) o Procesamiento de Lenguaje Natural es una rama de la IA que se enfoca en la interacción entre computadoras y lenguaje humano. Incluye tareas como análisis de sentimientos, traducción automática, generación de texto, chatbots y extracción de información de textos.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 206,
-	"pregunta": "¿Qué es una época (epoch) en el entrenamiento?",
-	"respuesta": "Una época es una pasada completa por todo el conjunto de datos de entrenamiento. Durante cada época, la red ve todos los ejemplos de entrenamiento una vez y actualiza sus pesos basándose en el error calculado.",
-	"categoria": 5
+	"pregunta": "¿Qué es aprendizaje automático?",
+	"respuesta": "El aprendizaje automático (machine learning) es una subdisciplina de la IA que permite a las computadoras aprender y mejorar automáticamente a partir de la experiencia sin ser explícitamente programadas. Utiliza algoritmos que pueden identificar patrones en los datos y hacer predicciones o decisiones basadas en esos patrones.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 207,
-	"pregunta": "¿Qué es un batch en el entrenamiento?",
-	"respuesta": "Un batch es un subconjunto de ejemplos de entrenamiento que se procesa juntos antes de actualizar los pesos. El entrenamiento por batches es más eficiente que procesar ejemplos individuales y ayuda a estabilizar el proceso de aprendizaje.",
-	"categoria": 5
+	"pregunta": "¿Qué es visión computacional?",
+	"respuesta": "La visión computacional es un campo de la IA que entrena computadoras para interpretar y entender el contenido visual del mundo. Utiliza técnicas de machine learning y deep learning para procesar imágenes y videos, permitiendo aplicaciones como reconocimiento facial, detección de objetos y análisis médico de imágenes.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 208,
-	"pregunta": "¿Qué es el overfitting en deep learning?",
-	"respuesta": "El overfitting ocurre cuando un modelo aprende demasiado bien los datos de entrenamiento, incluyendo el ruido, y no puede generalizar bien a datos nuevos. Se caracteriza por un buen rendimiento en entrenamiento pero malo en validación.",
-	"categoria": 5
+	"pregunta": "¿Qué es aprendizaje no supervisado?",
+	"respuesta": "El aprendizaje no supervisado es un tipo de machine learning donde el algoritmo encuentra patrones ocultos en datos sin etiquetas o respuestas conocidas. Incluye técnicas como clustering (agrupamiento), reducción de dimensionalidad y detección de anomalías, donde el objetivo es descubrir estructuras subyacentes en los datos.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 209,
-	"pregunta": "¿Qué es el underfitting?",
-	"respuesta": "El underfitting ocurre cuando un modelo es demasiado simple para capturar los patrones subyacentes en los datos. Resulta en un rendimiento pobre tanto en los datos de entrenamiento como en los de validación.",
-	"categoria": 5
+	"pregunta": "¿Qué es aprendizaje por refuerzo?",
+	"respuesta": "El aprendizaje por refuerzo es un paradigma de machine learning donde un agente aprende a tomar decisiones óptimas en un entorno mediante prueba y error. El agente recibe recompensas o penalizaciones por sus acciones y busca maximizar la recompensa acumulada a largo plazo. Es usado en juegos, robótica y sistemas de recomendación.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 210,
-	"pregunta": "¿Qué es el dropout?",
-	"respuesta": "El dropout es una técnica de regularización que aleatoriamente 'apaga' algunas neuronas durante el entrenamiento, estableciendo sus salidas a cero. Esto previene el overfitting al evitar que la red dependa demasiado de neuronas específicas.",
-	"categoria": 5
+	"pregunta": "Diferencia entre los casos de regresión y los casos de clasificación en el contexto de los modelos de minería de datos.",
+	"respuesta": "La principal diferencia radica en el tipo de variable que buscan predecir. Los modelos de clasificación se utilizan para predecir una variable objetivo que es categórica o discreta, como 'abandona' o 'no abandona' un servicio. En cambio, los modelos de regresión se emplean cuando la variable objetivo es continua y numérica, como predecir el precio de una vivienda o la temperatura de mañana. Esta diferencia fundamental determina los algoritmos, las métricas de evaluación y la interpretación de los resultados a utilizar.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 211,
-	"pregunta": "¿Qué es la regularización en deep learning?",
-	"respuesta": "La regularización son técnicas utilizadas para prevenir el overfitting añadiendo penalizaciones a la función de pérdida o modificando la arquitectura de la red. Ejemplos incluyen L1/L2 regularization, dropout, y batch normalization.",
-	"categoria": 5
+	"pregunta": "¿Qué son los modelos de ensemble y por qué se utilizan en la minería de datos?",
+	"respuesta": "Los modelos de ensemble son aquellos que combinan las predicciones de múltiples modelos base para generar una predicción final más robusta y precisa. Se utilizan ampliamente porque, al agregar varias perspectivas, a menudo logran un mejor rendimiento predictivo que cualquier modelo individual. Además, pueden ayudar a reducir el sobreajuste, mejorar la estabilidad y capturar relaciones más complejas en los datos, aprovechando las fortalezas de diferentes tipos de algoritmos.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 212,
-	"pregunta": "¿Qué es una red neuronal convolucional (CNN)?",
-	"respuesta": "Una CNN es un tipo de red neuronal especializada en procesar datos con estructura de grilla, como imágenes. Utiliza capas convolucionales que aplican filtros para detectar características locales como bordes, texturas y patrones.",
-	"categoria": 5
+	"pregunta": "Describe la tarea de 'Asociación' en minería de datos y proporciona un ejemplo.",
+	"respuesta": "La tarea de asociación, a menudo llamada análisis de la cesta de mercado, busca descubrir relaciones o reglas de afinidad entre elementos en grandes conjuntos de datos. El objetivo es identificar qué elementos tienden a aparecer juntos con frecuencia. Un ejemplo clásico es el descubrimiento de la regla 'si un cliente compra pañales, entonces es probable que también compre cerveza', lo que permite a un supermercado optimizar la disposición de sus productos para fomentar las ventas cruzadas.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 213,
-	"pregunta": "¿Qué es una red neuronal recurrente (RNN)?",
-	"respuesta": "Una RNN es un tipo de red neuronal diseñada para procesar secuencias de datos. Tiene conexiones recurrentes que permiten que la información persista, haciendo que sean útiles para tareas como procesamiento de lenguaje natural y series temporales.",
-	"categoria": 5
+	"pregunta": "Explica cómo funcionan los enfoques basados en densidad para la detección de atípicos y menciona un algoritmo representativo.",
+	"respuesta": "Los enfoques basados en densidad identifican observaciones atípicas (outliers) como aquellos puntos que se encuentran en regiones de baja densidad del espacio de características. La idea es que los datos normales se agrupan en zonas densas, mientras que las anomalías están aisladas. Un algoritmo representativo es LOF (Local Outlier Factor), que compara la densidad local de un punto con la de sus vecinos, siendo muy efectivo para detectar atípicos cuya densidad es significativamente menor que la de su entorno inmediato.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 214,
-	"pregunta": "¿Qué es LSTM?",
-	"respuesta": "LSTM (Long Short-Term Memory) es un tipo especial de RNN diseñado para recordar información durante largos períodos. Utiliza puertas (gates) para controlar qué información mantener, olvidar o añadir, resolviendo el problema del gradiente que desaparece.",
-	"categoria": 5
+	"pregunta": "¿Qué es la Regresión Logística y para qué tipo de problemas de minería de datos se utiliza?",
+	"respuesta": "La regresión logística es un modelo estadístico utilizado fundamentalmente para problemas de clasificación binaria, es decir, cuando la variable objetivo tiene dos posibles resultados (por ejemplo, 'sí' o 'no', 'éxito' o 'fracaso'). A pesar de su nombre, no es un modelo de regresión, sino de clasificación. Modela la probabilidad de que una observación pertenezca a una de las dos clases, transformando una combinación lineal de las variables predictoras mediante la función logística (o sigmoide).",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 215,
-	"pregunta": "¿Qué es el problema del gradiente que desaparece?",
-	"respuesta": "El problema del gradiente que desaparece ocurre cuando los gradientes se vuelven exponencialmente pequeños mientras se propagan hacia atrás a través de capas profundas, haciendo que las capas anteriores aprendan muy lentamente o no aprendan en absoluto.",
-	"categoria": 5
+	"pregunta": "¿En qué consiste la tarea de Agrupamiento o Clustering y en qué se diferencia de la Clasificación?",
+	"respuesta": "El Agrupamiento o Clustering es una técnica de aprendizaje no supervisado que tiene como objetivo agrupar un conjunto de observaciones en subconjuntos o 'clusters', de modo que las observaciones dentro de un mismo grupo sean muy similares entre sí y distintas a las de otros grupos. Se diferencia de la Clasificación en que no utiliza una variable objetivo predefinida; los grupos se descubren directamente a partir de la estructura inherente de los datos.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 216,
-	"pregunta": "¿Qué es el problema del gradiente que explota?",
-	"respuesta": "El problema del gradiente que explota ocurre cuando los gradientes se vuelven exponencialmente grandes durante la retropropagación, causando actualizaciones de pesos inestables y haciendo que el entrenamiento diverja.",
-	"categoria": 5
+	"pregunta": "¿Qué son los Árboles de Decisión y cuál es una de sus principales ventajas?",
+	"respuesta": "Los Árboles de Decisión son un modelo de aprendizaje supervisado que predice el valor de una variable objetivo aprendiendo reglas de decisión simples inferidas de las características de los datos. Su estructura se asemeja a un árbol, con nodos de decisión y nodos hoja. Una de sus principales ventajas es su alta interpretabilidad, ya que las reglas generadas son explícitas y fáciles de entender para los expertos del dominio y los responsables de la toma de decisiones.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 217,
-	"pregunta": "¿Qué es la normalización por lotes (batch normalization)?",
-	"respuesta": "La normalización por lotes es una técnica que normaliza las entradas de cada capa para que tengan media cero y varianza unitaria. Esto acelera el entrenamiento, reduce la dependencia de la inicialización y actúa como regularizador.",
-	"categoria": 5
+	"pregunta": "Explica la diferencia fundamental entre el aprendizaje supervisado y el no supervisado.",
+	"respuesta": "La diferencia fundamental radica en la disponibilidad de una variable objetivo o etiqueta. En el aprendizaje supervisado, como en la clasificación y la regresión, el algoritmo aprende de un conjunto de datos donde los resultados correctos son conocidos. En el aprendizaje no supervisado, como en el clustering y la asociación, el algoritmo intenta encontrar patrones y estructuras ocultas en los datos sin ninguna etiqueta o resultado predefinido.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 218,
-	"pregunta": "¿Qué es el transfer learning?",
-	"respuesta": "El transfer learning es una técnica donde un modelo pre-entrenado en una tarea se reutiliza como punto de partida para una tarea relacionada. Esto es especialmente útil cuando se tienen pocos datos de entrenamiento para la nueva tarea.",
-	"categoria": 5
+	"pregunta": "¿Qué es el sobreajuste (overfitting) de un modelo y cómo puede mitigarse?",
+	"respuesta": "El sobreajuste ocurre cuando un modelo de minería de datos aprende con demasiado detalle el conjunto de datos de entrenamiento, incluyendo el ruido y las fluctuaciones aleatorias. Esto provoca que el modelo funcione muy bien con los datos de entrenamiento pero falle al generalizar a datos nuevos. Puede mitigarse mediante técnicas como la validación cruzada, la reducción de la complejidad del modelo o la selección de características para eliminar el ruido.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 219,
-	"pregunta": "¿Qué es un autoencoder?",
-	"respuesta": "Un autoencoder es una red neuronal que aprende a comprimir datos de entrada a una representación más pequeña (codificación) y luego reconstruir la entrada original (decodificación). Es útil para reducción de dimensionalidad y detección de anomalías.",
-	"categoria": 5
+	"pregunta": "¿Qué es una red neuronal artificial?",
+	"respuesta": "Una red neuronal artificial (RNA) es un modelo computacional inspirado en la estructura y funcionamiento de las redes neuronales biológicas. Consiste en un conjunto de unidades de procesamiento interconectadas, llamadas neuronas, que trabajan en conjunto para procesar información y resolver problemas complejos, como el reconocimiento de patrones y la clasificación de datos.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 220,
-	"pregunta": "¿Qué es una red generativa adversarial (GAN)?",
-	"respuesta": "Una GAN consiste en dos redes neuronales compitiendo entre sí: un generador que crea datos sintéticos y un discriminador que intenta distinguir entre datos reales y sintéticos. El entrenamiento adversarial mejora ambas redes simultáneamente.",
-	"categoria": 5
+	"pregunta": "¿Qué es un perceptrón?",
+	"respuesta": "Un perceptrón es la forma más simple de una red neuronal artificial, consistiendo en una única neurona. Actúa como un clasificador binario lineal, tomando varias entradas, asignándoles un peso a cada una, sumándolas y pasando el resultado a través de una función de activación para producir una salida.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 221,
-	"pregunta": "¿Qué es la inicialización de pesos?",
-	"respuesta": "La inicialización de pesos es el proceso de establecer los valores iniciales de los pesos antes del entrenamiento. Una buena inicialización (como Xavier o He initialization) es crucial para que el entrenamiento converja eficientemente.",
-	"categoria": 5
+	"pregunta": "¿Qué son los pesos en una red neuronal?",
+	"respuesta": "Los pesos en una red neuronal son parámetros internos que determinan la fuerza de la conexión entre las neuronas. Durante el entrenamiento, la red ajusta estos pesos para minimizar el error en sus predicciones, representando así el conocimiento aprendido por el modelo.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 222,
-	"pregunta": "¿Qué es un hiperparámetro?",
-	"respuesta": "Los hiperparámetros son configuraciones del modelo que no se aprenden durante el entrenamiento, sino que se establecen antes de empezar. Incluyen tasa de aprendizaje, número de capas, número de neuronas por capa, y función de activación.",
-	"categoria": 5
+	"pregunta": "¿Qué es el sesgo (bias) en una neurona?",
+	"respuesta": "El sesgo (bias) en una neurona es un parámetro adicional que permite ajustar la salida de la función de activación, desplazándola hacia la izquierda o la derecha. Proporciona al modelo una mayor flexibilidad para adaptarse a los datos, permitiendo que la neurona se active incluso cuando todas las entradas son cero.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 223,
-	"pregunta": "¿Qué es la validación cruzada en deep learning?",
-	"respuesta": "La validación cruzada es una técnica para evaluar el rendimiento del modelo dividiendo los datos en múltiples subconjuntos (folds) y entrenando/validando múltiples veces. Ayuda a obtener una estimación más robusta del rendimiento del modelo.",
-	"categoria": 5
+	"pregunta": "¿Qué es una función de activación y cuál es su propósito?",
+	"respuesta": "Una función de activación es una operación matemática aplicada a la salida de una neurona que define su resultado final. Su propósito principal es introducir no linealidad en el modelo, permitiendo que la red neuronal aprenda relaciones complejas en los datos que no podrían ser capturadas por un modelo lineal.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 224,
-	"pregunta": "¿Qué es la función softmax?",
-	"respuesta": "La función softmax transforma un vector de valores reales en un vector de probabilidades que suman 1. Es comúnmente utilizada en la capa de salida para problemas de clasificación multiclase, donde cada clase tiene una probabilidad asignada.",
-	"categoria": 5
+	"pregunta": "Describe la función de activación ReLU.",
+	"respuesta": "La función de activación ReLU (Rectified Linear Unit o Unidad Lineal Rectificada) es una de las más utilizadas en redes neuronales. Devuelve la propia entrada si esta es positiva, y cero en caso contrario (f(x) = max(0, x)). Es computacionalmente eficiente y ayuda a mitigar el problema del gradiente desvaneciente.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 225,
-	"pregunta": "¿Qué es el early stopping?",
-	"respuesta": "El early stopping es una técnica de regularización que detiene el entrenamiento cuando el rendimiento en el conjunto de validación deja de mejorar. Previene el overfitting al evitar que el modelo siga entrenando innecesariamente.",
-	"categoria": 5
+	"pregunta": "Describe la función de activación sigmoide.",
+	"respuesta": "La función de activación sigmoide transforma cualquier valor de entrada en un rango entre 0 y 1. Se utiliza comúnmente en las capas de salida para problemas de clasificación binaria, donde la salida puede interpretarse como una probabilidad. Su forma es de 'S' y su fórmula es $1 / (1 + e^{-x})$",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 226,
-	"pregunta": "¿Qué es una capa densa (fully connected)?",
-	"respuesta": "Una capa densa es una capa donde cada neurona está conectada a todas las neuronas de la capa anterior. Cada conexión tiene su propio peso, y la capa aplica una transformación lineal seguida de una función de activación no lineal.",
-	"categoria": 5
+	"pregunta": "¿Qué es una red neuronal multicapa (MLP)?",
+	"respuesta": "Una red neuronal multicapa (MLP, por sus siglas en inglés) es un tipo de red neuronal artificial que consta de al menos tres capas de neuronas: una capa de entrada, una o más capas ocultas y una capa de salida. Cada neurona de una capa está conectada con todas las neuronas de la siguiente, permitiendo el aprendizaje de patrones no lineales complejos.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 227,
-	"pregunta": "¿Qué es el momentum en optimización?",
-	"respuesta": "El momentum es una técnica que acelera el gradiente descendente en la dirección correcta y amortigua las oscilaciones. Funciona añadiendo una fracción de la actualización anterior a la actualización actual, ayudando a superar mínimos locales.",
-	"categoria": 5
+	"pregunta": "¿Qué es la propagación hacia adelante (forward propagation)?",
+	"respuesta": "La propagación hacia adelante es el proceso mediante el cual los datos de entrada se mueven a través de la red neuronal, desde la capa de entrada hasta la capa de salida, para generar una predicción. En cada capa, se calcula la suma ponderada de las entradas y se aplica la función de activación.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 228,
-	"pregunta": "¿Qué es Adam optimizer?",
-	"respuesta": "Adam es un algoritmo de optimización que combina las ventajas del momentum y RMSprop. Mantiene tasas de aprendizaje adaptativas para cada parámetro y funciona bien en la mayoría de problemas de deep learning sin necesidad de ajustar muchos hiperparámetros.",
-	"categoria": 5
+	"pregunta": "¿Qué es la retropropagación (backpropagation)?",
+	"respuesta": "La retropropagación es el algoritmo utilizado para entrenar redes neuronales. Después de la propagación hacia adelante, se calcula el error entre la predicción del modelo y el valor real. Luego, este error se propaga hacia atrás a través de la red, ajustando los pesos y sesgos de cada neurona para minimizar dicho error.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 229,
-	"pregunta": "¿Qué es una función de activación leaky ReLU?",
-	"respuesta": "Leaky ReLU es una variante de ReLU que permite un pequeño gradiente cuando la entrada es negativa: f(x) = max(αx, x) donde α es un pequeño valor positivo. Esto ayuda a mitigar el problema de 'neuronas muertas' que puede ocurrir con ReLU.",
-	"categoria": 5
+	"pregunta": "¿Qué es una función de pérdida (loss function)?",
+	"respuesta": "Una función de pérdida, o función de coste, mide la diferencia entre las predicciones de un modelo y los valores reales en el conjunto de datos. El objetivo del entrenamiento es minimizar el valor de esta función, lo que indica que el modelo está haciendo predicciones más precisas.",
+	"categoria": 3,
+	"nivel": 1
   },
   {
 	"id": 230,
-	"pregunta": "¿Qué es la entropía cruzada?",
-	"respuesta": "La entropía cruzada es una función de pérdida comúnmente utilizada en problemas de clasificación. Mide la diferencia entre la distribución de probabilidad predicha y la distribución real, penalizando más fuertemente las predicciones incorrectas con alta confianza.",
-	"categoria": 5
+	"pregunta": "¿Cómo funciona el algoritmo de optimización de gradiente descendente?",
+	"respuesta": "El gradiente descendente es un algoritmo de optimización iterativo que busca minimizar la función de pérdida de un modelo. En cada paso, calcula el gradiente (la derivada) de la función de pérdida con respecto a los parámetros del modelo (pesos y sesgos) y los actualiza en la dirección opuesta al gradiente, 'descendiendo' así hacia el mínimo de la función.",
+	"categoria": 3,
+	"nivel": 2
   },
   {
 	"id": 231,
-	"pregunta": "¿Qué es una base de datos no relacional?",
-	"respuesta": "Una base de datos no relacional (o NoSQL) es un tipo de base de datos que no usa tablas con filas y columnas, como en las bases de datos relacionales. En su lugar, almacena los datos en formatos más flexibles como documentos, pares clave-valor, grafos o columnas distribuidas. **Características clave:** No requiere un esquema fijo. Escalable horizontalmente. Ideal para datos grandes o cambiantes. Permite trabajar con estructuras como JSON o XML. Ejemplo popular: MongoDB (usa documentos JSON para guardar datos).",
-	"categoria": 5
+	"pregunta": "¿Qué es la tasa de aprendizaje (learning rate)?",
+	"respuesta": "La tasa de aprendizaje es un hiperparámetro que controla el tamaño de los ajustes que se realizan en los pesos de la red durante el entrenamiento mediante el algoritmo de gradiente descendente. Un valor adecuado es crucial: si es demasiado pequeño, el entrenamiento será lento; si es demasiado grande, el modelo podría no converger.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 232,
+	"pregunta": "¿Qué es una época (epoch) en el entrenamiento de un modelo?",
+	"respuesta": "Una época representa una pasada completa del algoritmo de entrenamiento a través de todo el conjunto de datos de entrenamiento. El entrenamiento de un modelo generalmente requiere múltiples épocas para que el algoritmo pueda aprender adecuadamente los patrones en los datos.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 233,
+	"pregunta": "¿Qué es un lote (batch) en el entrenamiento?",
+	"respuesta": "Un lote (batch) es un subconjunto del conjunto de datos de entrenamiento que se utiliza en una iteración del proceso de entrenamiento. En lugar de procesar todo el conjunto de datos a la vez, se divide en lotes para hacer el cálculo más eficiente y mejorar la generalización del modelo.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 234,
+	"pregunta": "¿Qué es el subajuste (underfitting)?",
+	"respuesta": "El subajuste ocurre cuando un modelo de machine learning es demasiado simple para capturar la complejidad de los datos de entrenamiento. Como resultado, el modelo tiene un rendimiento deficiente tanto en los datos de entrenamiento como en los datos no vistos, ya que no ha aprendido las relaciones subyacentes.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 235,
+	"pregunta": "Explica la técnica de regularización 'dropout'.",
+	"respuesta": "Dropout es una técnica de regularización para prevenir el sobreajuste en redes neuronales. Durante el entrenamiento, desactiva aleatoriamente un porcentaje de neuronas en cada capa. Esto fuerza a la red a aprender representaciones más robustas y a no depender de unas pocas neuronas específicas.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 236,
+	"pregunta": "¿Qué es una red neuronal convolucional (CNN) y para qué tareas es adecuada?",
+	"respuesta": "Una red neuronal convolucional (CNN) es un tipo especializado de red neuronal diseñada para procesar datos con una estructura de cuadrícula, como las imágenes. Utiliza capas convolucionales para detectar jerarquías de características (líneas, formas, objetos). Es especialmente adecuada para tareas de visión por computadora como clasificación de imágenes, detección de objetos y reconocimiento facial.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 237,
+	"pregunta": "¿Qué es una red neuronal recurrente (RNN) y dónde se aplica comúnmente?",
+	"respuesta": "Una red neuronal recurrente (RNN) es un tipo de red neuronal diseñada para trabajar con datos secuenciales, ya que sus conexiones forman un ciclo dirigido que le permite mantener una memoria de información pasada. Se aplica comúnmente en el procesamiento del lenguaje natural (traducción, análisis de sentimientos), reconocimiento de voz y análisis de series temporales.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 238,
+	"pregunta": "¿Qué es una célula LSTM y qué problema de las RNNs ayuda a solucionar?",
+	"respuesta": "Una célula LSTM (Long Short-Term Memory) es una unidad de construcción de las redes neuronales recurrentes que utiliza un sistema de 'compuertas' para regular el flujo de información. Ayuda a solucionar el problema del gradiente desvaneciente en las RNNs estándar, permitiendo a la red aprender y recordar dependencias a largo plazo en secuencias de datos.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 239,
+	"pregunta": "¿Cuál es el problema del gradiente desvaneciente (vanishing gradient)?",
+	"respuesta": "El problema del gradiente desvaneciente ocurre en redes neuronales profundas, especialmente en RNNs, donde el gradiente de la función de pérdida se vuelve extremadamente pequeño a medida que se propaga hacia atrás. Esto impide que los pesos de las capas iniciales se actualicen de manera efectiva, deteniendo el aprendizaje del modelo.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 240,
+	"pregunta": "¿Qué es el aprendizaje por transferencia (transfer learning)?",
+	"respuesta": "El aprendizaje por transferencia es una técnica de machine learning donde un modelo pre-entrenado en una tarea grande y general se reutiliza como punto de partida para una tarea diferente pero relacionada. Esto permite aprovechar el conocimiento adquirido previamente, requiriendo menos datos y tiempo de entrenamiento para la nueva tarea.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 241,
+	"pregunta": "¿Qué es una red generativa antagónica (GAN)?",
+	"respuesta": "Una red generativa antagónica (GAN) es un tipo de modelo de aprendizaje no supervisado que consta de dos redes neuronales que compiten entre sí: un generador, que crea nuevos datos (ej. imágenes), y un discriminador, que intenta distinguir entre los datos reales y los generados. Esta competencia mejora la capacidad del generador para producir resultados realistas.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 242,
+	"pregunta": "¿Qué es un hiperparámetro en el contexto de la IA?",
+	"respuesta": "Un hiperparámetro es una variable de configuración externa al modelo cuyo valor se establece antes de que comience el proceso de entrenamiento. Ejemplos incluyen la tasa de aprendizaje, el número de capas ocultas en una red neuronal o el valor de 'k' en K-NN. La elección de hiperparámetros afecta significativamente el rendimiento del modelo.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 243,
+	"pregunta": "Describe la función de activación softmax y su uso.",
+	"respuesta": "La función softmax es una generalización de la función sigmoide que se utiliza en la capa de salida de redes neuronales para problemas de clasificación multiclase. Convierte un vector de números reales en una distribución de probabilidad, donde cada valor está entre 0 y 1 y la suma de todos los valores es 1, representando la probabilidad de pertenencia a cada clase.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 244,
+	"pregunta": "¿En qué consiste la técnica de 'parada temprana' (early stopping)?",
+	"respuesta": "La parada temprana es una técnica de regularización que busca prevenir el sobreajuste. Consiste en monitorear el rendimiento del modelo en un conjunto de validación durante el entrenamiento y detenerlo cuando el rendimiento en este conjunto deja de mejorar, incluso si el rendimiento en el conjunto de entrenamiento sigue aumentando.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 245,
+	"pregunta": "Define el algoritmo de agrupamiento K-Means.",
+	"respuesta": "K-Means es un algoritmo de aprendizaje no supervisado que agrupa un conjunto de datos en 'k' clústeres. Funciona asignando cada punto de datos al clúster cuyo centroide (media) esté más cercano. Luego, recalcula los centroides de los clústeres y repite el proceso hasta que las asignaciones no cambien.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 246,
+	"pregunta": "¿Qué es el algoritmo de Support Vector Machine (SVM)?",
+	"respuesta": "Support Vector Machine (SVM) o Máquina de Vectores de Soporte es un algoritmo de aprendizaje supervisado utilizado para clasificación y regresión. Su objetivo es encontrar el hiperplano que mejor separa las clases en el espacio de características, maximizando el margen (la distancia) entre los puntos de datos más cercanos de cada clase.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 247,
+	"pregunta": "Explica el algoritmo de K-Vecinos más cercanos (K-NN).",
+	"respuesta": "K-Vecinos más cercanos (K-NN) es un algoritmo de aprendizaje supervisado no paramétrico y basado en instancias. Para clasificar un nuevo punto de datos, identifica los 'k' puntos más cercanos en el conjunto de entrenamiento (sus vecinos) y asigna la clase que es más común entre esos vecinos.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 248,
+	"pregunta": "¿Qué es el bagging como técnica de ensamble? Menciona un ejemplo.",
+	"respuesta": "Bagging (Bootstrap Aggregating) es una técnica de ensamble que busca mejorar la estabilidad y precisión de los modelos. Consiste en entrenar múltiples modelos del mismo tipo en diferentes submuestras aleatorias con reemplazo del conjunto de datos original y luego promediar sus predicciones. Un ejemplo destacado es el algoritmo Random Forest.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 249,
+	"pregunta": "¿Qué es el boosting como técnica de ensamble? Menciona un ejemplo.",
+	"respuesta": "Boosting es una técnica de ensamble que combina secuencialmente varios modelos débiles para crear un modelo fuerte. Cada nuevo modelo se enfoca en corregir los errores cometidos por su predecesor, ponderando más los datos mal clasificados. Ejemplos populares incluyen AdaBoost y Gradient Boosting.",
+	"categoria": 3,
+	"nivel": 2
+  },
+  {
+	"id": 250,
+	"pregunta": "¿Qué es un sistema de recomendación?",
+	"respuesta": "Un sistema de recomendación es un tipo de sistema de filtrado de información que busca predecir la preferencia o calificación que un usuario daría a un ítem. Su objetivo es sugerir elementos relevantes (como películas, productos o noticias) a los usuarios basándose en sus datos y comportamiento.",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 251,
+	"pregunta": "Diferencia entre filtrado colaborativo y filtrado basado en contenido.",
+	"respuesta": "El filtrado colaborativo recomienda ítems basándose en las preferencias de usuarios con gustos similares ('los usuarios que compraron X también compraron Y'). En cambio, el filtrado basado en contenido recomienda ítems que son similares en sus atributos a los que un usuario ha preferido en el pasado ('si te gustó la película de acción X, te podría gustar la película de acción Y').",
+	"categoria": 3,
+	"nivel": 1
+  },
+  {
+	"id": 252,
+	"pregunta": "¿Cuál es la diferencia entre media poblacional y media muestral?",
+	"respuesta": "La media poblacional (μ) es el promedio de todos los individuos de una población completa. La media muestral (x̄) es el promedio de un subconjunto (muestra) de esa población y se utiliza para estimar la media poblacional.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 253,
+	"pregunta": "¿Qué es la moda en un conjunto de datos?",
+	"respuesta": "La moda es el valor que aparece con mayor frecuencia en un conjunto de datos. Un conjunto de datos puede no tener moda, tener una (unimodal), dos (bimodal) o más.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 254,
+	"pregunta": "¿Qué es la mediana y cuándo es preferible usarla en lugar de la media?",
+	"respuesta": "La mediana es el valor central de un conjunto de datos ordenado. Es preferible usarla en lugar de la media cuando el conjunto de datos tiene valores atípicos (outliers) o una distribución muy asimétrica, ya que la mediana no se ve afectada por estos valores extremos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 255,
+	"pregunta": "¿Qué es la varianza y qué mide?",
+	"respuesta": "La varianza ($σ²$) es una medida de dispersión que cuantifica qué tan alejados están los valores de un conjunto de datos de su media. Una varianza alta indica que los datos están muy dispersos, mientras que una varianza baja indica que están agrupados cerca de la media.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 256,
+	"pregunta": "¿Qué es la desviación estándar y cómo se relaciona con la varianza?",
+	"respuesta": "La desviación estándar (σ) también mide la dispersión de los datos respecto a la media. Es la raíz cuadrada de la varianza. Su principal ventaja es que se expresa en las mismas unidades que los datos originales, lo que facilita su interpretación.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 257,
+	"pregunta": "¿Qué son los cuartiles y cómo dividen un conjunto de datos?",
+	"respuesta": "Los cuartiles son tres valores (Q1, Q2, Q3) que dividen un conjunto de datos ordenado en cuatro partes iguales. Q1 (primer cuartil) deja por debajo al 25% de los datos, Q2 (la mediana) al 50%, y Q3 (tercer cuartil) al 75%.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 258,
+	"pregunta": "Define el rango intercuartílico (IQR) y para qué se utiliza.",
+	"respuesta": "El rango intercuartílico (IQR) es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1). Se utiliza para medir la dispersión del 50% central de los datos y es una medida robusta para identificar valores atípicos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 259,
+	"pregunta": "¿Qué es la asimetría (skewness) de una distribución?",
+	"respuesta": "La asimetría es una medida de la falta de simetría en una distribución de probabilidad. Una asimetría positiva indica que la cola de la distribución es más larga a la derecha, y una negativa, que es más larga a la izquierda. Una distribución simétrica tiene asimetría cero.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 260,
+	"pregunta": "¿Qué es la curtosis y qué nos dice sobre una distribución?",
+	"respuesta": "La curtosis mide qué tan 'puntiaguda' o 'achatada' es una distribución en comparación con la distribución normal. Una curtosis alta (leptocúrtica) indica colas pesadas y más valores atípicos, mientras que una baja (platicúrtica) indica colas ligeras.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 261,
+	"pregunta": "¿Qué es un outlier o valor atípico?",
+	"respuesta": "Un outlier o valor atípico es una observación en un conjunto de datos que es anormalmente distante de las otras observaciones. Puede ser debido a un error de medición o a la propia variabilidad de los datos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 262,
+	"pregunta": "¿Qué es el z-score o puntaje estándar y cómo se calcula?",
+	"respuesta": "El z-score indica a cuántas desviaciones estándar se encuentra un punto de datos de la media de su grupo. Se calcula restando la media al punto de datos y dividiendo el resultado por la desviación estándar: $z = (x - μ) / σ$.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 263,
+	"pregunta": "Describe las características de una distribución normal.",
+	"respuesta": "Una distribución normal tiene forma de campana (campana de Gauss), es simétrica alrededor de su media, y la media, la mediana y la moda son iguales. Su forma está completamente determinada por su media (μ) y su desviación estándar (σ).",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 264,
+	"pregunta": "¿Qué es la correlación y qué indica su coeficiente?",
+	"respuesta": "La correlación es una medida estadística que expresa la fuerza y dirección de la relación lineal entre dos variables. Su coeficiente varía de -1 (correlación negativa perfecta) a +1 (correlación positiva perfecta), donde 0 indica ninguna correlación lineal.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 265,
+	"pregunta": "¿Qué es la covarianza?",
+	"respuesta": "La covarianza es una medida que indica la dirección de la relación lineal entre dos variables. Un valor positivo significa que ambas variables tienden a aumentar juntas, mientras que un valor negativo significa que una tiende a aumentar cuando la otra disminuye. Su magnitud no es fácil de interpretar.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 266,
+	"pregunta": "¿Qué es una muestra representativa?",
+	"respuesta": "Una muestra representativa es un subconjunto de una población que refleja con precisión las características del grupo más grande. Es fundamental para poder generalizar los resultados de la muestra a toda la población.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 267,
+	"pregunta": "¿Qué es el error estándar?",
+	"respuesta": "El error estándar (SE) mide la variabilidad o dispersión de la distribución muestral de un estadístico (como la media muestral). Es la desviación estándar de las medias de todas las posibles muestras de un tamaño determinado, e indica la precisión de la media muestral como estimación de la media poblacional.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 268,
+	"pregunta": "Enuncia el Teorema del Límite Central de forma simple.",
+	"respuesta": "El Teorema del Límite Central establece que, si se toman muestras suficientemente grandes de cualquier población, la distribución de las medias de esas muestras será aproximadamente una distribución normal, sin importar la forma de la distribución original de la población.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 269,
+	"pregunta": "¿Qué es un intervalo de confianza?",
+	"respuesta": "Un intervalo de confianza es un rango de valores, calculado a partir de datos de una muestra, que se estima que contiene el verdadero valor de un parámetro de la población con un cierto nivel de confianza (por ejemplo, 95%).",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 270,
+	"pregunta": "¿Qué es una hipótesis nula (H0) en una prueba de hipótesis?",
+	"respuesta": "La hipótesis nula (H0) es la afirmación inicial que se asume como verdadera al comenzar una prueba de hipótesis. Generalmente, postula que no hay efecto, no hay diferencia o no hay relación entre las variables que se están estudiando.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 271,
+	"pregunta": "¿Qué representa el valor p (p-value)?",
+	"respuesta": "El valor p es la probabilidad de obtener los resultados observados en una muestra (o resultados más extremos) si la hipótesis nula fuera cierta. Un valor p pequeño (típicamente < 0.05) sugiere que es poco probable que los resultados se deban al azar, llevando al rechazo de la hipótesis nula.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 272,
+	"pregunta": "¿Qué es el nivel de significancia (α)?",
+	"respuesta": "El nivel de significancia, denotado como alfa (α), es el umbral de probabilidad que se establece para decidir si se rechaza la hipótesis nula. Representa la probabilidad máxima que estamos dispuestos a aceptar de cometer un Error Tipo I. Comúnmente se fija en 0.05 (5%).",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 273,
+	"pregunta": "Describe el Error Tipo I y el Error Tipo II.",
+	"respuesta": "El Error Tipo I (falso positivo) ocurre cuando se rechaza la hipótesis nula siendo esta verdadera. El Error Tipo II (falso negativo) ocurre cuando no se rechaza la hipótesis nula siendo esta falsa.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 274,
+	"pregunta": "¿Qué es la potencia estadística (statistical power)?",
+	"respuesta": "La potencia estadística es la probabilidad de que una prueba de hipótesis rechace correctamente la hipótesis nula cuando esta es falsa. En otras palabras, es la capacidad de la prueba para detectar un efecto real. Es igual a 1 - P(Error Tipo II).",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 275,
+	"pregunta": "¿Qué es una variable aleatoria?",
+	"respuesta": "Una variable aleatoria es una variable cuyo valor es un resultado numérico de un fenómeno aleatorio. Puede ser discreta (toma valores contables, como el resultado de un dado) o continua (toma cualquier valor en un rango, como la temperatura).",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 276,
+	"pregunta": "¿Qué es una función de densidad de probabilidad (PDF)?",
+	"respuesta": "Una función de densidad de probabilidad (PDF, por sus siglas en inglés) describe la probabilidad relativa de que una variable aleatoria continua tome un valor determinado. La probabilidad de que la variable caiga dentro de un rango específico es el área bajo la curva de la PDF en ese rango.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 277,
+	"pregunta": "¿Qué es una función de distribución acumulativa (CDF)?",
+	"respuesta": "Una función de distribución acumulativa (CDF, por sus siglas en inglés) indica la probabilidad de que una variable aleatoria X sea menor o igual a un valor específico x. Para cualquier valor x, la CDF proporciona $P(X ≤ x)$.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 278,
+	"pregunta": "¿Qué es el coeficiente de variación?",
+	"respuesta": "El coeficiente de variación (CV) es una medida relativa de la dispersión de datos. Se calcula como la relación entre la desviación estándar y la media ($CV = σ / μ$). Permite comparar la variabilidad entre conjuntos de datos con diferentes medias.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 279,
+	"pregunta": "Diferencia entre estadística descriptiva y estadística inferencial.",
+	"respuesta": "La estadística descriptiva se enfoca en organizar, resumir y presentar datos de manera informativa (mediante medias, medianas, gráficos, etc.). La estadística inferencial utiliza datos de una muestra para hacer inferencias, predicciones o conclusiones sobre una población más grande.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 280,
+	"pregunta": "¿Qué es una distribución de probabilidad discreta? Da un ejemplo.",
+	"respuesta": "Es una distribución que describe la probabilidad de cada resultado posible para una variable aleatoria que solo puede tomar un número contable de valores. Un ejemplo es la distribución de Bernoulli, que modela un solo experimento con dos resultados (éxito/fracaso).",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 281,
+	"pregunta": "¿Qué es una distribución de probabilidad continua? Da un ejemplo.",
+	"respuesta": "Es una distribución que describe las probabilidades de los posibles valores de una variable aleatoria continua, que puede tomar cualquier valor dentro de un rango dado. El ejemplo más conocido es la distribución normal o gaussiana.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 282,
+	"pregunta": "Explica la ley de los grandes números.",
+	"respuesta": "La ley de los grandes números establece que a medida que aumenta el tamaño de una muestra, la media muestral se acercará cada vez más a la media de la población de la que se extrajo. Es el principio por el cual los promedios se estabilizan con más datos.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 283,
+	"pregunta": "¿Qué es un muestreo aleatorio simple?",
+	"respuesta": "Es un método de selección de una muestra de una población en el que cada miembro de la población tiene la misma probabilidad de ser elegido. Garantiza que la muestra sea, en teoría, imparcial.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 284,
+	"pregunta": "¿Qué es el sesgo de selección en una muestra?",
+	"respuesta": "El sesgo de selección ocurre cuando el método para elegir una muestra provoca que esta no sea representativa de la población. Como resultado, las conclusiones extraídas de la muestra pueden ser incorrectas o estar sistemáticamente distorsionadas.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 285,
+	"pregunta": "¿Cómo se interpreta un coeficiente de correlación de Pearson (r)?",
+	"respuesta": "El coeficiente r mide la fuerza y dirección de una relación lineal. Si r está cerca de +1, indica una fuerte relación lineal positiva. Si está cerca de -1, una fuerte relación lineal negativa. Si está cerca de 0, indica una relación lineal débil o nula.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 286,
+	"pregunta": "¿Un coeficiente de correlación de cero implica que no hay relación entre las variables?",
+	"respuesta": "No necesariamente. Un coeficiente de correlación de cero solo indica que no hay una relación *lineal* entre las variables. Podría existir una relación fuerte no lineal (por ejemplo, cuadrática o en forma de U).",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 287,
+	"pregunta": "¿Qué es la regresión lineal simple?",
+	"respuesta": "La regresión lineal simple es un modelo estadístico que se utiliza para describir la relación entre dos variables (una dependiente y una independiente) mediante el ajuste de una línea recta a los datos. Permite predecir el valor de la variable dependiente a partir de la independiente.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 288,
+	"pregunta": "¿Qué representan los coeficientes (pendiente e intercepto) en una regresión lineal?",
+	"respuesta": "El intercepto es el valor predicho de la variable dependiente cuando la variable independiente es cero. La pendiente representa el cambio promedio en la variable dependiente por cada aumento de una unidad en la variable independiente.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 289,
+	"pregunta": "¿Qué es el R-cuadrado (R²) en el contexto de una regresión?",
+	"respuesta": "El R-cuadrado (o coeficiente de determinación) es una medida estadística que representa la proporción de la varianza de la variable dependiente que puede ser explicada por la variable o variables independientes. Su valor va de 0 a 1.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 290,
+	"pregunta": "¿Qué es una variable dependiente y una variable independiente?",
+	"respuesta": "La variable independiente es la que se manipula o cambia en un estudio para observar su efecto. La variable dependiente es la que se mide y se espera que cambie como resultado de la manipulación de la variable independiente.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 291,
+	"pregunta": "¿Para qué se utiliza la prueba t de Student?",
+	"respuesta": "La prueba t de Student se utiliza para comparar las medias de dos grupos y determinar si son significativamente diferentes entre sí. También puede usarse para comparar la media de un solo grupo con un valor conocido.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 292,
+	"pregunta": "¿Para qué se utiliza la prueba de Chi-cuadrado (χ²)?",
+	"respuesta": "La prueba de Chi-cuadrado se utiliza para analizar datos categóricos. Sus usos principales son probar la independencia entre dos variables categóricas y determinar si la distribución de frecuencias observada se ajusta a una distribución teórica (prueba de bondad de ajuste).",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 293,
+	"pregunta": "¿Qué es el análisis de varianza (ANOVA)?",
+	"respuesta": "El análisis de varianza (ANOVA) es una prueba estadística que se utiliza para determinar si existen diferencias estadísticamente significativas entre las medias de tres o más grupos independientes.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 294,
+	"pregunta": "¿Qué es la aleatoriedad?",
+	"respuesta": "La aleatoriedad es la propiedad de los eventos que ocurren sin un patrón o previsibilidad. En estadística, un proceso aleatorio es aquel en el que los resultados individuales no se pueden predecir, pero su distribución a largo plazo sí puede ser conocida.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 295,
+	"pregunta": "Describe qué es una distribución binomial.",
+	"respuesta": "La distribución binomial es una distribución de probabilidad discreta que describe el número de éxitos en una secuencia de 'n' ensayos de Bernoulli independientes entre sí, con una probabilidad fija 'p' de éxito en cada ensayo.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 296,
+	"pregunta": "Describe qué es una distribución de Poisson.",
+	"respuesta": "La distribución de Poisson es una distribución de probabilidad discreta que expresa la probabilidad de que un número determinado de eventos ocurra en un intervalo fijo de tiempo o espacio, si estos eventos ocurren con una tasa media constante e independientemente del tiempo desde el último evento.",
+	"categoria": 4,
+	"nivel": 2
+  },
+  {
+	"id": 297,
+	"pregunta": "¿Qué es un percentil?",
+	"respuesta": "Un percentil es una medida de posición que indica el valor por debajo del cual se encuentra un determinado porcentaje de las observaciones en un grupo. Por ejemplo, el percentil 80 es el valor por debajo del cual se encuentra el 80% de los datos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 298,
+	"pregunta": "¿Cómo se puede visualizar la distribución de una variable numérica? Menciona 2 gráficos.",
+	"respuesta": "Se puede visualizar mediante un histograma, que muestra la frecuencia de los datos en intervalos o 'bins', y un diagrama de caja (box plot), que resume la distribución a través de sus cuartiles, mediana y valores atípicos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 299,
+	"pregunta": "¿Qué es la frecuencia relativa?",
+	"respuesta": "La frecuencia relativa es la proporción de veces que un valor aparece en un conjunto de datos. Se calcula dividiendo la frecuencia absoluta (el número de veces que aparece el valor) por el número total de datos.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 300,
+	"pregunta": "¿Qué es un espacio muestral en probabilidad?",
+	"respuesta": "El espacio muestral (S) de un experimento aleatorio es el conjunto de todos los resultados posibles de dicho experimento. Por ejemplo, al lanzar un dado de seis caras, el espacio muestral es {1, 2, 3, 4, 5, 6}.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 301,
+	"pregunta": "¿Qué es un evento mutuamente excluyente?",
+	"respuesta": "Dos eventos son mutuamente excluyentes (o disjuntos) si no pueden ocurrir al mismo tiempo. Por ejemplo, al lanzar una moneda una vez, los eventos 'obtener cara' y 'obtener cruz' son mutuamente excluyentes.",
+	"categoria": 4,
+	"nivel": 1
+  },
+  {
+	"id": 302,
+	"pregunta": "¿Cuáles son los roles más comunes relacionados con datos en una empresa?",
+	"respuesta": "Los roles más comunes incluyen el Analista de Datos, Científico de Datos, Ingeniero de Datos, Analista de Negocio (enfocado en BI) y Arquitecto de Datos, cada uno con responsabilidades específicas en el ciclo de vida de los datos.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 303,
+	"pregunta": "¿Qué hace un analista de datos y en qué se enfoca?",
+	"respuesta": "Un analista de datos recopila, limpia y analiza datos para extraer información útil. Se enfoca principalmente en el análisis descriptivo y de diagnóstico para responder preguntas de negocio específicas usando datos pasados, a menudo creando informes y dashboards.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 304,
+	"pregunta": "¿Qué hace un analista de negocio (Business Analyst) y cómo utiliza los datos?",
+	"respuesta": "Un analista de negocio identifica problemas y oportunidades de negocio y define los requerimientos para las soluciones. Utiliza los datos para entender los procesos actuales, validar hipótesis y comunicar el impacto de los cambios propuestos a las partes interesadas (stakeholders).",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 305,
+	"pregunta": "¿Qué es la Inteligencia de Negocio (Business Intelligence - BI)?",
+	"respuesta": "La Inteligencia de Negocio es el conjunto de tecnologías, procesos y estrategias que usan las empresas para analizar datos existentes y presentar información procesable que ayude a los ejecutivos y gerentes a tomar decisiones de negocio informadas.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 306,
+	"pregunta": "¿Cuáles son los componentes principales de un sistema de BI?",
+	"respuesta": "Los componentes clave son las fuentes de datos (sistemas internos, datos externos), un proceso ETL (Extract, Transform, Load) para integrar los datos, un almacén de datos (Data Warehouse) y herramientas de visualización y reporting para el usuario final (como dashboards).",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 307,
+	"pregunta": "¿Qué es un dashboard o tablero de control y cuál es su propósito?",
+	"respuesta": "Un dashboard es una herramienta de visualización que muestra de forma gráfica, resumida y centralizada los indicadores clave de rendimiento (KPIs) y otras métricas importantes. Su propósito es permitir un monitoreo rápido y fácil del estado de un negocio, departamento o proceso.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 308,
+	"pregunta": "Define qué es un KPI (Key Performance Indicator).",
+	"respuesta": "Un KPI, o Indicador Clave de Rendimiento, es un valor medible que demuestra cuán efectivamente una organización está logrando sus objetivos de negocio clave. Deben ser específicos, medibles y relevantes para el éxito.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 309,
+	"pregunta": "Proporciona un ejemplo de un KPI para un equipo de ventas.",
+	"respuesta": "Un ejemplo común es la 'tasa de conversión de leads', que mide el porcentaje de clientes potenciales que realizan una compra. Otro podría ser el 'valor promedio del ticket de venta'.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 310,
+	"pregunta": "Proporciona un ejemplo de un KPI para un departamento de marketing digital.",
+	"respuesta": "Un ejemplo clave es el 'Costo por Adquisición' (CPA), que mide cuánto cuesta en promedio adquirir un nuevo cliente a través de las campañas de marketing. Otro es la 'Tasa de Clics' (CTR).",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 311,
+	"pregunta": "¿En qué sectores se puede aplicar la minería de datos para la toma de decisiones estratégicas?",
+	"respuesta": "Se puede aplicar en prácticamente todos los sectores: retail (análisis de canasta de mercado), finanzas (detección de fraude), salud (diagnósticos predictivos), telecomunicaciones (predicción de abandono de clientes) y manufactura (mantenimiento predictivo).",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 312,
+	"pregunta": "¿Cuáles son los principales criterios para la selección de datos en un proyecto de minería de datos?",
+	"respuesta": "Los criterios principales son: la relevancia (que los datos estén directamente relacionados con el problema de negocio), la calidad (precisión, completitud, consistencia), la disponibilidad (que sean accesibles) y que haya una cantidad suficiente para obtener resultados estadísticamente significativos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 313,
+	"pregunta": "Describe las responsabilidades legales y éticas que deben considerar las organizaciones al manipular datos.",
+	"respuesta": "Las organizaciones deben cumplir con las leyes de protección de datos (como el GDPR), garantizar la privacidad y seguridad de la información personal, ser transparentes sobre cómo usan los datos y asegurarse de que sus algoritmos no perpetúen sesgos discriminatorios.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 314,
+	"pregunta": "Dentro de la normativa relativa al uso de datos, ¿qué implica la privacidad de la información y la propiedad intelectual?",
+	"respuesta": "La privacidad de la información se refiere al derecho de un individuo a controlar sus datos personales. La propiedad intelectual protege los activos de datos y los algoritmos desarrollados por una empresa, considerándolos secretos comerciales o activos valiosos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 315,
+	"pregunta": "¿Por qué la colaboración con un experto en el dominio es crucial para el éxito de un proyecto de datos?",
+	"respuesta": "Es crucial porque el experto en el dominio (ej. un gerente de finanzas) aporta el contexto de negocio. Ayuda a formular las preguntas correctas, interpretar los resultados del análisis de manera significativa y validar que los hallazgos sean relevantes y aplicables.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 316,
+	"pregunta": "¿Qué es el 'gobierno de datos' (Data Governance)?",
+	"respuesta": "El gobierno de datos es el marco de reglas, políticas, estándares y procesos para gestionar los activos de datos de una organización. Su objetivo es garantizar la alta calidad, consistencia, disponibilidad y seguridad de los datos en toda la empresa.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 317,
+	"pregunta": "¿Qué es la 'calidad de datos' (Data Quality) y por qué es fundamental para la BI?",
+	"respuesta": "La calidad de datos es el grado en que los datos son adecuados para su propósito. Es fundamental porque las decisiones de negocio basadas en datos incorrectos, incompletos o inconsistentes (baja calidad) pueden llevar a errores estratégicos costosos. Se rige por el principio 'basura entra, basura sale'.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 318,
+	"pregunta": "Menciona tres dimensiones de la calidad de los datos (ej. completitud, precisión).",
+	"respuesta": "Tres dimensiones clave son: **Precisión** (los datos reflejan la realidad), **Completitud** (no hay valores faltantes) y **Consistencia** (los datos no se contradicen entre diferentes sistemas o momentos en el tiempo).",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 319,
+	"pregunta": "¿Qué es un Data Warehouse (almacén de datos)?",
+	"respuesta": "Un Data Warehouse es un sistema de almacenamiento de datos que centraliza e integra grandes volúmenes de datos de diferentes fuentes. Está diseñado y optimizado para el análisis (OLAP) y la generación de informes, no para el procesamiento transaccional.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 320,
+	"pregunta": "¿Qué es un Data Mart?",
+	"respuesta": "Un Data Mart es una versión más pequeña y enfocada de un Data Warehouse que está diseñada para las necesidades de un departamento o área de negocio específica, como Ventas o Recursos Humanos. Contiene un subconjunto de los datos del almacén principal.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 321,
+	"pregunta": "Diferencia entre un Data Warehouse y una base de datos transaccional (OLTP).",
+	"respuesta": "Un Data Warehouse (OLAP) está optimizado para consultas analíticas complejas sobre grandes volúmenes de datos históricos. Una base de datos transaccional (OLTP) está optimizada para un gran número de transacciones cortas y rápidas (lecturas, inserciones, actualizaciones), como las de un sistema de punto de venta.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 322,
+	"pregunta": "¿Qué es el proceso ETL (Extract, Transform, Load)?",
+	"respuesta": "ETL es un proceso de integración de datos que consiste en: **Extraer** los datos de diversas fuentes; **Transformarlos** (limpiarlos, estandarizarlos, combinarlos) para que se ajusten a las necesidades del negocio; y **Cargarlos** (Load) en un repositorio central, como un Data Warehouse.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 323,
+	"pregunta": "¿Para qué sirven herramientas de visualización de datos como Tableau o Power BI?",
+	"respuesta": "Sirven para transformar datos complejos en representaciones gráficas interactivas y fáciles de entender, como dashboards y gráficos. Permiten a los usuarios explorar los datos, identificar tendencias, patrones y conocimientos de forma intuitiva.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 324,
+	"pregunta": "¿Qué es el análisis prescriptivo?",
+	"respuesta": "Es el tipo de análisis más avanzado, que no solo predice lo que podría suceder, sino que también recomienda acciones específicas para optimizar un resultado. Responde a la pregunta: '¿Qué deberíamos hacer al respecto?'.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 325,
+	"pregunta": "¿Qué es el análisis predictivo?",
+	"respuesta": "Es el tipo de análisis que utiliza datos históricos y algoritmos de machine learning para determinar la probabilidad de resultados futuros. Responde a la pregunta: '¿Qué es probable que suceda?'.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 326,
+	"pregunta": "¿Qué es el análisis descriptivo?",
+	"respuesta": "Es la forma más básica de análisis, que resume los datos históricos para entender lo que ha ocurrido en el pasado. Responde a la pregunta: '¿Qué pasó?'.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 327,
+	"pregunta": "¿Qué es el análisis de diagnóstico?",
+	"respuesta": "Este tipo de análisis profundiza en los datos para entender las causas de un evento pasado. Responde a la pregunta: '¿Por qué pasó?'.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 328,
+	"pregunta": "Ordena los 4 tipos de análisis (descriptivo, diagnóstico, predictivo, prescriptivo) por complejidad y valor de negocio.",
+	"respuesta": "El orden de menor a mayor complejidad y valor de negocio es: 1. Descriptivo, 2. Diagnóstico, 3. Predictivo, y 4. Prescriptivo.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 329,
+	"pregunta": "¿Qué es el análisis de la canasta de mercado (market basket analysis)?",
+	"respuesta": "Es una técnica de minería de datos que descubre asociaciones entre productos, identificando qué artículos se compran juntos con frecuencia en una misma transacción. Se usa para estrategias de cross-selling y diseño de tiendas.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 330,
+	"pregunta": "¿Cómo puede una empresa utilizar el análisis de segmentación de clientes?",
+	"respuesta": "Permite agrupar a los clientes en categorías con características similares (demográficas, de comportamiento). Esto ayuda a personalizar campañas de marketing, desarrollar productos específicos para cada segmento y ofrecer un servicio al cliente más enfocado.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 331,
+	"pregunta": "¿Qué es el valor de vida del cliente (Customer Lifetime Value - CLV)?",
+	"respuesta": "El CLV es una métrica que predice el beneficio neto total que una empresa puede esperar de un cliente durante toda su relación. Ayuda a justificar las inversiones en marketing y servicio para retener a los clientes más valiosos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 332,
+	"pregunta": "Describe el análisis RFM (Recencia, Frecuencia, Monetario).",
+	"respuesta": "Es un método de segmentación de clientes que los califica en función de tres variables: **Recencia** (cuándo fue su última compra), **Frecuencia** (con qué regularidad compran) y **Valor Monetario** (cuánto gastan). Ayuda a identificar a los clientes más valiosos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 333,
+	"pregunta": "¿Qué es un 'data-driven mindset' o mentalidad basada en datos?",
+	"respuesta": "Es una cultura organizacional donde las decisiones en todos los niveles se toman basándose en el análisis de datos y la evidencia, en lugar de depender únicamente de la intuición, la jerarquía o la experiencia personal.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 334,
+	"pregunta": "¿Cómo ayuda la inteligencia de negocio a obtener una ventaja competitiva?",
+	"respuesta": "Permite tomar decisiones más rápidas e informadas, identificar nuevas oportunidades de mercado, entender mejor a los clientes para mejorar su retención, optimizar operaciones para reducir costos y anticiparse a las tendencias del mercado.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 335,
+	"pregunta": "¿Qué es el autoservicio de BI (Self-Service BI)?",
+	"respuesta": "Es un enfoque que dota a los usuarios de negocio de herramientas y acceso a los datos para que puedan generar sus propios informes y análisis sin tener que depender de un equipo técnico o de TI. Fomenta la agilidad y la alfabetización de datos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 336,
+	"pregunta": "Define el concepto de 'fuente única de verdad' (Single Source of Truth) en datos.",
+	"respuesta": "Es la práctica de asegurar que todos en una organización basen sus decisiones y análisis en el mismo conjunto de datos centralizado y validado, generalmente un Data Warehouse. Esto evita inconsistencias y promueve la confianza en los datos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 337,
+	"pregunta": "¿Qué es la monetización de datos?",
+	"respuesta": "Es el proceso de generar ingresos a partir de los activos de datos. Puede ser de forma indirecta (usando datos para mejorar productos o procesos) o directa (vendiendo datos, análisis o productos de información a terceros).",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 338,
+	"pregunta": "Explica el concepto de 'ciclo de vida de los datos'.",
+	"respuesta": "Es el proceso que abarca todas las etapas por las que pasan los datos, desde su creación o captura, pasando por su almacenamiento, uso, compartición y archivo, hasta su eventual destrucción segura.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 339,
+	"pregunta": "¿Qué es la inteligencia competitiva?",
+	"respuesta": "Es el proceso ético de recopilar, analizar y distribuir información sobre la industria, los competidores y el entorno empresarial para apoyar la toma de decisiones estratégicas y anticipar movimientos del mercado.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 340,
+	"pregunta": "¿Cómo se relaciona la inteligencia de negocio con la estrategia corporativa?",
+	"respuesta": "La BI es fundamental para la estrategia: proporciona los datos para formularla (ej. análisis de mercado), los KPIs para monitorear su ejecución, y la información necesaria para ajustarla según el rendimiento y las condiciones cambiantes.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 341,
+	"pregunta": "¿Qué es un informe ad-hoc?",
+	"respuesta": "Un informe ad-hoc es un informe generado para un propósito específico y único, para responder a una pregunta de negocio que no está cubierta por los informes estándar. Se crea 'a demanda'.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 342,
+	"pregunta": "Diferencia entre un informe estático y un dashboard interactivo.",
+	"respuesta": "Un informe estático (como un PDF o una impresión) presenta datos en un formato fijo. Un dashboard interactivo permite a los usuarios filtrar, desglosar y explorar los datos en tiempo real para obtener diferentes perspectivas y profundizar en la información.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 343,
+	"pregunta": "¿Qué es la minería de procesos (Process Mining)?",
+	"respuesta": "Es una técnica analítica que utiliza los registros de eventos de los sistemas de TI (como un CRM o ERP) para descubrir, monitorear y mejorar los procesos de negocio tal y como ocurren en la realidad, identificando cuellos de botella y desviaciones.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 344,
+	"pregunta": "¿Cómo puede la inteligencia de negocio mejorar la eficiencia operativa?",
+	"respuesta": "Al proporcionar visibilidad sobre los procesos, la BI ayuda a identificar cuellos de botella, optimizar la asignación de recursos (personal, maquinaria), reducir desperdicios, automatizar informes y mejorar la gestión de inventarios, lo que conduce a una mayor eficiencia.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 345,
+	"pregunta": "Describe un desafío común en la implementación de una estrategia de BI.",
+	"respuesta": "Un desafío común es la baja calidad de los datos de origen. Si los datos son incorrectos, incompletos o inconsistentes, los análisis y dashboards resultantes serán inútiles o engañosos. Otros desafíos son la falta de apoyo ejecutivo y la resistencia cultural al cambio.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 346,
+	"pregunta": "¿Qué es un stakeholder (parte interesada) en un proyecto de datos?",
+	"respuesta": "Es cualquier persona, grupo u organización que tiene un interés en el proyecto de datos o que puede verse afectado por sus resultados. Incluye a usuarios finales, gerentes, ejecutivos, el equipo de TI y a veces clientes o proveedores.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 347,
+	"pregunta": "¿Por qué es importante entender los requerimientos del negocio antes de iniciar un análisis?",
+	"respuesta": "Porque sin una comprensión clara del problema a resolver, la pregunta a responder o el objetivo a alcanzar, el análisis carece de propósito. Entender los requerimientos asegura que el resultado final sea relevante, útil y genere valor para la empresa.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 348,
+	"pregunta": "¿Qué es el ROI (Retorno de la Inversión) y cómo se aplica a proyectos de datos?",
+	"respuesta": "El ROI es una métrica de rendimiento que mide la rentabilidad de una inversión. En proyectos de datos, se calcula comparando el beneficio financiero generado por el proyecto (ej. aumento de ventas, ahorro de costos) con el costo total de su implementación (software, personal, etc.).",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 349,
+	"pregunta": "¿Qué es un 'cuello de botella' en un proceso de negocio y cómo pueden los datos ayudar a identificarlo?",
+	"respuesta": "Un cuello de botella es una etapa en un proceso que limita la capacidad y el rendimiento general del sistema. Los datos, como los tiempos de ciclo de cada etapa o las colas de espera, pueden analizarse para identificar con precisión dónde se está produciendo el atasco.",
+	"categoria": 5,
+	"nivel": 1
+  },
+  {
+	"id": 350,
+	"pregunta": "Define el concepto de 'alfabetización de datos' (Data Literacy) en una organización.",
+	"respuesta": "La alfabetización de datos es la capacidad de los empleados para leer, trabajar, analizar y argumentar con datos. Es una habilidad esencial para que una organización pueda construir una cultura verdaderamente basada en datos.",
+	"categoria": 5,
+	"nivel": 2
+  },
+  {
+	"id": 351,
+	"pregunta": "¿Cómo contribuye la inteligencia de negocio a la gestión de la cadena de suministro?",
+	"respuesta": "La BI contribuye optimizando los niveles de inventario mediante pronósticos de demanda, mejorando la logística al analizar rutas y tiempos de entrega, monitoreando el rendimiento de los proveedores y proporcionando visibilidad en tiempo real de toda la cadena para identificar y resolver problemas rápidamente.",
+	"categoria": 5,
+	"nivel": 2
   }
-  
 ]
