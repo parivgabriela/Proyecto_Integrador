@@ -1,8 +1,12 @@
 from chromadb.utils import embedding_functions
+import os
+import tempfile
 
 DB_DIRECTORY = 'vectordb'
 KNOWLEDGE_BASE_PATH = 'app/static/pdfs/'
-UPLOAD_USER_PATH = 'uploads'
+
+UPLOAD_USER_PATH = os.path.join(tempfile.gettempdir(), 'uploads')
+
 
 FAQ_FOLDER = 'data/' # revisar
 FAQ_FILE = "faq.json"
@@ -24,4 +28,5 @@ MODEL_LLM_version = "llama3.2:latest"
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
+ALLOWED_EXTENSIONS_chat = {'txt', 'pdf'}
 categorias_faq = {"001": "Programación", "002": "Ciencia de datos", "003": "IA", "004": "Estadistica", "005": "Inteligencia del negocio"}

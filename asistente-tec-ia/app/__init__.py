@@ -14,7 +14,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    clean_upload_folder(UPLOAD_USER_PATH)
+    clean_upload_folder()
     app.config['UPLOAD_FOLDER'] = UPLOAD_USER_PATH
 
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
