@@ -7,10 +7,10 @@ from flask import Blueprint, render_template, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from app.config.files_config import load_json_file, FAQ_FILE, FAQ_FREQ_FILE
 from app.services.question_process import process_user_query
-from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, UPLOAD_USER_PATH, KNOWLEDGE_BASE_PATH
+from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, KNOWLEDGE_BASE_PATH
 from app.services.get_keywords_text import extract_keywords
 from app.services.summarize_text import resumir_texto_llama3
-from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA, MODEL_LLM_version
+from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA, MODEL_LLM_version, UPLOAD_USER_PATH
 
 tec_ia_bot = Blueprint("tec_ia_bot", __name__)
 
@@ -92,7 +92,9 @@ def procesando_archivos_completado():
 def subir_archivo():
     try:
         files = request.files.getlist('files')
+        logging.info("Subiendo los archivos a [uploads]")
         if not files:
+            logging.error("No se encontraron archivos en la petición")
             return jsonify({"error": "No se encontraron archivos en la petición"}), 400
     except Exception as e:
         logging.error(f"Error al subir archivos: {str(e)}")
@@ -103,6 +105,7 @@ def subir_archivo():
 
     for file in files:
         if file.filename == '':
+            logging.error("No se seleccionó ningún archivo")
             return jsonify({"error": "No se seleccionó ningún archivo"}), 400
 
         if file:
@@ -124,6 +127,7 @@ def subir_archivo():
         procesando_archivos()
         if errors:
             message += " Algunos archivos tuvieron errores."
+        logging.info(message)
         return jsonify({
             "mensaje": message,
             "subidos": uploaded_files_info,
