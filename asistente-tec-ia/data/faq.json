@@ -1,8 +1,8 @@
 [
-  {
+   {
 	"id": 1,
-	"pregunta": "¿Cuál es el nombre de la carrera y qué título otorga?",
-	"respuesta": "La carrera se denomina 'Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial' y otorga el título de 'Técnico Superior en Ciencia de Datos e Inteligencia Artificial'.",
+	"pregunta": "¿Cuál es el nombre completo de la carrera?",
+	"respuesta": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
 	"categoria": 0,
 	"nivel": 1
   },
@@ -52,6 +52,167 @@
 	"id": 8,
 	"pregunta": "¿Cuál es el propósito principal del modelizado de minería de datos y qué implica para los futuros técnicos?",
 	"respuesta": "El propósito fundamental es que los futuros Técnicos Superiores en Ciencia de Datos e Inteligencia Artificial aprendan a manipular, explorar y preparar las fuentes de información para luego procesar los datos. Esto implica la realización de diferentes modelos para detectar datos atípicos, predecir comportamientos y analizar los resultados obtenidos.",
+	"categoria": 0,
+	"nivel": 1
+  },
+    {
+	"id": 9,
+	"pregunta": "¿En qué sector de actividad se puede desempeñar el egresado?",
+	"respuesta": "El egresado puede desempeñarse en el sector Informática, abarcando diversas áreas como gobierno, salud, seguridad, educación, biotecnología, entretenimiento, planificación urbana, transporte, deportes, entre otras",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 10,
+	"pregunta": "¿Qué capacidades tendrá el Técnico Superior egresado?",
+	"respuesta": "Estará capacitado para realizar proyectos de innovación en Ciencia de Datos e IA, diseñar e implementar técnicas de Machine Learning, construir redes neuronales, aplicar visión por computadora, procesar audio y texto, y liderar proyectos tecnológicos",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 11,
+	"pregunta": "¿Cuáles son las principales funciones que ejercerá el profesional?",
+	"respuesta": "Las principales funciones incluyen: diseñar proyectos, diseñar soluciones de análisis de datos, desarrollar sistemas de inteligencia artificial con visión artificial o procesamiento de habla, realizar mantenimiento y optimización de sistemas, y organizar y gestionar proyectos",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 12,
+	"pregunta": "¿Cuáles son los campos de formación de la carrera?",
+	"respuesta": "La carrera se organiza en cuatro campos: Formación General (4%), Formación de Fundamento (30%), Formación Específica (48%) y Prácticas Profesionalizantes (18%)",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 13,
+	"pregunta": "¿Qué materias incluye el Campo de Formación General?",
+	"respuesta": "Incluye dos materias: Comunicación y Trabajo, Tecnología y Sociedad, con un total de 96 horas cátedra",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 14,
+	"pregunta": "¿Cuáles son las materias del Campo de Formación de Fundamento?",
+	"respuesta": "Incluye: Técnicas de Programación, Elementos de Análisis Matemático, Administración y Gestión de Bases de Datos, Lógica Computacional, Estadística y Probabilidades para Gestión de Datos, y Gestión de Proyectos",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 15,
+	"pregunta": "¿Qué materias específicas se estudian en la carrera?",
+	"respuesta": "Las materias específicas son: Desarrollo de Sistemas de Inteligencia Artificial, Ciencia de Datos, Procesamiento de Aprendizaje Automático, Modelizado de Minería de Datos, Técnicas de Procesamiento de Habla, Seminario de Actualización, y Técnicas de Procesamiento Digital de Imágenes",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 16,
+	"pregunta": "¿Qué son las Prácticas Profesionalizantes?",
+	"respuesta": "Son espacios curriculares destinados a integrar los saberes teóricos con la práctica real de trabajo. Incluyen: Aproximación al Campo Laboral, Modelizado de Sistemas de IA, Análisis y Exploración de Datos, y Proyecto Integrador",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 17,
+	"pregunta": "¿Cuál es el porcentaje de prácticas formativas en la carrera?",
+	"respuesta": "El 50% de la carrera corresponde a prácticas formativas, garantizando una formación equilibrada entre teoría y práctica",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 18,
+	"pregunta": "¿En qué consiste el trabajo con Machine Learning en esta carrera?",
+	"respuesta": "El técnico podrá diseñar, desarrollar e implementar técnicas de Machine Learning para modelos predictivos, sistemas de recomendación, scoring, reconocimiento de segmentos y clusters, construyendo secuencias de análisis con librerías de datos",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 19,
+	"pregunta": "¿Qué aplicaciones de Inteligencia Artificial se estudian?",
+	"respuesta": "Se estudian aplicaciones como visión por computadora para procesamiento de imágenes, procesamiento de audio y texto, reconocimiento automático del habla, síntesis de música, chatbots, traducción automática y comprensión del lenguaje natural",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 20,
+	"pregunta": "¿El técnico puede liderar proyectos y equipos?",
+	"respuesta": "Sí, el Técnico Superior podrá coordinar equipos de trabajo, dirigir emprendimientos de pequeña o mediana envergadura, organizar tareas, evaluar presupuestos y supervisar el trabajo del equipo",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 21,
+	"pregunta": "¿Qué importancia tiene la visualización de datos en el perfil profesional?",
+	"respuesta": "Una parte importante del trabajo del técnico radica en diseñar visualizaciones de información efectivas y comunicar los hallazgos de manera comprensible a roles no especializados de la organización y clientes",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 22,
+	"pregunta": "¿Se abordan aspectos éticos en la formación?",
+	"respuesta": "Sí, la formación incluye consideraciones éticas, manejo adecuado de la información y principios de usabilidad como parte integral del desarrollo profesional",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 23,
+	"pregunta": "¿Qué tipo de documentación debe manejar el técnico?",
+	"respuesta": "El técnico debe documentar todas las etapas de su trabajo, especificaciones de productos, diseños y consideraciones analizadas, facilitando el acceso posterior para recuperación y evaluación",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 24,
+	"pregunta": "¿En qué sectores profesionales tiene aplicación la Ciencia de Datos?",
+	"respuesta": "La Ciencia de Datos tiene aplicación en salud, genética, agro, redes sociales, marketing, finanzas, banca, comercialización de productos, telefonía, entre otros sectores",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 25,
+	"pregunta": "¿Qué diferencia hay entre materias y módulos en el plan de estudios?",
+	"respuesta": "Las materias se organizan alrededor de campos disciplinares, mientras que los módulos integran contenidos diversos organizados para resolver situaciones problemáticas propias del campo profesional, combinando teoría y práctica",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 26,
+	"pregunta": "¿Cuál es la carga horaria semanal promedio de la carrera?",
+	"respuesta": "La carga horaria varía según el cuatrimestre, pero en promedio los estudiantes tienen entre 20-25 horas semanales de clases, considerando todas las materias y espacios curriculares",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 27,
+	"pregunta": "¿La carrera prepara para crear emprendimientos propios?",
+	"respuesta": "Sí, el técnico podrá generar y participar de emprendimientos, estableciendo objetivos y alcances, evaluando recursos a incorporar y cumpliendo con obligaciones legales y administrativas",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 28,
+	"pregunta": "¿Qué papel juega la programación en la formación?",
+	"respuesta": "La programación es fundamental, comenzando con Técnicas de Programación en el campo de fundamento y aplicándose en el desarrollo de sistemas de IA, machine learning y procesamiento de datos a lo largo de toda la carrera",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 29,
+	"pregunta": "¿Se estudian bases de datos en la carrera?",
+	"respuesta": "Sí, se incluye la materia 'Administración y Gestión de Bases de Datos' en el campo de fundamento, esencial para el manejo y almacenamiento de grandes volúmenes de datos",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 30,
+	"pregunta": "¿La carrera incluye formación en gestión de proyectos?",
+	"respuesta": "Sí, incluye la materia 'Gestión de Proyectos' y desarrolla capacidades para organizar el trabajo, evaluar recursos, tiempos y presupuestos, y cumplir con disposiciones legales y administrativas",
+	"categoria": 0,
+	"nivel": 1
+  },
+  {
+	"id": 31,
+	"pregunta": "¿Qué título otorga esta carrera?",
+	"respuesta": "Técnico Superior en Ciencia de Datos e Inteligencia Artificial",
 	"categoria": 0,
 	"nivel": 1
   },
