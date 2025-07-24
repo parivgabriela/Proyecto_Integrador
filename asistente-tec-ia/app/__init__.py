@@ -1,15 +1,20 @@
 import os
+import logging
 from flask import Flask
 from .config.config import Config
 from .routes.tec_ia_rutas import tec_ia_bot  
 from .config.logging_config import setup_logging
-from .extensions import socketio
-
-UPLOAD_USER_PATH = 'uploads/'
+from .extensions import socketio, clean_upload_folder
+from .services.constants_process import UPLOAD_USER_PATH
 
 def create_app():
+    setup_logging()
+    logging.info("Iniciando la aplicación Flask.")
+
     app = Flask(__name__)
     app.config.from_object(Config)
+
+    clean_upload_folder(UPLOAD_USER_PATH)
     app.config['UPLOAD_FOLDER'] = UPLOAD_USER_PATH
 
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -19,8 +24,5 @@ def create_app():
 
     # Registrar blueprints
     app.register_blueprint(tec_ia_bot)
-
-    # Configurar logging
-    setup_logging()
 
     return app
