@@ -2,7 +2,6 @@ import os
 import sys
 import logging
 from logging.handlers import RotatingFileHandler
-
 from .logging_handler import NoSocketIOFilter
 
 def setup_logging():
@@ -36,7 +35,7 @@ def setup_logging():
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s: %(message)s"))
-    console_handler.addFilter(no_socketio_filter)
+    #console_handler.addFilter(no_socketio_filter)
 
 
     # Añadir ambos handlers al logger raíz
