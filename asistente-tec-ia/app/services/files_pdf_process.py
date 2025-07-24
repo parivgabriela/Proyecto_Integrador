@@ -4,7 +4,7 @@ import unicodedata
 import logging
 import chromadb
 import pdfplumber
-from .constants_process import DB_DIRECTORY, KNOWLEDGE_BASE_PATH, UPLOAD_USER_PATH, sentence_transformer_ef\
+from .constants_process import DB_DIRECTORY, sentence_transformer_ef\
     , CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA, MODEL_CUSTOM_PDF
 
 # Inicializar ChromaDB
