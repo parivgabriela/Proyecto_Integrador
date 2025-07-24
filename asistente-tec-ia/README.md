@@ -10,7 +10,7 @@ El sistema utiliza el sistema RAG
 
 
 ### 📄 Resumidor de Textos
-- Capacidad para resumir archivos de texto de hasta **1200 palabras** esto tambien se puede modificar
+- Capacidad para resumir archivos de texto de hasta **1200 palabras** esto también se puede modificar
 - Utiliza el modelo **llama3.2:latest** de meta. Se puede modificar por otro, pero debe estar descargado desde ollama
 - Genera resúmenes concisos y coherentes
 
@@ -29,6 +29,10 @@ Esta funcionalidad puede devolver de una a dos palabras
 
 ### ❓ Módulo de Preguntas Frecuentes (FAQ)
 - Este sistema fue creado en base a ahorra tiempo a la hora de responder dudas comunes entre los estudiantes. El archivo es totalmente customizable. ver la estructura y copiar el formato en data/faq.json
+
+### Archivos Temporales vs Permanentes
+- La aplicación maneja dos tipos de almacenamientos para los archivos a ser procesados. EL chatbot Tec-IA trabaja con archivos permanentes. Y procesamiento también lo es. Por eso una vez que se entrene el modelo no es necesario volver a presionar el botón nuevamente.
+- Chatear con PDF: este módulo utiliza la carpeta temporal *uploads*, que se puede encontrar si se ejecuta ```tempfile.gettempdir()```. Antes de iniciar se verifica que la carpeta exista y de no ser así poder crearla y en caso de que exista limpiar todo el contenido. La base de conocimiento también es temporal, lo que se haya procesado previamente ya fue eliminado.
 
 ### Crear Entorno Virtual con Conda
 
