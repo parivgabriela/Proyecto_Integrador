@@ -60,14 +60,14 @@ def chat_personalizado(query):
 
 @socketio.on("chat_tec_ia")
 def handle_message(msg):
-    logging.info(f"Mensaje recibido tec_ia")
+    logging.info("Mensaje recibido por el modelo tec_ia")
     respuesta = process_user_query(query=msg, model_type=MODEL_TEC_IA)
 
     socketio.send(respuesta)
 
 @socketio.on("chat_with_llama")
 def chat_with_llama(query):
-    logging.info(f"Mensaje recibido llama")
+    logging.info(f"Mensaje recibido por el modelo {MODEL_LLAMA}")
     respuesta = process_user_query(query=query, model_type=MODEL_LLAMA)
 
     socketio.send(respuesta)
@@ -78,26 +78,28 @@ def chatear_modelo_llama():
 
 @socketio.on("procesando_archivos")
 def procesando_archivos():
-    logging.info("Procesando archivos")
+    logging.info("Procesando archivos de chatear con PDF")
     socketio.send("Iniciando proceso de guardar la información a la colección")
     process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
+    procesando_archivos_completado()
 
 
 @socketio.on("proceso_archivos_completado")
 def procesando_archivos_completado():
     socketio.send("Se finalizo proceso de guardar la información a la colección")
+    logging.info("[procesando_archivos] Proceso completo")
 
 
 @tec_ia_bot.route('/subir_archivos_procesar', methods=['POST'])
 def subir_archivo():
     try:
         files = request.files.getlist('files')
-        logging.info("Subiendo los archivos a [uploads]")
+        logging.info("[/subir_archivos_procesar] Subiendo los archivos a uploads/")
         if not files:
-            logging.error("No se encontraron archivos en la petición")
+            logging.error("[/subir_archivos_procesar] No se encontraron archivos en la petición")
             return jsonify({"error": "No se encontraron archivos en la petición"}), 400
     except Exception as e:
-        logging.error(f"Error al subir archivos: {str(e)}")
+        logging.error(f"[/subir_archivos_procesar] - Error al subir archivos: {str(e)}")
         return jsonify({"error": "Error interno del servidor"}), 500
 
     uploaded_files_info = []
@@ -105,7 +107,7 @@ def subir_archivo():
 
     for file in files:
         if file.filename == '':
-            logging.error("No se seleccionó ningún archivo")
+            logging.error("[/subir_archivos_procesar] - No se seleccionó ningún archivo")
             return jsonify({"error": "No se seleccionó ningún archivo"}), 400
 
         if file:
@@ -123,7 +125,7 @@ def subir_archivo():
                 errors.append({"filename": file.filename, "error": f"Error al guardar: {str(e)}"})
         
     if uploaded_files_info:
-        message = "Archivos procesados exitosamente."
+        message = "[/subir_archivos_procesar] Archivos procesados exitosamente."
         procesando_archivos()
         if errors:
             message += " Algunos archivos tuvieron errores."
@@ -145,6 +147,7 @@ def descargar_archivo_url():
     url = data.get('url')
 
     if not url:
+        logging.error('[/descargar_archivo_url] - URL no proporcionada')
         return jsonify({'error': 'URL no proporcionada'}), 400
 
     try:
@@ -164,7 +167,7 @@ def descargar_archivo_url():
         with open(file_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
-
+        logging.info('[/descargar_archivo_url] - Archivo descarcargado y guardado')
         return jsonify({
             'message': 'Archivo descargado correctamente',
             'filename': filename,
@@ -172,6 +175,7 @@ def descargar_archivo_url():
         })
 
     except requests.RequestException as e:
+        logging.error('[/descargar_archivo_url] - Error al descargar el archivo')
         return jsonify({'error': f'Error al descargar el archivo: {str(e)}'}), 500
 
 
@@ -196,7 +200,7 @@ def procesar_texto_y_archivo():
         # summarize or keywords
         action = request.form.get('action')
     
-        logging.info(f"Action requested: {action}")
+        logging.info(f"[/procesar_texto_y_archivo] Acción solicitada: {action}")
 
         respuesta = {}
         estado_http = 200
@@ -221,11 +225,11 @@ def procesar_texto_y_archivo():
             logging.warning(f"Acción no válida: {action}")
             return jsonify(respuesta), estado_http
 
-        logging.info(f"Acción '{action}' completada exitosamente.")
+        logging.info(f"[Acción solicitada] - Acción '{action}' completada exitosamente.")
         return jsonify(respuesta), estado_http
 
     except Exception as e:
-        logging.error(f"Error procesando la solicitud: {str(e)}")
+        logging.error(f"[Acción solicitada] - Error procesando la solicitud: {str(e)}")
         return jsonify({
             "detalle": str(e),
             "error": "Se produjo un error al procesar la solicitud."
