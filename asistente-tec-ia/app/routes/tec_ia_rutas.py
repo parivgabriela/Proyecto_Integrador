@@ -7,10 +7,10 @@ from flask import Blueprint, render_template, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from app.config.files_config import load_json_file, FAQ_FILE, FAQ_FREQ_FILE
 from app.services.question_process import process_user_query
-from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, KNOWLEDGE_BASE_PATH
+from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection
 from app.services.get_keywords_text import extract_keywords
 from app.services.summarize_text import resumir_texto_llama3
-from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA, MODEL_LLM_version, UPLOAD_USER_PATH
+from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA, MODEL_LLM_version, UPLOAD_USER_PATH, KNOWLEDGE_BASE_PATH
 
 tec_ia_bot = Blueprint("tec_ia_bot", __name__)
 
