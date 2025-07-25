@@ -81,14 +81,6 @@ def procesando_archivos():
     logging.info("Procesando archivos de chatear con PDF")
     socketio.send("Iniciando proceso de guardar la información a la colección")
     process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
-    procesando_archivos_completado()
-
-
-@socketio.on("proceso_archivos_completado")
-def procesando_archivos_completado():
-    socketio.send("Se finalizo proceso de guardar la información a la colección")
-    logging.info("[procesando_archivos] Proceso completo")
-
 
 @tec_ia_bot.route('/subir_archivos_procesar', methods=['POST'])
 def subir_archivo():
@@ -251,8 +243,8 @@ def get_faq_ranking():
 
     # Ordenar por frecuencia descendente
     ranked = sorted(freq_data, key=lambda x: x['frecuencia'], reverse=True)
-    faq_data_dict = { item["id"]: "pregunta" for item in faq_data }
-    # Combinar preguntas con su frecuencia
+    faq_data_dict = { item["id"]: item["pregunta"] for item in faq_data }
+
     result = []
     for item in ranked:
         q_id = item['id_pregunta']
@@ -263,4 +255,3 @@ def get_faq_ranking():
             })
 
     return jsonify(result), 200
-

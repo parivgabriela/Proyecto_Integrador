@@ -113,27 +113,31 @@ const renderPagination = () => {
     });
 };
 
-const renderRanking = async (allFaqsData) => {
+const renderRanking = async () => {
     try {
+        // 1. Llama al endpoint para obtener el ranking
         const response = await fetch('/get_faq_ranking');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const rankingData = await response.json();
-        
-        const sortedIds = Object.keys(rankingData).sort((a, b) => rankingData[b] - rankingData[a]).slice(0, 5);
+        const top5Faqs = rankingData.slice(0, 5);
         
         rankingList.innerHTML = '';
-        sortedIds.forEach(id => {
-            const faq = allFaqsData.find(f => f.id == id);
-            if (faq) {
-                const li = document.createElement('a');
-                li.href = "#"; // Podría ser un enlace al ancla de la pregunta
-                li.className = 'block p-2 rounded hover:bg-gray-50 ';
-                li.textContent = faq.pregunta;
-                rankingList.appendChild(li);
-            }
+        
+        top5Faqs.forEach(faq => {
+            const linkElement = document.createElement('a');
+            linkElement.href = "#";
+            linkElement.className = 'block p-2 rounded hover:bg-gray-50';
+            linkElement.textContent = faq.pregunta; // Usa el texto directamente
+            
+            rankingList.appendChild(linkElement);
         });
+
     } catch (error) {
-        rankingList.innerHTML = `<p class="text-red-500 text-xs">No se pudo cargar el ranking.</p>`;
-        console.error('Error fetching ranking:', error);
+        console.error("No se pudo cargar el ranking de preguntas:", error);
+        // Opcionalmente, mostrar un mensaje de error en la UI
+        rankingList.innerHTML = '<li class="p-2 text-red-500">No se pudo cargar el ranking.</li>';
     }
 };
 
