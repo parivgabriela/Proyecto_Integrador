@@ -42,7 +42,6 @@ function enviarMensaje(mensaje, chatMode) {
     } else {
         socket.emit("chat_with_llama", mensaje)
     }
-    
 }
 
 function handleMessage(data) {
@@ -95,22 +94,17 @@ function addMessage(message, isUser = false) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Tu función original para formatear negritas y viñetas (sin cambios)
 function formatearTexto(texto) {
-    // Negrita: **texto**
     texto = texto.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
     // Viñetas: * texto (al inicio de línea)
-    // Se mejora la regex para que funcione correctamente
     texto = texto.replace(/^\s*\*\s+(.*)/gm, '<li>$1</li>');
 
     // Si se encontraron viñetas, envolverlas en <ul>
-    // Se mejora la regex para agrupar listas consecutivas
     if (texto.includes('<li>')) {
       texto = texto.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
     }
 
-    // Reemplazar saltos de línea por <br> para el resto del texto
     texto = texto.replace(/\n/g, '<br>');
 
     return texto;
@@ -186,15 +180,12 @@ function accionEnviarMensaje(input) {
         }
 }
 
-
-// Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     
     sendButton.addEventListener('click', accionEnviarMensaje(userInput));
     
     if (userInput) {
         const messageUser = userInput.value.trim();
-        // Enviar mensaje con Enter (pero nueva línea con Shift+Enter)
         userInput.addEventListener('keydown', function(event) {
             if (event.key === 'Enter' && !event.shiftKey) {
                 event.preventDefault();
@@ -202,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Ajustar altura del textarea al escribir
         userInput.addEventListener('input', adjustTextareaHeight(userInput));
     }
 });
