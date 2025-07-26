@@ -106,26 +106,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="fas fa-file-pdf"></i>
                     <span>${file.name} (${formatFileSize(file.size)})</span>
                 `;
-                
                 fileList.appendChild(fileItem);
             }
         }
         
         processUploadBtn.disabled = uploadedFiles.length === 0;
     }
-    //socket.once("message", handleMessage);
-
-    socket.once('procesando_archivos', (data) => {
-        updateProgressBar(0);
-        console.log('Se incio el proceso de agregar archivo a collection:', data);
-        document.getElementById('status').textContent = `Estado: ${data.mensaje} (${data.progreso}%)`;
-    });
-
-    socket.on('proceso_archivos_completado', (data) => {
-        updateProgressBar(100);
-        console.log('Proceso completado:', data);
-        document.getElementById('status').textContent = `Estado: ${data.mensaje}`;
-    });
     
     function formatFileSize(bytes) {
         if (bytes === 0) return '0 Bytes';
@@ -150,10 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
             body: formData
         })
         .then(response => {
-            // Primero, verifica si la respuesta es OK (status 200-299)
             if (!response.ok) {
                 // Si la respuesta no es OK, lanza un error con el mensaje del backend
-                // o un mensaje genérico. Intenta parsear el JSON de error si está disponible.
                 return response.json().then(errorData => {
                     throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
                 }).catch(() => {
@@ -161,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 });
             }
-            // Si la respuesta es OK, la parseamos como JSON
             return response.json();
         })
         .then(data => {
@@ -194,17 +177,16 @@ document.addEventListener('DOMContentLoaded', function() {
             hideLoading();
             alert('Error al descargar el archivo: ' + error);
         });
-
     }
-            
+  
     function showLoading() {
         loadingOverlay.classList.add('active');
     }
-    
+
     function hideLoading() {
         loadingOverlay.classList.remove('active');
     }
-    
+
     function showChat() {
         document.querySelector('.file-manager').style.display = 'none';
         chatWrapper.classList.add('active');
