@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleFiles(files) {
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
-            if (file.type === 'application/pdf') {
+            if (file.type === 'application/pdf' || file.type ==='text/plain') {
                 uploadedFiles.push(file);
                 
                 const fileItem = document.createElement('div');

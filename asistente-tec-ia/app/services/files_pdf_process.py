@@ -4,8 +4,7 @@ import unicodedata
 import logging
 import chromadb
 import pdfplumber
-from .constants_process import DB_DIRECTORY, sentence_transformer_ef\
-    , CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA, MODEL_CUSTOM_PDF
+from .constants_process import DB_DIRECTORY, sentence_transformer_ef, CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA, ALLOWED_EXTENSIONS_chat
 
 # Inicializar ChromaDB
 chroma_client = chromadb.PersistentClient(path=DB_DIRECTORY)
@@ -55,11 +54,20 @@ def extract_text_from_pdf(full_path):
     
     return ""
 
+def extract_text_from_txt(full_path):
+    text = None
+    with open(full_path, 'r', encoding="utf-8") as f:
+        text = f.read()
+
+    return text
 
 def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     """ Procesa un archivo PDF, crea una base de conocimiento con ChromaDB"""
 
     files_to_process = list_pdf_files(pdf_path)
+    if files_to_process < 1:
+        logging.error("Not files in directory not found.")
+        return
 
     collection = COLLECTIONS_NAMES.get(collection_name)
     if not collection:
@@ -67,15 +75,21 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
         return
 
     total_chunks_processed = 0
+    document_text = None
+    chunks = []
+
     for filename in files_to_process:
         full_path = f"{pdf_path}/{filename}"
-        document_text = extract_text_from_pdf(full_path)
-        
+        extension = filename.split('.')[-1]
+        if extension == 'pdf':
+            document_text = extract_text_from_pdf(full_path)
+        elif extension == 'txt':
+            document_text = extract_text_from_txt(full_path)
+
         if not document_text:
             continue
 
         # Fusing RecursiveCharacterTextSplitter
-        chunks = []
         for i in range(0, len(document_text), CHUNK_SIZE - CHUNK_OVERLAP):
             chunk = document_text[i:i + CHUNK_SIZE]
             chunks.append(chunk)
@@ -111,7 +125,7 @@ def list_pdf_files(path):
     """Listar los archivos pdf"""
     files = os.listdir(path)
     logging.info(f"Archivos: {files}")
-    return [f for f in files if f.endswith(".pdf")]
+    return [f for f in files if f.endswith(tuple(ALLOWED_EXTENSIONS_chat))]
 
 
 def entrenar_modelo_tec_ia():
