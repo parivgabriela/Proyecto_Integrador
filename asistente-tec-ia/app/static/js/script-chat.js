@@ -1,5 +1,3 @@
-
-// Inicialización de Socket.io
 const socket = io();
 
 // Elementos del DOM
@@ -53,7 +51,6 @@ function contarPalabras(texto) {
     return texto.trim().split(/\s+/).length;
 }
 
-// Función para agregar un mensaje al chat
 function addMessage(message, isUser = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = isUser ? 'message user' : 'message bot';
@@ -64,7 +61,6 @@ function addMessage(message, isUser = false) {
     const trimmedMessage = message.trim();
 
     if (trimmedMessage.startsWith('```') && trimmedMessage.endsWith('```')) {
-        // Es un bloque de código
         
         // 1. Extraer el código de adentro de las comillas
         const codeContent = trimmedMessage.slice(3, -3).trim();
@@ -192,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 accionEnviarMensaje(userInput)
             }
         });
-        
+
         userInput.addEventListener('input', adjustTextareaHeight(userInput));
     }
 });
