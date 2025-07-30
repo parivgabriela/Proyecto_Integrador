@@ -130,7 +130,7 @@ Proyecto_Integrador
 
 ### Chatear con PDF personalizado
 1. Selecciona del menú "Chatear con PDF"
-2. Carga tu archivo PDF y luego hace clic en "Procesar archivos"
+2. Carga tu archivo PDF o TXT y luego hace clic en "Procesar archivos"
 3. El asistente responderá basándose en la información cargada.
 
 ### Chatear con Llama
