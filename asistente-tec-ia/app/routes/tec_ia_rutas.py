@@ -82,6 +82,15 @@ def procesando_archivos():
     socketio.send("Iniciando proceso de guardar la información a la colección")
     process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
 
+@tec_ia_bot.route('/subir_archivos_perm_procesar', methods=['POST'])
+def subir_archivos_perm():
+    print('ok')
+    return jsonify({
+            "mensaje": "ok",
+            "subidos": "archivos",
+            "errores": "0"
+        }), 200
+
 @tec_ia_bot.route('/subir_archivos_procesar', methods=['POST'])
 def subir_archivo():
     try:
