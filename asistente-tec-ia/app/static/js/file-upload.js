@@ -13,8 +13,9 @@ function updateProgressBar(progress) {
         loadingText.textContent = `Procesando archivos: ${progress}%`;
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Referencias a elementos del DOM
+    // --- LÓGICA ORIGINAL PARA LA PÁGINA DE CHAT CON ARCHIVOS ---
     const uploadBtn = document.getElementById('uploadBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const uploadSection = document.getElementById('uploadSection');
@@ -26,70 +27,80 @@ document.addEventListener('DOMContentLoaded', function() {
     const processUploadBtn = document.getElementById('processUploadBtn');
     const processDownloadBtn = document.getElementById('processDownloadBtn');
     const loadingOverlay = document.getElementById('loadingOverlay');
-    const chatWrapper = document.getElementById('chatWrapper');
     
     let uploadedFiles = [];
-    const socket = io();
     
-    // Mostrar sección de carga de archivos por defecto
-    uploadSection.classList.add('active');
-    
-    // Event listeners para cambiar entre secciones
-    uploadBtn.addEventListener('click', function() {
+    if (uploadBtn) {
+        // Mostrar sección de carga de archivos por defecto
         uploadSection.classList.add('active');
-        downloadSection.classList.remove('active');
-    });
-    
-    downloadBtn.addEventListener('click', function() {
-        downloadSection.classList.add('active');
-        uploadSection.classList.remove('active');
-    });
-            
-    // Event listeners para el drag and drop
-    dropZone.addEventListener('click', function() {
-        fileUpload.click();
-    });
-    
-    fileUpload.addEventListener('change', handleFileSelect);
-    
-    dropZone.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        dropZone.style.borderColor = '#4a86e8';
-    });
-    
-    dropZone.addEventListener('dragleave', function() {
-        dropZone.style.borderColor = '#ccc';
-    });
-    
-    dropZone.addEventListener('drop', function(e) {
-        e.preventDefault();
-        dropZone.style.borderColor = '#ccc';
         
-        if (e.dataTransfer.files.length > 0) {
-            handleFiles(e.dataTransfer.files);
-        }
-    });
+        // Event listeners para cambiar entre secciones
+        uploadBtn.addEventListener('click', function() {
+            uploadSection.classList.add('active');
+            downloadSection.classList.remove('active');
+        });
+    }
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            downloadSection.classList.add('active');
+            uploadSection.classList.remove('active');
+        });
+    }
             
-    // URL input validation
-    urlInput.addEventListener('input', function() {
-        processDownloadBtn.disabled = !urlInput.value.trim();
-    });
+    if (dropZone) {
+        // Event listeners para el drag and drop
+        dropZone.addEventListener('click', function() {
+            fileUpload.click();
+        });
+        
+        fileUpload.addEventListener('change', handleFileSelect);
+        
+        dropZone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropZone.style.borderColor = '#4a86e8';
+        });
+        
+        dropZone.addEventListener('dragleave', function() {
+            dropZone.style.borderColor = '#ccc';
+        });
+        
+        dropZone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropZone.style.borderColor = '#ccc';
+            
+            if (e.dataTransfer.files.length > 0) {
+                handleFiles(e.dataTransfer.files);
+            }
+        });
+    }
+            
+    if (urlInput) {
+        // URL input validation
+        urlInput.addEventListener('input', function() {
+            processDownloadBtn.disabled = !urlInput.value.trim();
+        });
+    }
     
-    // Process buttons event listeners
-    processUploadBtn.addEventListener('click', function() {
-        if (uploadedFiles.length > 0) {
-            processFiles('/subir_archivos_procesar');
-        }
-    });
+    if (processUploadBtn) {
+        // Process buttons event listeners
+        processUploadBtn.addEventListener('click', function() {
+            if (uploadedFiles.length > 0) {
+                processFiles('/subir_archivos_procesar');
+            }
+        });
+    }
     
-    processDownloadBtn.addEventListener('click', function() {
-        const url = urlInput.value.trim();
-        if (url) {
-            processUrlDownload('/descargar_archivo_url', url);
-        }
-    });
+    if (processDownloadBtn) {
+        processDownloadBtn.addEventListener('click', function() {
+            const url = urlInput.value.trim();
+            if (url) {
+                processUrlDownload('/descargar_archivo_url', url);
+            }
+        });
+    }
     
-    // Functions
+    // Funciones para la lógica original
     function handleFileSelect(e) {
         handleFiles(this.files);
     }
@@ -113,16 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
         processUploadBtn.disabled = uploadedFiles.length === 0;
     }
     
-    function formatFileSize(bytes) {
-        if (bytes === 0) return '0 Bytes';
-        
-        const k = 1024;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-    
     function processFiles(endpoint) {
         showLoading();
         
@@ -137,11 +138,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (!response.ok) {
-                // Si la respuesta no es OK, lanza un error con el mensaje del backend
                 return response.json().then(errorData => {
                     throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
                 }).catch(() => {
-                    // Si no se puede parsear JSON, lanzar un error genérico
                     throw new Error(`HTTP error! status: ${response.status}`);
                 });
             }
@@ -178,17 +177,123 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Error al descargar el archivo: ' + error);
         });
     }
+
+    // --- NUEVA LÓGICA PARA LA PÁGINA DE ARCHIVOS PERMANENTES ---
+    const toggleUploadSectionBtn = document.getElementById('toggleUploadSectionBtn');
+    const uploadPermSection = document.getElementById('uploadPermSection');
+    const fileUploadPerm = document.getElementById('fileUploadPerm');
+    const dropZonePerm = document.getElementById('dropZonePerm');
+    const fileListPerm = document.getElementById('fileListPerm');
+    const processUploadPermBtn = document.getElementById('processUploadPermBtn');
+
+    let uploadedPermFiles = [];
+
+    if (toggleUploadSectionBtn) {
+        toggleUploadSectionBtn.addEventListener('click', () => {
+            uploadPermSection.classList.toggle('hidden');
+        });
+    }
+
+    if (dropZonePerm) {
+        dropZonePerm.addEventListener('click', () => fileUploadPerm.click());
+
+        dropZonePerm.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZonePerm.style.borderColor = '#4a86e8';
+        });
+
+        dropZonePerm.addEventListener('dragleave', () => {
+            dropZonePerm.style.borderColor = '#ccc';
+        });
+
+        dropZonePerm.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZonePerm.style.borderColor = '#ccc';
+            if (e.dataTransfer.files.length > 0) {
+                handlePermFiles(e.dataTransfer.files);
+            }
+        });
+    }
+
+    if (fileUploadPerm) {
+        fileUploadPerm.addEventListener('change', (e) => handlePermFiles(e.target.files));
+    }
+
+    function handlePermFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (file.type === 'application/pdf' || file.type === 'text/plain') {
+                uploadedPermFiles.push(file);
+
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <i class="fas fa-file-alt text-gray-600"></i>
+                    <span class="text-gray-800">${file.name} (${formatFileSize(file.size)})</span>
+                `;
+                fileListPerm.appendChild(fileItem);
+            }
+        }
+        processUploadPermBtn.disabled = uploadedPermFiles.length === 0;
+    }
+
+    if (processUploadPermBtn) {
+        processUploadPermBtn.addEventListener('click', () => {
+            if (uploadedPermFiles.length > 0) {
+                processPermFiles('/subir_archivos_perm_procesar');
+            }
+        });
+    }
+
+    function processPermFiles(endpoint) {
+        showLoading();
+
+        const formData = new FormData();
+        uploadedPermFiles.forEach(file => {
+            formData.append('files', file);
+        });
+
+        fetch(endpoint, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(err => { throw new Error(err.error || 'Error en la subida del servidor.') });
+            }
+            return response.json();
+        })
+        .then(data => {
+            hideLoading();
+            alert('Archivos subidos con éxito!');
+            window.location.reload(); // Recarga la página para ver el nuevo archivo en la lista
+        })
+        .catch(error => {
+            hideLoading();
+            alert('Error al procesar los archivos: ' + error.message);
+        });
+    }
+
+    // --- FUNCIONES AUXILIARES COMUNES ---
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
   
     function showLoading() {
-        loadingOverlay.classList.add('active');
+        if (loadingOverlay) loadingOverlay.classList.add('active');
     }
 
     function hideLoading() {
-        loadingOverlay.classList.remove('active');
+        if (loadingOverlay) loadingOverlay.classList.remove('active');
     }
 
     function showChat() {
-        document.querySelector('.file-manager').style.display = 'none';
-        chatWrapper.classList.add('active');
+        const fileManager = document.querySelector('.file-manager');
+        if (fileManager) fileManager.style.display = 'none';
+        if (chatWrapper) chatWrapper.classList.add('active');
     }
 });
