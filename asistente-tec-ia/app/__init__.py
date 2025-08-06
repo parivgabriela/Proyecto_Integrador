@@ -15,9 +15,13 @@ def create_app():
     app.config.from_object(Config)
 
     clean_upload_folder()
-    app.config['UPLOAD_FOLDER'] = UPLOAD_USER_PATH
 
+    app.config['UPLOAD_FOLDER'] = UPLOAD_USER_PATH
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+    STATIC_PDFS_PATH = os.path.join(app.root_path, 'static', 'pdfs')
+    app.config['PERMANENT_PDF_FOLDER'] = STATIC_PDFS_PATH
+    os.makedirs(app.config['PERMANENT_PDF_FOLDER'], exist_ok=True)
 
     # Inicializar extensiones
     socketio.init_app(app)
