@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Process buttons event listeners
         processUploadBtn.addEventListener('click', function() {
             if (uploadedFiles.length > 0) {
-                processFiles('/subir_archivos_procesar');
+                processFiles('/subir_archivos_temporales_procesar');
             }
         });
     }
