@@ -4,10 +4,9 @@ import requests
 from urllib.parse import urlparse
 from app.extensions import socketio
 from flask import Blueprint, render_template, request, jsonify, current_app
-from werkzeug.utils import secure_filename
 from app.config.files_config import load_json_file, FAQ_FILE, FAQ_FREQ_FILE
 from app.services.question_process import process_user_query
-from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection
+from app.services.files_pdf_process import list_pdf_files, process_pdf_files_save_collection, save_request_files
 from app.services.get_keywords_text import extract_keywords
 from app.services.summarize_text import resumir_texto_llama3
 from app.services.constants_process import MODEL_TEC_IA, MODEL_CUSTOM_PDF, MODEL_LLAMA, MODEL_LLM_version, UPLOAD_USER_PATH, KNOWLEDGE_BASE_PATH
@@ -82,65 +81,38 @@ def procesando_archivos():
     socketio.send("Iniciando proceso de guardar la información a la colección")
     process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
 
+
 @tec_ia_bot.route('/subir_archivos_perm_procesar', methods=['POST'])
 def subir_archivos_perm():
-    print('ok')
-    return jsonify({
-            "mensaje": "ok",
-            "subidos": "archivos",
-            "errores": "0"
-        }), 200
-
-@tec_ia_bot.route('/subir_archivos_procesar', methods=['POST'])
-def subir_archivo():
     try:
         files = request.files.getlist('files')
-        logging.info("[/subir_archivos_procesar] Subiendo los archivos a uploads/")
         if not files:
-            logging.error("[/subir_archivos_procesar] No se encontraron archivos en la petición")
-            return jsonify({"error": "No se encontraron archivos en la petición"}), 400
+            return jsonify({"error": "[/subir_archivos_perm_procesar] No se encontraron archivos en la petición"}), 400
     except Exception as e:
-        logging.error(f"[/subir_archivos_procesar] - Error al subir archivos: {str(e)}")
+        logging.error(f"[/subir_archivos_perm_procesar]: Error al subir archivos: {str(e)}")
         return jsonify({"error": "Error interno del servidor"}), 500
 
-    uploaded_files_info = []
-    errors = []
-
-    for file in files:
-        if file.filename == '':
-            logging.error("[/subir_archivos_procesar] - No se seleccionó ningún archivo")
-            return jsonify({"error": "No se seleccionó ningún archivo"}), 400
-
-        if file:
-            try:
-                filename = secure_filename(file.filename)
-                # Accede a UPLOAD_FOLDER desde la configuración de la aplicación
-                file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
-                file.save(file_path)
-                uploaded_files_info.append({
-                    "filename": filename,
-                    "ruta": file_path,
-                    "status": "success"
-                })
-            except Exception as e:
-                errors.append({"filename": file.filename, "error": f"Error al guardar: {str(e)}"})
-        
-    if uploaded_files_info:
-        message = "[/subir_archivos_procesar] Archivos procesados exitosamente."
+    msg, status = save_request_files(current_app.config['PERMANENT_PDF_FOLDER'], files, "/subir_archivos_perm_procesar")
+    if status == 200:
         procesando_archivos()
-        if errors:
-            message += " Algunos archivos tuvieron errores."
-        logging.info(message)
-        return jsonify({
-            "mensaje": message,
-            "subidos": uploaded_files_info,
-            "errores": errors
-        }), 200
-    else:
-        return jsonify({
-            "error": "No se pudo subir ningún archivo.",
-            "errores": errors
-        }), 400    
+    return jsonify(msg), status
+
+
+@tec_ia_bot.route('/subir_archivos_temporales_procesar', methods=['POST'])
+def subir_archivo_temp():
+    try:
+        files = request.files.getlist('files')
+        if not files:
+            return jsonify({"error": "[/subir_archivos_temporales_procesar] No se encontraron archivos en la petición"}), 400
+    except Exception as e:
+        logging.error(f"[/subir_archivos_temporales_procesar]: Error al subir archivos: {str(e)}")
+        return jsonify({"error": "Error interno del servidor"}), 500
+
+    msg, status = save_request_files(current_app.config['UPLOAD_FOLDER'], files, "/subir_archivos_temporales_procesar")
+    if status == 200:
+        procesando_archivos()
+    return jsonify(msg), status
+
 
 @tec_ia_bot.route('/descargar_archivo_url', methods=['POST'])
 def descargar_archivo_url():
