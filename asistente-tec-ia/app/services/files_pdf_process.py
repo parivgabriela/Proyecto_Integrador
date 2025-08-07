@@ -4,6 +4,7 @@ import unicodedata
 import logging
 import chromadb
 import pdfplumber
+from werkzeug.utils import secure_filename
 from .constants_process import DB_DIRECTORY, sentence_transformer_ef, CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA, ALLOWED_EXTENSIONS_chat
 
 # Inicializar ChromaDB
@@ -65,7 +66,7 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     """ Procesa un archivo PDF, crea una base de conocimiento con ChromaDB"""
 
     files_to_process = list_pdf_files(pdf_path)
-    if files_to_process < 1:
+    if len(files_to_process) < 1:
         logging.error("Not files in directory not found.")
         return
 
@@ -81,6 +82,7 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     for filename in files_to_process:
         full_path = f"{pdf_path}/{filename}"
         extension = filename.split('.')[-1]
+        logging.info(f"Extrayendo informacion del archivo {filename}")
         if extension == 'pdf':
             document_text = extract_text_from_pdf(full_path)
         elif extension == 'txt':
@@ -119,6 +121,45 @@ def get_context_from_chroma(query: str, model_type: str):
         context = "\n".join(result['documents'][0]) if result and result['documents'] else "No se encontró información relevante en el documento."
 
     return context
+
+def save_request_files(path_app_folder, files, endpoint:str):
+    
+    uploaded_files_info = []
+    errors = []
+    for file in files:
+        if file.filename == '':
+            logging.error(f"[{endpoint}] - No se seleccionó ningún archivo")
+            errors.append({"error": "No se seleccionó ningún archivo"}), 400
+
+        if file:
+            try:
+                filename = secure_filename(file.filename)
+                # Accede al archivo desde la configuración de la aplicación
+                file_path = os.path.join(path_app_folder, filename)
+                file.save(file_path)
+                uploaded_files_info.append({
+                    "filename": filename,
+                    "ruta": file_path,
+                    "status": "success"
+                })
+            except Exception as e:
+                errors.append({"filename": file.filename, "error": f"Error al guardar: {str(e)}"})
+    
+    if uploaded_files_info:
+        message = f"[{endpoint}] - Archivos guardados exitosamente."
+        if errors:
+            message += " Algunos archivos tuvieron errores."
+        logging.info(message)
+        return {
+            "mensaje": message,
+            "subidos": uploaded_files_info,
+            "errores": errors
+        }, 200
+
+    return {
+        "error": f"[{endpoint}] - No se pudo subir ningún archivo.",
+        "errores": errors
+    }, 400   
 
 
 def list_pdf_files(path):
