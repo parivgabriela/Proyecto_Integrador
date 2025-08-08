@@ -5,7 +5,8 @@ import logging
 import chromadb
 import pdfplumber
 from werkzeug.utils import secure_filename
-from .constants_process import DB_DIRECTORY, sentence_transformer_ef, CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA, ALLOWED_EXTENSIONS_chat
+from .constants_process import DB_DIRECTORY, sentence_transformer_ef, CHUNK_OVERLAP, CHUNK_SIZE, MODEL_TEC_IA,\
+      ALLOWED_EXTENSIONS_chat, KNOWLEDGE_BASE_PATH
 
 # Inicializar ChromaDB
 chroma_client = chromadb.PersistentClient(path=DB_DIRECTORY)
@@ -64,15 +65,19 @@ def extract_text_from_txt(full_path):
 
 def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     """ Procesa un archivo PDF, crea una base de conocimiento con ChromaDB"""
+    files_to_process = None
+    path_to_folder = None
 
-    files_to_process = list_pdf_files(pdf_path)
+    if collection_name == MODEL_TEC_IA:
+        path_to_folder = KNOWLEDGE_BASE_PATH
+        files_to_process = [pdf_path]
+        print(files_to_process)
+    else:
+        path_to_folder = pdf_path
+        files_to_process = list_pdf_files(pdf_path)
+
     if len(files_to_process) < 1:
         logging.error("Not files in directory not found.")
-        return
-
-    collection = COLLECTIONS_NAMES.get(collection_name)
-    if not collection:
-        logging.error(f"Collection '{collection_name}' not found.")
         return
 
     total_chunks_processed = 0
@@ -80,7 +85,7 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     chunks = []
 
     for filename in files_to_process:
-        full_path = f"{pdf_path}/{filename}"
+        full_path = f"{path_to_folder}/{filename}"
         extension = filename.split('.')[-1]
         logging.info(f"Extrayendo informacion del archivo {filename}")
         if extension == 'pdf':
@@ -137,11 +142,7 @@ def save_request_files(path_app_folder, files, endpoint:str):
                 # Accede al archivo desde la configuración de la aplicación
                 file_path = os.path.join(path_app_folder, filename)
                 file.save(file_path)
-                uploaded_files_info.append({
-                    "filename": filename,
-                    "ruta": file_path,
-                    "status": "success"
-                })
+                uploaded_files_info.append(filename)
             except Exception as e:
                 errors.append({"filename": file.filename, "error": f"Error al guardar: {str(e)}"})
     
