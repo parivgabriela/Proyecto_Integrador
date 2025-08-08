@@ -1,21 +1,6 @@
-// Función para mostrar el progreso en la interfaz
-function updateProgressBar(progress) {
-    // Si tienes una barra de progreso en tu UI:
-    const progressBar = document.getElementById('progressBar');
-    if (progressBar) {
-        progressBar.style.width = progress + '%';
-        progressBar.textContent = progress + '%';
-    }
-    
-    // Alternativa: mensaje en la pantalla de carga
-    const loadingText = document.getElementById('loadingText');
-    if (loadingText) {
-        loadingText.textContent = `Procesando archivos: ${progress}%`;
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     // --- LÓGICA ORIGINAL PARA LA PÁGINA DE CHAT CON ARCHIVOS ---
+    const socket = io();
     const uploadBtn = document.getElementById('uploadBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const uploadSection = document.getElementById('uploadSection');
@@ -99,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Funciones para la lógica original
     function handleFileSelect(e) {
         handleFiles(this.files);
@@ -156,7 +141,16 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Error al procesar los archivos: ' + error);
         });
     }
-            
+
+    socket.on('procesando_archivos_ok', (data) => {
+        hideLoading();
+        showChat();
+    });
+
+    socket.on('procesando_archivos_perm_ok', (data) => {
+        console.log('ok');
+    });
+
     function processUrlDownload(endpoint, url) {
         showLoading();
 
@@ -169,8 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            hideLoading();
-            showChat();
+            // hideLoading();
+            // showChat();
+            console.log('mensaje', data.mensaje);
         })
         .catch(error => {
             hideLoading();
@@ -190,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (toggleUploadSectionBtn) {
         toggleUploadSectionBtn.addEventListener('click', () => {
+            console.log('clic');
             uploadPermSection.classList.toggle('hidden');
         });
     }
