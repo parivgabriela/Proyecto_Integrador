@@ -75,11 +75,12 @@ def chat_with_llama(query):
 def chatear_modelo_llama():
     return render_template("chatear_modelo_llama.html")
 
-@socketio.on("procesando_archivos")
-def procesando_archivos():
-    logging.info("Procesando archivos de chatear con PDF")
-    socketio.send("Iniciando proceso de guardar la información a la colección")
-    process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
+
+def procesando_archivos(path_file, model):
+    logging.info("Procesando archivos de", model)
+    socketio.emit("procesando_archivos", "Iniciando proceso de guardar la información a la colección")
+    process_pdf_files_save_collection(path_file, model)
+
 
 
 @tec_ia_bot.route('/subir_archivos_perm_procesar', methods=['POST'])
@@ -94,7 +95,11 @@ def subir_archivos_perm():
 
     msg, status = save_request_files(current_app.config['PERMANENT_PDF_FOLDER'], files, "/subir_archivos_perm_procesar")
     if status == 200:
-        procesando_archivos()
+        logging.info(f"Procesando archivos de {MODEL_TEC_IA}")
+        print(msg['subidos'])
+        process_pdf_files_save_collection(msg['subidos'], MODEL_TEC_IA)
+        socketio.emit("procesando_archivos_perm_ok", "fin del proceso")
+    # revisar mandar mensaje para que entrene el modelo o hacerlo desde aca
     return jsonify(msg), status
 
 
@@ -110,7 +115,10 @@ def subir_archivo_temp():
 
     msg, status = save_request_files(current_app.config['UPLOAD_FOLDER'], files, "/subir_archivos_temporales_procesar")
     if status == 200:
-        procesando_archivos()
+        logging.info(f"Procesando archivos de {MODEL_CUSTOM_PDF}")
+        process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
+        socketio.emit("procesando_archivos_ok", "Iniciando proceso de guardar la información a la colección")
+
     return jsonify(msg), status
 
 
