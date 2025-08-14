@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hideLoading();
             showChat();
             console.log("Respuesta completa del backend:", data);
+            mostrarNotificacion("Archivo procesado:" + data.subidos);
         })
         .catch(error => {
             hideLoading();
@@ -145,10 +146,14 @@ document.addEventListener('DOMContentLoaded', function() {
     socket.on('procesando_archivos_ok', (data) => {
         hideLoading();
         showChat();
+        console.log(data);
+        mostrarNotificacion(data.subidos);
     });
 
     socket.on('procesando_archivos_perm_ok', (data) => {
         console.log('ok');
+        console.log(data);
+        mostrarNotificacion("ok");
     });
 
     function processUrlDownload(endpoint, url) {
@@ -163,15 +168,32 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            // hideLoading();
-            // showChat();
-            console.log('mensaje', data.mensaje);
+            hideLoading();
+            showChat();
+            console.log('mensaje', data);
+            mostrarNotificacion("Archivo procesado: " + data.filename)
         })
         .catch(error => {
             hideLoading();
             alert('Error al descargar el archivo: ' + error);
         });
     }
+    function mostrarNotificacion(mensaje) {
+        // 1. Selecciona el elemento del DOM
+        const notificacion = document.getElementById("notificacion-toast");
+
+        // 2. Asigna el mensaje que se mostrará
+        notificacion.textContent = mensaje;
+
+        // 3. Añade la clase 'show' para activar la animación CSS
+        notificacion.className = "toast show";
+
+        // 4. Después de 4 segundos, remueve la clase para que desaparezca
+        // El tiempo (4000ms) debe ser mayor a la duración de la animación
+        setTimeout(() => {
+            notificacion.className = notificacion.className.replace("show", "");
+        }, 8000);
+        }
 
     // --- NUEVA LÓGICA PARA LA PÁGINA DE ARCHIVOS PERMANENTES ---
     const toggleUploadSectionBtn = document.getElementById('toggleUploadSectionBtn');
@@ -260,9 +282,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            console.log(data)
             hideLoading();
-            alert('Archivos subidos con éxito!');
             window.location.reload(); // Recarga la página para ver el nuevo archivo en la lista
+            mostrarNotificacion("Archivo subidos con éxito");
+
         })
         .catch(error => {
             hideLoading();
