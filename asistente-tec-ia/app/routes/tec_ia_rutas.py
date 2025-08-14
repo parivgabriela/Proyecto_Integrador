@@ -148,7 +148,7 @@ def descargar_archivo_url():
         with open(file_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
-        logging.info('[/descargar_archivo_url] - Archivo descarcargado y guardado')
+        logging.info(f'[/descargar_archivo_url] - Archivo descarcargado y guardado {filename}')
         return jsonify({
             'message': 'Archivo descargado correctamente',
             'filename': filename,
