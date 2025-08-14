@@ -68,9 +68,10 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     files_to_process = None
     path_to_folder = None
 
-    if collection_name == MODEL_TEC_IA:
+    if pdf_path != KNOWLEDGE_BASE_PATH and collection_name == MODEL_TEC_IA:
         path_to_folder = KNOWLEDGE_BASE_PATH
-        files_to_process = [pdf_path]
+
+        files_to_process = pdf_path
         print(files_to_process)
     else:
         path_to_folder = pdf_path
@@ -83,6 +84,10 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
     total_chunks_processed = 0
     document_text = None
     chunks = []
+
+    collection = COLLECTIONS_NAMES.get(collection_name)
+    if not collection:
+        logging.error("Collection not found")
 
     for filename in files_to_process:
         full_path = f"{path_to_folder}/{filename}"
