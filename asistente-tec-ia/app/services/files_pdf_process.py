@@ -72,7 +72,6 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
         path_to_folder = KNOWLEDGE_BASE_PATH
 
         files_to_process = pdf_path
-        print(files_to_process)
     else:
         path_to_folder = pdf_path
         files_to_process = list_pdf_files(pdf_path)
@@ -117,7 +116,7 @@ def process_pdf_files_save_collection(pdf_path: str, collection_name: str):
         )
         total_chunks_processed += len(chunks)
 
-    logging.info(f"Se procesaron {len(chunks)} fragmentos del PDF y se agregaron a la base de conocimiento.")
+    logging.info(f"Se procesaron {len(chunks)} fragmentos del PDF y se agregaron a la base de conocimiento de {collection_name}.")
 
 
 def get_context_from_chroma(query: str, model_type: str):
@@ -170,12 +169,6 @@ def save_request_files(path_app_folder, files, endpoint:str):
 
 def list_pdf_files(path):
     """Listar los archivos pdf"""
-    files = os.listdir(path)
-    logging.info(f"Archivos: {files}")
-    return [f for f in files if f.endswith(tuple(ALLOWED_EXTENSIONS_chat))]
-
-
-def entrenar_modelo_tec_ia():
-    archivos = list_pdf_files(MODEL_TEC_IA)
-    for archivo in archivos:
-        process_pdf_files_save_collection(archivo, "TEC-IA")
+    list_files = os.listdir(path)
+    logging.info(f"Archivos en la carpeta {path}: {', '.join(list_files)}")
+    return [f for f in list_files if f.endswith(tuple(ALLOWED_EXTENSIONS_chat))]
