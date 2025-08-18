@@ -36,7 +36,7 @@ def listar_pdf():
 @tec_ia_bot.route('/entrenar_modelo')
 def entrenar_modelo():
     process_pdf_files_save_collection(KNOWLEDGE_BASE_PATH, MODEL_TEC_IA)
-
+    logging.info("Modelo Tec-IA entrenado")    
     return render_template('index.html', respuesta="Modelo entrenado, solo ejecutarlo una vez")
 
 
@@ -91,11 +91,11 @@ def subir_archivos_perm():
             return jsonify({"error": "[/subir_archivos_perm_procesar] No se encontraron archivos en la petición"}), 400
     except Exception as e:
         logging.error(f"[/subir_archivos_perm_procesar]: Error al subir archivos: {str(e)}")
-        return jsonify({"error": "Error interno del servidor"}), 500
+        return jsonify({"error": "[/subir_archivos_perm_procesar]: Error interno del servidor"}), 500
 
     msg, status = save_request_files(current_app.config['PERMANENT_PDF_FOLDER'], files, "/subir_archivos_perm_procesar")
     if status == 200:
-        logging.info(f"Procesando archivos de {MODEL_TEC_IA}")
+        logging.info(f"[/subir_archivos_perm_procesar]: Procesando archivos de {MODEL_TEC_IA}")
         print(msg['subidos'])
         process_pdf_files_save_collection(msg['subidos'], MODEL_TEC_IA)
         socketio.emit("procesando_archivos_perm_ok", "fin del proceso")
@@ -115,7 +115,7 @@ def subir_archivo_temp():
 
     msg, status = save_request_files(current_app.config['UPLOAD_FOLDER'], files, "/subir_archivos_temporales_procesar")
     if status == 200:
-        logging.info(f"Procesando archivos de {MODEL_CUSTOM_PDF}")
+        logging.info(f"[/subir_archivos_temporales_procesar]: Procesando archivos de {MODEL_CUSTOM_PDF}")
         process_pdf_files_save_collection(UPLOAD_USER_PATH, MODEL_CUSTOM_PDF)
         socketio.emit("procesando_archivos_ok", "Iniciando proceso de guardar la información a la colección")
 
